@@ -17,7 +17,7 @@
 	<div class="sheet-tabs">
 		<div class="sheet-tab sheet-tab-core">
 			<input type="radio" name="attr_tab" value="core" checked="checked">
-			<span class="sheet-tab-label">基本情報</span>
+			<span class="sheet-tab-label">Basic 基本情報</span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
@@ -69,7 +69,7 @@
         </div>
 		<div class="sheet-tab sheet-tab-resonance">
 			<input type="radio" name="attr_tab" value="equipment">
-			<span class="sheet-tab-label">共鳴情報</span>
+			<span class="sheet-tab-label">Resonances 共鳴情報</span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content"> 
 					<fieldset>
@@ -271,11 +271,14 @@
     	</div>
 		<div class="sheet-tab sheet-tab-stats">
 			<input type="radio" name="attr_tab" value="stats">
-			<span class="sheet-tab-label">能力値</span>
+			<span class="sheet-tab-label">Stats 能力値</span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
 						<legend> 能力値 </legend>
+					<div class="row">
+						<span> Points Left 残高: 25 </span>
+					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="shintai-u">身体:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-shintai" />
@@ -329,16 +332,19 @@
     	</div>
 		<div class="sheet-tab sheet-tab-skills">
 			<input type="radio" name="attr_tab" value="skills">
-			<span class="sheet-tab-label">技能</span>
+			<span class="sheet-tab-label">Skills 技能</span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
 						<legend> 技能 </legend>
+						<div class="row"> Points Left 残高: 30 </div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="resonance-u">∞共鳴:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  <label class='sheet-label' data-i18n="kyoumei-u">∞共鳴:</label>
+					  Lv. 
+					  <input checked="true" type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -346,9 +352,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">*調査:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -356,9 +365,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">検索:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -366,9 +378,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">洞察:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -376,9 +391,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">マッピング:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -386,9 +404,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">直感:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -396,9 +417,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">鑑定:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -406,9 +430,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">*知覚:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -416,9 +443,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">観察眼:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -426,9 +456,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">聞き耳:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -436,9 +469,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">毒見:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -446,9 +482,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">機器察知:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -456,9 +495,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">★霊感:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -466,9 +508,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">*交渉:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -476,9 +521,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">社交術:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -486,9 +534,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">ディベート:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -496,9 +547,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">心理:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -506,9 +560,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">魅了:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -516,9 +573,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">*知識:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -526,9 +586,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u">専門知識:</label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -537,9 +600,12 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *ニュース: </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
@@ -547,261 +613,348 @@
 
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 事情通 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 業界 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *運動 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> スピード </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> ストレングス </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> アクロバット </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> ダイブ </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *格闘 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 武術 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> ★奥義 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *投擲 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> ★射撃 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *生存 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 耐久 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *自我 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 根性 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *手当て </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 医術 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> ★蘇生 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *細工 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 技巧 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 芸術 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 操縦 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 暗号 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 電脳 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 隠匿 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> *幸運 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="resonance-u"> 強運 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
 					</div>
 					<div class="row">
 						<label class='sheet-label' data-i18n="resonance-u"> *その他 </label>
-					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
-						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
-					  </select>
+					  Lv. 
+					  
+					  <input type="radio" name="attr_character_skill-kyoumei" value="0">  0 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="1">  1 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="2">  2 </input>
+					  <input type="radio" name="attr_character_skill-kyoumei" value="3">  3 </input>
 					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
 						  <option> 運勢 </option>
 					  </select>
