@@ -1,0 +1,819 @@
+<link rel="stylesheet" type="text/css" href="emoklore-sheet.css" >
+
+<div class='sheet-container'>
+    <div class='sheet-header'>
+      <div class='sheet-2colrow'>
+        <div class='sheet-col'>
+            <div class="sheet-attrblock">
+				<h1>Emoklore Character Sheet</h1>
+				<img name="attr_character_avatar">
+                <br />
+            </div>
+        </div>
+        <div class='sheet-col'>
+        </div>
+      </div>
+    </div>
+	<div class="sheet-tabs">
+		<div class="sheet-tab sheet-tab-core">
+			<input type="radio" name="attr_tab" value="core" checked="checked">
+			<span class="sheet-tab-label">基本情報</span>
+    		<div class="sheet-tab-content">
+    		    <div class="sheet-content">
+					<fieldset>
+						<legend>基本情報</legend>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="name-u">名前:</label>
+						  <input type="text" class='sheet-input' name="attr_character_name" />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="namekana-u">名前(かな）:</label>
+						  <input type="text" class='sheet-input' name="attr_character_namekana" />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="age-u">年齢:</label>
+						  <input type="text" class='sheet-input' name="attr_character_age"  />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="occupation-u">職業:</label>
+						  <input type="text" class='sheet-input' name="attr_character_occupation"  />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="hometown-u">出身:</label>
+						  <input type="text" class='sheet-input' name="attr_character_hometown"  />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="appearance-u">概観的特徴:</label>
+						  <input type="text" class='sheet-input' name="attr_character_appearance"  />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="personality-u">性格:</label>
+						  <input type="text" class='sheet-input' name="attr_character_personality"  />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="personalhistory-u">経歴:</label>
+						  <input type="text" class='sheet-input' name="attr_character_personalhistory"  />
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="relatedpeople-u">関係のある人々:</label>
+						  <input type="text" class='sheet-input' name="attr_character_relatedpeople"  />
+						</div>
+						<!-- Skipping タグ for now. Reason: no clear use case in Roll20. -->
+						<div class="row">
+						  <label class='sheet-label' data-i18n="memo-u">メモ:</label>
+						  <textarea  class='sheet-input' name="attr_character_memo"  ></textarea>
+						</div>
+					</fieldset>
+        		</div>
+        	</div>
+        </div>
+		<div class="sheet-tab sheet-tab-resonance">
+			<input type="radio" name="attr_tab" value="equipment">
+			<span class="sheet-tab-label">共鳴情報</span>
+    		<div class="sheet-tab-content">
+    		    <div class="sheet-content"> 
+					<fieldset>
+						<legend> 共鳴情報 </legend>
+						<div class="row">
+						<label class='sheet-label' data-i18n="resonanceomote-u">表:</label>
+						<select class="sheet-input" selected="select-please" name="attr-character-resonance-omote" >
+							<option value='select-please'> 選択してください </option> 
+							<optgroup label="欲望"> 
+								<option>自己顕示 </option> 
+								<option>所有 </option> 
+								<option>本能 </option> 
+								<option>破壊 </option> 
+								<option>優越感 </option> 
+								<option>怠惰 </option> 
+								<option>逃避 </option> 
+								<option>好奇心 </option> 
+								<option>スリル </option> 
+							</optgroup> 
+							<optgroup label="情念"> 
+								<option> 喜び </option> 
+								<option> 怒り </option>
+								<option> 悲しみ </option>
+								<option> 幸福 </option>
+								<option> 不安 </option>
+								<option> 嫌悪 </option>
+								<option> 恐怖 </option>
+								<option> 恨み </option>
+								<option> 嫉妬 </option>
+							</optgroup> 
+							<optgroup label="理想"> 
+								<option> 正義 </option> 
+								<option> 崇拝 </option>
+								<option> 善悪 </option>
+								<option> 希望 </option>
+								<option> 向上 </option>
+								<option> 理性 </option>
+								<option> 勝利 </option>
+								<option> 秩序 </option>
+								<option> 憧憬 </option>
+								<option> 無我 
+								</option>
+							</optgroup> 
+							<optgroup label="関係">
+								<option> 友情 </option>
+								<option> 愛 </option>
+								<option> 恋 </option>
+								<option> 依存 </option>
+								<option> 尊敬 </option>
+								<option> 軽蔑 </option>
+								<option> 庇護 </option>
+								<option> 支配 </option>
+								<option> 奉仕 </option>
+								<option> 甘え </option>
+							</optgroup>
+							<optgroup label="傷">
+								<option> 後悔 </option>
+								<option> 孤独 </option>
+								<option> 絶望 </option>
+								<option> 否定 </option>
+								<option> 疑念 </option>
+								<option> 罪悪感 </option>
+								<option> 狂気 </option>
+								<option> 劣等感 </option>
+							</optgroup>
+						</select>
+						</div>
+
+						<div class="row">
+						<label class='sheet-label' data-i18n="resonanceura-u">裏:</label>
+						<select class="sheet-input" selected="select-please" name="attr-character-resonance-ura" >
+							<option value='select-please'> 選択してください </option> 
+							<optgroup label="欲望"> 
+								<option>自己顕示 </option> 
+								<option>所有 </option> 
+								<option>本能 </option> 
+								<option>破壊 </option> 
+								<option>優越感 </option> 
+								<option>怠惰 </option> 
+								<option>逃避 </option> 
+								<option>好奇心 </option> 
+								<option>スリル </option> 
+							</optgroup> 
+							<optgroup label="情念"> 
+								<option> 喜び </option> 
+								<option> 怒り </option>
+								<option> 悲しみ </option>
+								<option> 幸福 </option>
+								<option> 不安 </option>
+								<option> 嫌悪 </option>
+								<option> 恐怖 </option>
+								<option> 恨み </option>
+								<option> 嫉妬 </option>
+							</optgroup> 
+							<optgroup label="理想"> 
+								<option> 正義 </option> 
+								<option> 崇拝 </option>
+								<option> 善悪 </option>
+								<option> 希望 </option>
+								<option> 向上 </option>
+								<option> 理性 </option>
+								<option> 勝利 </option>
+								<option> 秩序 </option>
+								<option> 憧憬 </option>
+								<option> 無我 
+								</option>
+							</optgroup> 
+							<optgroup label="関係">
+								<option> 友情 </option>
+								<option> 愛 </option>
+								<option> 恋 </option>
+								<option> 依存 </option>
+								<option> 尊敬 </option>
+								<option> 軽蔑 </option>
+								<option> 庇護 </option>
+								<option> 支配 </option>
+								<option> 奉仕 </option>
+								<option> 甘え </option>
+							</optgroup>
+							<optgroup label="傷">
+								<option> 後悔 </option>
+								<option> 孤独 </option>
+								<option> 絶望 </option>
+								<option> 否定 </option>
+								<option> 疑念 </option>
+								<option> 罪悪感 </option>
+								<option> 狂気 </option>
+								<option> 劣等感 </option>
+							</optgroup>
+						</select>
+						</div>
+
+						<div class="row">
+						<label class='sheet-label' data-i18n="resonanceroots-u">ルーツ:</label>
+						<select class="sheet-input" selected="select-please" name="attr-character-resonance-roots" >
+							<option value='select-please'> 選択してください </option> 
+							<optgroup label="欲望"> 
+								<option>自己顕示 </option> 
+								<option>所有 </option> 
+								<option>本能 </option> 
+								<option>破壊 </option> 
+								<option>優越感 </option> 
+								<option>怠惰 </option> 
+								<option>逃避 </option> 
+								<option>好奇心 </option> 
+								<option>スリル </option> 
+							</optgroup> 
+							<optgroup label="情念"> 
+								<option> 喜び </option> 
+								<option> 怒り </option>
+								<option> 悲しみ </option>
+								<option> 幸福 </option>
+								<option> 不安 </option>
+								<option> 嫌悪 </option>
+								<option> 恐怖 </option>
+								<option> 恨み </option>
+								<option> 嫉妬 </option>
+							</optgroup> 
+							<optgroup label="理想"> 
+								<option> 正義 </option> 
+								<option> 崇拝 </option>
+								<option> 善悪 </option>
+								<option> 希望 </option>
+								<option> 向上 </option>
+								<option> 理性 </option>
+								<option> 勝利 </option>
+								<option> 秩序 </option>
+								<option> 憧憬 </option>
+								<option> 無我 
+								</option>
+							</optgroup> 
+							<optgroup label="関係">
+								<option> 友情 </option>
+								<option> 愛 </option>
+								<option> 恋 </option>
+								<option> 依存 </option>
+								<option> 尊敬 </option>
+								<option> 軽蔑 </option>
+								<option> 庇護 </option>
+								<option> 支配 </option>
+								<option> 奉仕 </option>
+								<option> 甘え </option>
+							</optgroup>
+							<optgroup label="傷">
+								<option> 後悔 </option>
+								<option> 孤独 </option>
+								<option> 絶望 </option>
+								<option> 否定 </option>
+								<option> 疑念 </option>
+								<option> 罪悪感 </option>
+								<option> 狂気 </option>
+								<option> 劣等感 </option>
+							</optgroup>
+						</select>
+						</div>
+					</fieldset>
+    		    </div>
+    		</div>
+    	</div>
+		<div class="sheet-tab sheet-tab-stats">
+			<input type="radio" name="attr_tab" value="stats">
+			<span class="sheet-tab-label">能力値</span>
+    		<div class="sheet-tab-content">
+    		    <div class="sheet-content">
+					<fieldset>
+						<legend> 能力値 </legend>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="shintai-u">身体:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-shintai" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="kiyou-u">器用:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-kiyou" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="seishin-u">精神:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-seishin" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="gokan-u">五感:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-gokan" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="chiryoku-u">知力:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-chiryoku" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="miryoku-u">魅力:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-miryoku" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="shakai-u">社会:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-shakai" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="unsei-u">運勢:</label>
+					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-unsei" />
+					</div>
+					</fieldset>
+					<fieldset>
+						<legend> パラメータ </legend>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="hp-u">HP:</label>
+						  <input type="number" readonly="true" class='sheet-input' 
+								 name="attr_character_stat-hp" 
+								 value="(@{character_stat-shintai}+10)"/>
+						</div>
+						<div class="row">
+						  <label class='sheet-label' data-i18n="mp-u">MP:</label>
+						  <input type="number" readonly="true" class='sheet-input' 
+								 name="attr_character_stat-mp" 
+								 value="(@{character_stat-seishin}+@{character_stat-chiryoku})"/>
+						</div>
+					</fieldset> 
+    		    </div>
+    		</div>
+    	</div>
+		<div class="sheet-tab sheet-tab-skills">
+			<input type="radio" name="attr_tab" value="skills">
+			<span class="sheet-tab-label">技能</span>
+    		<div class="sheet-tab-content">
+    		    <div class="sheet-content">
+					<fieldset>
+						<legend> 技能 </legend>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">∞共鳴:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">*調査:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">検索:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">洞察:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">マッピング:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">直感:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">鑑定:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">*知覚:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">観察眼:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">聞き耳:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">毒見:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">機器察知:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">★霊感:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">*交渉:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">社交術:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">ディベート:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">心理:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">魅了:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">*知識:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u">専門知識:</label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *ニュース: </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 事情通 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 業界 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *運動 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> スピード </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> ストレングス </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> アクロバット </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> ダイブ </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *格闘 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 武術 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> ★奥義 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *投擲 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> ★射撃 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *生存 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 耐久 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *自我 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 根性 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *手当て </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 医術 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> ★蘇生 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *細工 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 技巧 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 芸術 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 操縦 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 暗号 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 電脳 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 隠匿 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> *幸運 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+					  <label class='sheet-label' data-i18n="resonance-u"> 強運 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</div>
+					<div class="row">
+						<label class='sheet-label' data-i18n="resonance-u"> *その他 </label>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option>レベル1</option> <option>レベル2</option> <option>レベル3</option>
+					  </select>
+					  <select class='sheet-input' name="attr_character_stat-kyoumei" />
+						  <option> 運勢 </option>
+					  </select>
+					</fieldset>
+    		    </div>
+    		</div>
+    	</div>
+    </div>
+</div>
+
+<script type="text/worker">
+
+
+</script>
+
