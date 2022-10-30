@@ -48,6 +48,7 @@
       color: white;
       display: flex;
       font-variant: small-caps;
+	  font-size:12px;
       font-weight: bold;
       height: 30px;
       justify-content: center;
