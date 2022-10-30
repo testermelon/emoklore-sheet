@@ -1,61 +1,52 @@
 .sheet-container {
-    position:relative;
-    width: 800px;
-    background-color: black;
-    color: green;
     position: relative;
-    display: inline-block;
-    border: 4px double gold;
-    border-radius:15px;
-    padding: 10px;
 }
 
 .sheet-header {
     padding-bottom: 10px;
-    border-bottom: 4px double gold;
+	width:90%;
 }
 
 .sheet-tabs {
   margin-top: 10px;
   position: relative;
-  width: 800px; }
+  width: 90%; }
   .sheet-tabs::after {
     clear: both;
     content: '';
     display: block; }
   .sheet-tabs .sheet-tab {
-    width: 800px; }
-    .sheet-tabs .sheet-tab:nth-of-type(2) > input[type="radio"], .sheet-tabs .sheet-tab:nth-of-type(2) > .sheet-tab-label {
-      margin-left: 20%; }
-    .sheet-tabs .sheet-tab:nth-of-type(3) > input[type="radio"], .sheet-tabs .sheet-tab:nth-of-type(3) > .sheet-tab-label {
-      margin-left: 40%; }
-    .sheet-tabs .sheet-tab:nth-of-type(4) > input[type="radio"], .sheet-tabs .sheet-tab:nth-of-type(4) > .sheet-tab-label {
-      margin-left: 60%; }
-    .sheet-tabs .sheet-tab:nth-of-type(5) > input[type="radio"], .sheet-tabs .sheet-tab:nth-of-type(5) > .sheet-tab-label {
-      margin-left: 80%; }
+    width: 100%; }
+    .sheet-tabs .sheet-tab:nth-of-type(2) > input[type="radio"], 
+	.sheet-tabs .sheet-tab:nth-of-type(2) > .sheet-tab-label {
+      margin-left: 25%; }
+    .sheet-tabs .sheet-tab:nth-of-type(3) > input[type="radio"], 
+	.sheet-tabs .sheet-tab:nth-of-type(3) > .sheet-tab-label {
+      margin-left: 50%; }
+    .sheet-tabs .sheet-tab:nth-of-type(4) > input[type="radio"], 
+	.sheet-tabs .sheet-tab:nth-of-type(4) > .sheet-tab-label {
+      margin-left: 75%; }
     .sheet-tabs .sheet-tab > input[type="radio"] {
       height: 30px;
       margin: 0;
       opacity: 0;
       position: absolute;
       top: 0;
-      width: 20%;
+      width: 24%;
       z-index: 1; }
       
       .sheet-tabs .sheet-tab > input[type="radio"]:hover ~ .sheet-tab-label {
         background: #111111;
         color: white;
-        border-bottom-color: gold; 
       }
       
     .sheet-tabs .sheet-tab > .sheet-tab-label {
       align-items: center;
       background: #555555;
       border-radius: 6px 6px 0 0;
-      border: 2px solid gold;
+      border: 2px solid ;
       color: white;
       display: flex;
-      font-size: 11px;
       font-variant: small-caps;
       font-weight: bold;
       height: 30px;
@@ -64,18 +55,11 @@
       position: absolute;
       text-transform: uppercase;
       top: 0;
-      width: 20%;
-      border-left-color: gold;
-      border-top-color: gold;
-      border-right-color: gold;
-      border-bottom-color: gold; 
+      width: 24%;
     }
       
     .sheet-tabs .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
-      background: black;
-      border-color: gold;
-      border-bottom-color: black;
-      color: green;
+      background: slategray;
     }
     
     .sheet-tabs .sheet-tab > input[type="radio"]:checked {
@@ -94,27 +78,27 @@
 
     .sheet-content {
         padding: 5px;
-        border: 2px solid gold;
         border-radius: 0 10px 10px 10px;
         min-height:300px;
     }
 
+.row {
+	display:flex;
+	padding: 2px;
+	border-bottom: 1px solid #111111;
+}
+
+
 .sheet-label {
-    float: left;
-    width: 150px;
-    color: white;
-    font-weight:bold;
-    font-size: 12px;
-    height: 12px;
+	width:200px;
 }
 
 .sheet-input {
-    width: calc(50% - 150px);
+	margin:2px;
 }
 
 
 .sheet-heading {
-    font-size: 1.5em;
     font-weight:bold;
     border:0px;
     border-radius:0px;
@@ -129,11 +113,13 @@ button .sheet-rollatrrib, button .sheet-rollskill{
 .sheet-attrblock {
     background: #333333;
     border-radius:15px;
-    border: 1px solid gold;
     padding: 5px;
     color: lightgrey;
     text-align:center;
-    min-height: 50px;
+}
+
+h1 {
+	margin:0;
 }
 
 .sheet-attrblock input {
@@ -157,9 +143,6 @@ button .sheet-rollatrrib, button .sheet-rollskill{
 }
 
 .sheet-top {
-    border-bottom: 2px double gold;
-    display: inline-block;
-    width:100%;
 }
 
 .sheet-blocklabel {
@@ -168,51 +151,6 @@ button .sheet-rollatrrib, button .sheet-rollskill{
     background:transparent;
     border:0px;
     color:White;
-}
-
-.sheet-weaponblock {
-    background: #333333;
-    border-radius:15px;
-    border: 1px solid gold;
-    padding: 5px;
-    color: lightgrey;
-    min-height:50px;
-}
-
-.sheet-weaponblock input {
-    font-size: 12px;
-    line-height:15px;
-    height: 15px;
-}
-
-.sheet-armorblock {
-    background: #333333;
-    border-radius:15px;
-    border: 1px solid gold;
-    padding: 5px;
-    color: lightgrey;
-    min-height:50px;
-}
-
-.sheet-armorblock input {
-    font-size: 12px;
-    line-height:15px;
-    height: 15px;
-}
-
-.sheet-equipblock {
-    background: #333333;
-    border-radius:15px;
-    border: 1px solid gold;
-    padding: 5px;
-    color: lightgrey;
-    min-height:50px;
-}
-
-.sheet-equipblock input {
-    font-size: 12px;
-    line-height:15px;
-    height: 15px;
 }
 
 .sheet-dirstats {

@@ -1,66 +1,66 @@
+<head>
 <link rel="stylesheet" type="text/css" href="emoklore-sheet.css" >
+<meta charset="utf-8">
+</head>
 
 <div class='sheet-container'>
     <div class='sheet-header'>
-      <div class='sheet-2colrow'>
-        <div class='sheet-col'>
-            <div class="sheet-attrblock">
-				<h1>Emoklore Character Sheet</h1>
-				<img name="attr_character_avatar">
-                <br />
-            </div>
-        </div>
-        <div class='sheet-col'>
+		<div class="sheet-attrblock">
+			<h1> <img name="token" class="token-icon" src="token.jpg"> Emoklore Character Sheet</h1>
         </div>
       </div>
     </div>
 	<div class="sheet-tabs">
 		<div class="sheet-tab sheet-tab-core">
 			<input type="radio" name="attr_tab" value="core" checked="checked">
-			<span class="sheet-tab-label">Basic 基本情報</span>
+			<span class="sheet-tab-label">Basic Info 基本情報</span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
-						<legend>基本情報</legend>
+						<legend>Basic Info/基本情報</legend>
+						<div class="basicinfo-propic-image">
+							<img name="" src="propic.jpg">
+							</img>
+						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="name-u">名前:</label>
+						  <label class='sheet-label' data-i18n="name-u">Name/名前:</label>
 						  <input type="text" class='sheet-input' name="attr_character_name" />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="namekana-u">名前(かな）:</label>
+						  <label class='sheet-label' data-i18n="namekana-u">Nick(Kana)/名前(かな）:</label>
 						  <input type="text" class='sheet-input' name="attr_character_namekana" />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="age-u">年齢:</label>
+						  <label class='sheet-label' data-i18n="age-u">Age/年齢:</label>
 						  <input type="text" class='sheet-input' name="attr_character_age"  />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="occupation-u">職業:</label>
+						  <label class='sheet-label' data-i18n="occupation-u">Occupation/職業:</label>
 						  <input type="text" class='sheet-input' name="attr_character_occupation"  />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="hometown-u">出身:</label>
+						  <label class='sheet-label' data-i18n="hometown-u">Hometown/出身:</label>
 						  <input type="text" class='sheet-input' name="attr_character_hometown"  />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="appearance-u">概観的特徴:</label>
+						  <label class='sheet-label' data-i18n="appearance-u">Appearance/概観的特徴:</label>
 						  <input type="text" class='sheet-input' name="attr_character_appearance"  />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="personality-u">性格:</label>
+						  <label class='sheet-label' data-i18n="personality-u">Personality/性格:</label>
 						  <input type="text" class='sheet-input' name="attr_character_personality"  />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="personalhistory-u">経歴:</label>
+						  <label class='sheet-label' data-i18n="personalhistory-u">Personal History/経歴:</label>
 						  <input type="text" class='sheet-input' name="attr_character_personalhistory"  />
 						</div>
 						<div class="row">
-						  <label class='sheet-label' data-i18n="relatedpeople-u">関係のある人々:</label>
+						  <label class='sheet-label' data-i18n="relatedpeople-u">Related People/関係のある人々:</label>
 						  <input type="text" class='sheet-input' name="attr_character_relatedpeople"  />
 						</div>
 						<!-- Skipping タグ for now. Reason: no clear use case in Roll20. -->
 						<div class="row">
-						  <label class='sheet-label' data-i18n="memo-u">メモ:</label>
+						  <label class='sheet-label' data-i18n="memo-u">Memo/メモ:</label>
 						  <textarea  class='sheet-input' name="attr_character_memo"  ></textarea>
 						</div>
 					</fieldset>
@@ -73,198 +73,205 @@
     		<div class="sheet-tab-content">
     		    <div class="sheet-content"> 
 					<fieldset>
-						<legend> 共鳴情報 </legend>
+						<legend> Resonance Info/共鳴情報 </legend>
 						<div class="row">
-						<label class='sheet-label' data-i18n="resonanceomote-u">表:</label>
-						<select class="sheet-input" selected="select-please" name="attr-character-resonance-omote" >
-							<option value='select-please'> 選択してください </option> 
-							<optgroup label="欲望"> 
-								<option>自己顕示 </option> 
-								<option>所有 </option> 
-								<option>本能 </option> 
-								<option>破壊 </option> 
-								<option>優越感 </option> 
-								<option>怠惰 </option> 
-								<option>逃避 </option> 
-								<option>好奇心 </option> 
-								<option>スリル </option> 
-							</optgroup> 
-							<optgroup label="情念"> 
-								<option> 喜び </option> 
-								<option> 怒り </option>
-								<option> 悲しみ </option>
-								<option> 幸福 </option>
-								<option> 不安 </option>
-								<option> 嫌悪 </option>
-								<option> 恐怖 </option>
-								<option> 恨み </option>
-								<option> 嫉妬 </option>
-							</optgroup> 
-							<optgroup label="理想"> 
-								<option> 正義 </option> 
-								<option> 崇拝 </option>
-								<option> 善悪 </option>
-								<option> 希望 </option>
-								<option> 向上 </option>
-								<option> 理性 </option>
-								<option> 勝利 </option>
-								<option> 秩序 </option>
-								<option> 憧憬 </option>
-								<option> 無我 
-								</option>
-							</optgroup> 
-							<optgroup label="関係">
-								<option> 友情 </option>
-								<option> 愛 </option>
-								<option> 恋 </option>
-								<option> 依存 </option>
-								<option> 尊敬 </option>
-								<option> 軽蔑 </option>
-								<option> 庇護 </option>
-								<option> 支配 </option>
-								<option> 奉仕 </option>
-								<option> 甘え </option>
-							</optgroup>
-							<optgroup label="傷">
-								<option> 後悔 </option>
-								<option> 孤独 </option>
-								<option> 絶望 </option>
-								<option> 否定 </option>
-								<option> 疑念 </option>
-								<option> 罪悪感 </option>
-								<option> 狂気 </option>
-								<option> 劣等感 </option>
-							</optgroup>
-						</select>
-						</div>
-
-						<div class="row">
-						<label class='sheet-label' data-i18n="resonanceura-u">裏:</label>
-						<select class="sheet-input" selected="select-please" name="attr-character-resonance-ura" >
-							<option value='select-please'> 選択してください </option> 
-							<optgroup label="欲望"> 
-								<option>自己顕示 </option> 
-								<option>所有 </option> 
-								<option>本能 </option> 
-								<option>破壊 </option> 
-								<option>優越感 </option> 
-								<option>怠惰 </option> 
-								<option>逃避 </option> 
-								<option>好奇心 </option> 
-								<option>スリル </option> 
-							</optgroup> 
-							<optgroup label="情念"> 
-								<option> 喜び </option> 
-								<option> 怒り </option>
-								<option> 悲しみ </option>
-								<option> 幸福 </option>
-								<option> 不安 </option>
-								<option> 嫌悪 </option>
-								<option> 恐怖 </option>
-								<option> 恨み </option>
-								<option> 嫉妬 </option>
-							</optgroup> 
-							<optgroup label="理想"> 
-								<option> 正義 </option> 
-								<option> 崇拝 </option>
-								<option> 善悪 </option>
-								<option> 希望 </option>
-								<option> 向上 </option>
-								<option> 理性 </option>
-								<option> 勝利 </option>
-								<option> 秩序 </option>
-								<option> 憧憬 </option>
-								<option> 無我 
-								</option>
-							</optgroup> 
-							<optgroup label="関係">
-								<option> 友情 </option>
-								<option> 愛 </option>
-								<option> 恋 </option>
-								<option> 依存 </option>
-								<option> 尊敬 </option>
-								<option> 軽蔑 </option>
-								<option> 庇護 </option>
-								<option> 支配 </option>
-								<option> 奉仕 </option>
-								<option> 甘え </option>
-							</optgroup>
-							<optgroup label="傷">
-								<option> 後悔 </option>
-								<option> 孤独 </option>
-								<option> 絶望 </option>
-								<option> 否定 </option>
-								<option> 疑念 </option>
-								<option> 罪悪感 </option>
-								<option> 狂気 </option>
-								<option> 劣等感 </option>
-							</optgroup>
-						</select>
-						</div>
-
-						<div class="row">
-						<label class='sheet-label' data-i18n="resonanceroots-u">ルーツ:</label>
+						<label class='sheet-label' data-i18n="resonanceomote-u">Front Surface/表:</label>
 						<select class="sheet-input" selected="select-please" name="attr-character-resonance-roots" >
-							<option value='select-please'> 選択してください </option> 
-							<optgroup label="欲望"> 
-								<option>自己顕示 </option> 
-								<option>所有 </option> 
-								<option>本能 </option> 
-								<option>破壊 </option> 
-								<option>優越感 </option> 
-								<option>怠惰 </option> 
-								<option>逃避 </option> 
-								<option>好奇心 </option> 
-								<option>スリル </option> 
+							<option value='select-please'> Please Select/選択してください </option> 
+							<optgroup label="Desire/欲望"> 
+								<option>Showing off/自己顕示 </option> 
+								<option>Ownership/所有 </option> 
+								<option>Instinct/本能 </option> 
+								<option>Destruction/破壊 </option> 
+								<option>Superiority/優越感 </option> 
+								<option>Laziness/怠惰 </option> 
+								<option>Escape/逃避 </option> 
+								<option>Curiosity/好奇心 </option> 
+								<option>Thrill/スリル </option> 
 							</optgroup> 
-							<optgroup label="情念"> 
-								<option> 喜び </option> 
-								<option> 怒り </option>
-								<option> 悲しみ </option>
-								<option> 幸福 </option>
-								<option> 不安 </option>
-								<option> 嫌悪 </option>
-								<option> 恐怖 </option>
-								<option> 恨み </option>
-								<option> 嫉妬 </option>
+							<optgroup label="Passion/情念"> 
+								<option> Joy/喜び </option> 
+								<option> Anger/怒り </option>
+								<option> Sadness/悲しみ </option>
+								<option> Happiness/幸福 </option>
+								<option> Anxiety/不安 </option>
+								<option> Disgust/嫌悪 </option>
+								<option> Fear/恐怖 </option>
+								<option> Grudge/恨み </option>
+								<option> Jealousy/嫉妬 </option>
 							</optgroup> 
-							<optgroup label="理想"> 
-								<option> 正義 </option> 
-								<option> 崇拝 </option>
-								<option> 善悪 </option>
-								<option> 希望 </option>
-								<option> 向上 </option>
-								<option> 理性 </option>
-								<option> 勝利 </option>
-								<option> 秩序 </option>
-								<option> 憧憬 </option>
-								<option> 無我 
+							<optgroup label="Ideals/理想"> 
+								<option> Justice/正義 </option> 
+								<option> Worship/崇拝 </option>
+								<option> Right-Wrong/善悪 </option>
+								<option> Hope/希望 </option>
+								<option> Improvement/向上 </option>
+								<option> Reason/理性 </option>
+								<option> Victory/勝利 </option>
+								<option> Order/秩序 </option>
+								<option> Admiration/憧憬 </option>
+								<option> Selflessness/無我 
 								</option>
 							</optgroup> 
-							<optgroup label="関係">
-								<option> 友情 </option>
-								<option> 愛 </option>
-								<option> 恋 </option>
-								<option> 依存 </option>
-								<option> 尊敬 </option>
-								<option> 軽蔑 </option>
-								<option> 庇護 </option>
-								<option> 支配 </option>
-								<option> 奉仕 </option>
-								<option> 甘え </option>
+							<optgroup label="Relationsip/関係">
+								<option> Friendship/友情 </option>
+								<option> Love/愛 </option>
+								<option> Romantic Love/恋 </option>
+								<option> Dependence/依存 </option>
+								<option> Respect/尊敬 </option>
+								<option> Contempt/軽蔑 </option>
+								<option> Asylum/庇護 </option>
+								<option> Domination/支配 </option>
+								<option> Service/奉仕 </option>
+								<option> Spoil/甘え </option>
 							</optgroup>
-							<optgroup label="傷">
-								<option> 後悔 </option>
-								<option> 孤独 </option>
-								<option> 絶望 </option>
-								<option> 否定 </option>
-								<option> 疑念 </option>
-								<option> 罪悪感 </option>
-								<option> 狂気 </option>
-								<option> 劣等感 </option>
+							<optgroup label="Wounds/傷">
+								<option> Regret/後悔 </option>
+								<option> Loneliness/孤独 </option>
+								<option> Despair/絶望 </option>
+								<option> Negation/否定 </option>
+								<option> DOubt/疑念 </option>
+								<option> Guilt/罪悪感 </option>
+								<option> Insanity/狂気 </option>
+								<option> Inferiority/劣等感 </option>
 							</optgroup>
 						</select>
 						</div>
+
+						<div class="row">
+						<label class='sheet-label' data-i18n="resonanceura-u">Under-Surface/裏:</label>
+						<select class="sheet-input" selected="select-please" name="attr-character-resonance-roots" >
+							<option value='select-please'> Please Select/選択してください </option> 
+							<optgroup label="Desire/欲望"> 
+								<option>Showing off/自己顕示 </option> 
+								<option>Ownership/所有 </option> 
+								<option>Instinct/本能 </option> 
+								<option>Destruction/破壊 </option> 
+								<option>Superiority/優越感 </option> 
+								<option>Laziness/怠惰 </option> 
+								<option>Escape/逃避 </option> 
+								<option>Curiosity/好奇心 </option> 
+								<option>Thrill/スリル </option> 
+							</optgroup> 
+							<optgroup label="Passion/情念"> 
+								<option> Joy/喜び </option> 
+								<option> Anger/怒り </option>
+								<option> Sadness/悲しみ </option>
+								<option> Happiness/幸福 </option>
+								<option> Anxiety/不安 </option>
+								<option> Disgust/嫌悪 </option>
+								<option> Fear/恐怖 </option>
+								<option> Grudge/恨み </option>
+								<option> Jealousy/嫉妬 </option>
+							</optgroup> 
+							<optgroup label="Ideals/理想"> 
+								<option> Justice/正義 </option> 
+								<option> Worship/崇拝 </option>
+								<option> Right-Wrong/善悪 </option>
+								<option> Hope/希望 </option>
+								<option> Improvement/向上 </option>
+								<option> Reason/理性 </option>
+								<option> Victory/勝利 </option>
+								<option> Order/秩序 </option>
+								<option> Admiration/憧憬 </option>
+								<option> Selflessness/無我 
+								</option>
+							</optgroup> 
+							<optgroup label="Relationsip/関係">
+								<option> Friendship/友情 </option>
+								<option> Love/愛 </option>
+								<option> Romantic Love/恋 </option>
+								<option> Dependence/依存 </option>
+								<option> Respect/尊敬 </option>
+								<option> Contempt/軽蔑 </option>
+								<option> Asylum/庇護 </option>
+								<option> Domination/支配 </option>
+								<option> Service/奉仕 </option>
+								<option> Spoil/甘え </option>
+							</optgroup>
+							<optgroup label="Wounds/傷">
+								<option> Regret/後悔 </option>
+								<option> Loneliness/孤独 </option>
+								<option> Despair/絶望 </option>
+								<option> Negation/否定 </option>
+								<option> DOubt/疑念 </option>
+								<option> Guilt/罪悪感 </option>
+								<option> Insanity/狂気 </option>
+								<option> Inferiority/劣等感 </option>
+							</optgroup>
+						</select>
+						</div>
+
+						<div class="row">
+						<label class='sheet-label' data-i18n="resonanceroots-u">Roots/ルーツ:</label>
+						<select class="sheet-input" selected="select-please" name="attr-character-resonance-roots" >
+							<option value='select-please'> Please Select/選択してください </option> 
+							<optgroup label="Desire/欲望"> 
+								<option>Showing off/自己顕示 </option> 
+								<option>Ownership/所有 </option> 
+								<option>Instinct/本能 </option> 
+								<option>Destruction/破壊 </option> 
+								<option>Superiority/優越感 </option> 
+								<option>Laziness/怠惰 </option> 
+								<option>Escape/逃避 </option> 
+								<option>Curiosity/好奇心 </option> 
+								<option>Thrill/スリル </option> 
+							</optgroup> 
+							<optgroup label="Passion/情念"> 
+								<option> Joy/喜び </option> 
+								<option> Anger/怒り </option>
+								<option> Sadness/悲しみ </option>
+								<option> Happiness/幸福 </option>
+								<option> Anxiety/不安 </option>
+								<option> Disgust/嫌悪 </option>
+								<option> Fear/恐怖 </option>
+								<option> Grudge/恨み </option>
+								<option> Jealousy/嫉妬 </option>
+							</optgroup> 
+							<optgroup label="Ideals/理想"> 
+								<option> Justice/正義 </option> 
+								<option> Worship/崇拝 </option>
+								<option> Right-Wrong/善悪 </option>
+								<option> Hope/希望 </option>
+								<option> Improvement/向上 </option>
+								<option> Reason/理性 </option>
+								<option> Victory/勝利 </option>
+								<option> Order/秩序 </option>
+								<option> Admiration/憧憬 </option>
+								<option> Selflessness/無我 
+								</option>
+							</optgroup> 
+							<optgroup label="Relationsip/関係">
+								<option> Friendship/友情 </option>
+								<option> Love/愛 </option>
+								<option> Romantic Love/恋 </option>
+								<option> Dependence/依存 </option>
+								<option> Respect/尊敬 </option>
+								<option> Contempt/軽蔑 </option>
+								<option> Asylum/庇護 </option>
+								<option> Domination/支配 </option>
+								<option> Service/奉仕 </option>
+								<option> Spoil/甘え </option>
+							</optgroup>
+							<optgroup label="Wounds/傷">
+								<option> Regret/後悔 </option>
+								<option> Loneliness/孤独 </option>
+								<option> Despair/絶望 </option>
+								<option> Negation/否定 </option>
+								<option> DOubt/疑念 </option>
+								<option> Guilt/罪悪感 </option>
+								<option> Insanity/狂気 </option>
+								<option> Inferiority/劣等感 </option>
+							</optgroup>
+						</select>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend> Reverberations Records/残響の記録 </legend>
+						<label> Scenario Name/シナリオ名: </label>
+							<input />
+						<label> Emotions/感情: </label>
+							<input />
 					</fieldset>
     		    </div>
     		</div>
@@ -275,45 +282,45 @@
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
-						<legend> 能力値 </legend>
+						<legend> Stats/能力値 </legend>
 					<div class="row">
-						<span> Points Left 残高: 25 </span>
+						<span> Points Left/残高: 25 </span>
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="shintai-u">身体:</label>
+					  <label class='sheet-label' data-i18n="shintai-u">Physique/身体:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-shintai" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="kiyou-u">器用:</label>
+					  <label class='sheet-label' data-i18n="kiyou-u">Dexterity/器用:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-kiyou" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="seishin-u">精神:</label>
+					  <label class='sheet-label' data-i18n="seishin-u">Mentality/精神:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-seishin" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="gokan-u">五感:</label>
+					  <label class='sheet-label' data-i18n="gokan-u">Five Senses/五感:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-gokan" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="chiryoku-u">知力:</label>
+					  <label class='sheet-label' data-i18n="chiryoku-u">Intelligence/知力:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-chiryoku" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="miryoku-u">魅力:</label>
+					  <label class='sheet-label' data-i18n="miryoku-u">Charm/魅力:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-miryoku" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="shakai-u">社会:</label>
+					  <label class='sheet-label' data-i18n="shakai-u">Sociability/社会:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-shakai" />
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="unsei-u">運勢:</label>
+					  <label class='sheet-label' data-i18n="unsei-u">Luck/運勢:</label>
 					  <input type="number" min="0" max="6" class='sheet-input' name="attr_character_stat-unsei" />
 					</div>
 					</fieldset>
 					<fieldset>
-						<legend> パラメータ </legend>
+						<legend> Parameter/パラメータ </legend>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="hp-u">HP:</label>
 						  <input type="number" readonly="true" class='sheet-input' 
@@ -336,8 +343,8 @@
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
-						<legend> 技能 </legend>
-						<div class="row"> Points Left 残高: 30 </div>
+						<legend> Skills/技能 </legend>
+						<div class="row"> Points Left/残高: 30 </div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kyoumei-u">∞共鳴:</label>
 					  Lv. 
@@ -969,4 +976,3 @@
 
 
 </script>
-
