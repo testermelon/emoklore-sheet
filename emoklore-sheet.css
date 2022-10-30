@@ -8,18 +8,34 @@
 .sheet-container {
     position: relative;
 	font-family: 'Noto Sans', monospace;
-	overflow-y:scroll;
+	min-width:650px;
+	max-width:700px;
 }
 
 .sheet-header {
-	width:90%;
+	width:100%;
 	font-family:Caveat, cursive;
 }
+
+.img-char-token {
+	margin:5px;
+	width:50px;
+	max-height:50px;
+}
+
+.img-char-avatar {
+	display:block;
+	width:200px;
+	max-width:300px;
+	max-height:500px;
+	margin: auto auto 30px 200px;
+}
+
 
 .sheet-tabs {
   margin-top: 10px;
   position: relative;
-  width: 90%; }
+  width: 100%; }
   .sheet-tabs::after {
     clear: both;
     content: '';
@@ -135,9 +151,12 @@ button .sheet-rollatrrib, button .sheet-rollskill{
     padding: 5px;
     color: lightgrey;
     text-align:center;
+	display:flex;
+	align-items:center;
 }
 
 h1 {
+	line-height:50px;
 	margin:5px;
 }
 
