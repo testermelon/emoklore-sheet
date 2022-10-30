@@ -1,9 +1,11 @@
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 .sheet-container {
     position: relative;
+	font-family: 'Noto Sans', monospace;
 }
 
 .sheet-header {
-    padding-bottom: 10px;
 	width:90%;
 }
 
@@ -43,8 +45,7 @@
     .sheet-tabs .sheet-tab > .sheet-tab-label {
       align-items: center;
       background: #555555;
-      border-radius: 6px 6px 0 0;
-      border: 2px solid ;
+      border-radius: 15px;
       color: white;
       display: flex;
       font-variant: small-caps;
@@ -60,7 +61,7 @@
     }
       
     .sheet-tabs .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
-      background: slategray;
+      background: teal;
     }
     
     .sheet-tabs .sheet-tab > input[type="radio"]:checked {
@@ -89,6 +90,16 @@
 	border-bottom: 1px solid #111111;
 }
 
+fieldset {
+	border-radius: 15px;
+	margin: 10px 0 10px 0;
+}
+
+legend {
+	margin-bottom: 5px;
+	font-size: 1.1em;
+	font-weight:bold;
+}
 
 .sheet-label {
 	width:200px;
@@ -96,6 +107,7 @@
 
 .sheet-input {
 	margin:2px;
+	height:24px;;
 }
 
 
