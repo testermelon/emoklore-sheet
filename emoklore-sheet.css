@@ -1,4 +1,5 @@
  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 .sheet-container {
     position: relative;
@@ -7,6 +8,7 @@
 
 .sheet-header {
 	width:90%;
+	font-family:Caveat, cursive;
 }
 
 .sheet-tabs {
@@ -132,7 +134,7 @@ button .sheet-rollatrrib, button .sheet-rollskill{
 }
 
 h1 {
-	margin:0;
+	margin:5px;
 }
 
 .sheet-attrblock input {
