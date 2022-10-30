@@ -1,9 +1,14 @@
  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
+ html {
+	 overflow-y:scroll;
+ }
+
 .sheet-container {
     position: relative;
 	font-family: 'Noto Sans', monospace;
+	overflow-y:scroll;
 }
 
 .sheet-header {
@@ -81,8 +86,6 @@
       }
 
     .sheet-content {
-        padding: 5px;
-        border-radius: 0 10px 10px 10px;
         min-height:300px;
     }
 
@@ -95,6 +98,7 @@
 fieldset {
 	border-radius: 15px;
 	margin: 10px 0 10px 0;
+	padding: 20px 10px 20px 10px;
 }
 
 legend {
