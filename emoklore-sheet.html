@@ -270,12 +270,14 @@
 						</select>
 						</div>
 					</fieldset>
-					<fieldset>
+					<fieldset class="repeating_reverbrecords">
 						<legend> Reverberations Records/残響の記録 </legend>
-						<label class="sheet-label" > Scenario Name/シナリオ名: </label>
-							<input />
-						<label class="sheet-label"> Emotions/感情: </label>
-							<input />
+						<div class="row">
+							<label class="sheet-label"> Scenario Name/シナリオ名: </label>
+							<input class="sheet-input" type="text" name="attr_scenarioname">
+							<label class=""> Emotions/感情: </label>
+							<input class="sheet-input" type="text" name="attr_emotions">
+						</div>
 					</fieldset>
     		    </div>
     		</div>
@@ -298,50 +300,110 @@
 					<br>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="shintai-u">Physique/身体:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-shintai" />
+					  <select class='sheet-input' name="attr_char_stat-shintai">
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kiyou-u">Dexterity/器用:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-kiyou" />
+					  <select class='sheet-input' name="attr_char_stat-kiyou" />
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="seishin-u">Mentality/精神:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-seishin" />
+					  <select  class='sheet-input' name="attr_char_stat-seishin" />
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="gokan-u">Five Senses/五感:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-gokan" />
+					  <select  class='sheet-input' name="attr_char_stat-gokan" />
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chiryoku-u">Intelligence/知力:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-chiryoku" />
+					  <select  class='sheet-input' name="attr_char_stat-chiryoku" />
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="miryoku-u">Charm/魅力:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-miryoku" />
+					  <select  class='sheet-input' name="attr_char_stat-miryoku" />
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="shakai-u">Sociability/社会:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-shakai" />
+					  <select  class='sheet-input' name="attr_char_stat-shakai" />
+						  <option> 0 </option>
+						  <option> 1 </option>
+						  <option> 2 </option>
+						  <option> 3 </option>
+						  <option> 4 </option>
+						  <option> 5 </option>
+						  <option> 6 </option>
+					  </select>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="unsei-u">Luck/運勢:</label>
-					  <input type="number" min="0" max="6" class='sheet-input' name="attr_char_stat-unsei" />
+					  <input type="number" class='sheet-input' name="attr_char_stat-unsei" />
 					</div>
 					</fieldset>
 					<fieldset>
 						<legend> Parameter/パラメータ </legend>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="hp-u">HP:</label>
-						  <input type="number" readonly="true" class='sheet-input' 
+						  <span  class='sheet-input' 
 								 name="attr_char_stat-hp" 
-								 value="(@{char_stat-shintai}+10)"/>
+								 value="(@{char_stat-shintai}+10)" >
+								 10
+						  </span>
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="mp-u">MP:</label>
-						  <input type="number" readonly="true" class='sheet-input' 
+						  <span  class='sheet-input' 
 								 name="attr_char_stat-mp" 
-								 value="(@{char_stat-seishin}+@{char_stat-chiryoku})"/>
+								 value="(@{char_stat-seishin}+@{char_stat-chiryoku})">
+							  10
+						  </span>
 						</div>
 					</fieldset> 
     		    </div>
@@ -367,18 +429,21 @@
 					<div class="row row-header">
 						<span class="sheet-label" > Skill Name/技能名</span>
 						<span class="sheet-label" > Level/レベル</span>
-						<span class="sheet-label" > Permanent Increase/永続上昇</span>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kyoumei-u">∞Resonance/∞共鳴:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kyoumei-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kyoumei-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kyoumei-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kyoumei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
-					  </span>
-					  <span class="sheet-label">
-						  <input type="number" name="attr_char_skill-kyoumei-inc" class="sheet-input">
+						  <select name="attr_char_skill-kyoumei-lvl"> 
+							  <option> 1 </option>
+							  <option> 2 </option>
+							  <option> 3 </option>
+							  <option> 4 </option>
+							  <option> 5 </option>
+							  <option> 6 </option>
+							  <option> 7 </option>
+							  <option> 8 </option>
+							  <option> 9 </option>
+						  </select>
 					  </span>
 					</div>
 					<br>
@@ -391,23 +456,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chousa-u">*Investigation/*調査:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="0" > 0</input>
+						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="1" checked> 1</input>
+						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-chousa" > </span>
-						  <select class='sheet-input' name="attr_char_skill-chousa-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-chousa" > 0  </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-chousa-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					</div>
@@ -421,17 +478,9 @@
 						  <input name="attr_char_skill-kensaku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kensaku" > </span>
-						  <select class='sheet-input' name="attr_char_skill-kensaku-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-kensaku" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-kensaku-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -446,17 +495,9 @@
 						  <input name="attr_char_skill-dousatsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-dousatsu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-dousatsu-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-dousatsu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-dousatsu-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -471,17 +512,10 @@
 						  <input name="attr_char_skill-mapping-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-mapping" > </span>
+						  <span class="skill-result" name=attr_char_skill-mapping" >0  </span>
 						  <select class='sheet-input' name="attr_char_skill-mapping-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -496,16 +530,9 @@
 						  <input name="attr_char_skill-chokkan-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-chokkan" > </span>
+						  <span class="skill-result" name=attr_char_skill-chokkan" > 0 </span>
 						  <select class='sheet-input' name="attr_char_skill-chokkan-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
@@ -521,17 +548,10 @@
 						  <input name="attr_char_skill-kantei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kantei" > </span>
+						  <span class="skill-result" name=attr_char_skill-kantei" >0 </span>
 						  <select class='sheet-input' name="attr_char_skill-kantei-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
 							  <option> Five Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -540,23 +560,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chikaku-u">*Perception/*知覚:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="0" > 0</input>
+						  <input disabled checked name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-chikaku" > </span>
-						  <select class='sheet-input' name="attr_char_skill-chikaku-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
+						  <span class="skill-result" name=attr_char_skill-chikaku" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-chikaku-stat" />
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -571,17 +583,9 @@
 						  <input name="attr_char_skill-kansatsugan-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kansatsugan" > </span>
-						  <select class='sheet-input' name="attr_char_skill-kansatsugan-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
+						  <span class="skill-result" name=attr_char_skill-kansatsugan" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-kansatsugan-stat" />
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -596,17 +600,9 @@
 						  <input name="attr_char_skill-kikime-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kikime" > </span>
-						  <select class='sheet-input' name="attr_char_skill-kikime-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
+						  <span class="skill-result" name=attr_char_skill-kikime" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-kikime-stat" />
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -621,17 +617,9 @@
 						  <input name="attr_char_skill-dokumi-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-dokumi" > </span>
-						  <select class='sheet-input' name="attr_char_skill-dokumi-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
+						  <span class="skill-result" name=attr_char_skill-dokumi" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-dokumi-stat" />
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -646,16 +634,9 @@
 						  <input name="attr_char_skill-kikikanchi-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kikikanchi" > </span>
+						  <span class="skill-result" name=attr_char_skill-kikikanchi" >0 </span>
 						  <select class='sheet-input' name="attr_char_skill-kikikanchi-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
@@ -671,16 +652,9 @@
 						  <input name="attr_char_skill-reikan-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-reikan" > </span>
+						  <span class="skill-result" name=attr_char_skill-reikan" >0 </span>
 						  <select class='sheet-input' name="attr_char_skill-reikan-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
@@ -690,23 +664,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="koushou-u">*Negotiation/*交渉:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-koushou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-koushou-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
+						  <span class="skill-result" name=attr_char_skill-koushou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-koushou-stat" />
 							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -721,17 +687,9 @@
 						  <input name="attr_char_skill-shakoujutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-shakoujutsu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-shakoujutsu-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
+						  <span class="skill-result" name=attr_char_skill-shakoujutsu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-shakoujutsu-stat" />
 							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -746,17 +704,9 @@
 						  <input name="attr_char_skill-debate-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-debate" > </span>
-						  <select class='sheet-input' name="attr_char_skill-debate-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-debate" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-debate-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -771,17 +721,10 @@
 						  <input name="attr_char_skill-shinri-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-shinri" > </span>
-						  <select class='sheet-input' name="attr_char_skill-shinri-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
+						  <span class="skill-result" name=attr_char_skill-shinri" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-shinri-stat" />
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -796,17 +739,9 @@
 						  <input name="attr_char_skill-miryou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-miryou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-miryou-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
+						  <span class="skill-result" name=attr_char_skill-miryou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-miryou-stat" />
 							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -815,23 +750,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chishiki-u">*Knowledge/*知識:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-chishiki" > </span>
-						  <select class='sheet-input' name="attr_char_skill-chishiki-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-chishiki" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-chishiki-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -846,17 +773,9 @@
 						  <input name="attr_char_skill-senmonchishiki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-senmonchishiki" > </span>
-						  <select class='sheet-input' name="attr_char_skill-senmonchishiki-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-senmonchishiki" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-senmonchishiki-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -866,23 +785,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="news-u"> *News/*ニュース: </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-news" > </span>
-						  <select class='sheet-input' name="attr_char_skill-news-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
+						  <span class="skill-result" name=attr_char_skill-news" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-news-stat" />
 							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -897,17 +808,10 @@
 						  <input name="attr_char_skill-jijoutsuu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-jijoutsuu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-jijoutsuu-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
+						  <span class="skill-result" name=attr_char_skill-jijoutsuu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-jijoutsuu-stat" />
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
 							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -921,17 +825,10 @@
 						  <input name="attr_char_skill-gyoukai-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-gyoukai" > </span>
-						  <select class='sheet-input' name="attr_char_skill-gyoukai-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
+						  <span class="skill-result" name=attr_char_skill-gyoukai" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-gyoukai-stat" />
 							  <option> Charm/魅力 </option>
 							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -939,23 +836,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="undou-u"> *Athletics/*運動 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled  checked name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-undou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-undou-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-undou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-undou-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -969,17 +858,9 @@
 						  <input name="attr_char_skill-speed-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-speed" > </span>
-						  <select class='sheet-input' name="attr_char_skill-speed-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-speed" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-speed-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -993,17 +874,9 @@
 						  <input name="attr_char_skill-strength-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-strength" > </span>
-						  <select class='sheet-input' name="attr_char_skill-strength-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-strength" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-strength-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1017,17 +890,10 @@
 						  <input name="attr_char_skill-acrobat-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-acrobat" > </span>
-						  <select class='sheet-input' name="attr_char_skill-acrobat-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-acrobat" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-acrobat-stat" />
 							  <option> Physique/身体 </option>
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1041,17 +907,9 @@
 						  <input name="attr_char_skill-dive-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-dive" > </span>
-						  <select class='sheet-input' name="attr_char_skill-dive-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-dive" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-dive-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1059,23 +917,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kakutou-u"> *Fighting/*格闘 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kakutou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-kakutou-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-kakutou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-kakutou-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1089,17 +939,9 @@
 						  <input name="attr_char_skill-bujutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-bujutsu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-bujutsu-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-bujutsu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-bujutsu-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1113,17 +955,11 @@
 						  <input name="attr_char_skill-ougi-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-ougi" > </span>
-						  <select class='sheet-input' name="attr_char_skill-ougi-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-ougi" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-ougi-stat" />
 							  <option> Physique/身体 </option>
 							  <option> Dexterity/器用 </option>
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1131,23 +967,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="touteki-u"> *Throwing/*投擲 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-touteki" > </span>
-						  <select class='sheet-input' name="attr_char_skill-touteki-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-touteki" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-touteki-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1161,17 +989,10 @@
 						  <input name="attr_char_skill-shageki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-shageki" > </span>
-						  <select class='sheet-input' name="attr_char_skill-shageki-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-shageki" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-shageki-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1179,23 +1000,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="seizon-u"> *Survival/*生存 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled  checked name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-seizon" > </span>
-						  <select class='sheet-input' name="attr_char_skill-seizon-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-seizon" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-seizon-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1209,17 +1022,9 @@
 						  <input name="attr_char_skill-taikyuu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-taikyuu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-taikyuu-stat" />
-							  <option> Select a Stat </option>
+						  <span class="skill-result" name=attr_char_skill-taikyuu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-taikyuu-stat" />
 							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1227,23 +1032,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="jiga-u"> *Ego/*自我 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-jiga" > </span>
-						  <select class='sheet-input' name="attr_char_skill-jiga-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
+						  <span class="skill-result" name=attr_char_skill-jiga" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-jiga-stat" />
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1257,17 +1054,9 @@
 						  <input name="attr_char_skill-konjou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-konjou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-konjou-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
+						  <span class="skill-result" name=attr_char_skill-konjou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-konjou-stat" />
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1275,23 +1064,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="teate-u"> *Treatment-Care/*手当て </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-teate" > </span>
-						  <select class='sheet-input' name="attr_char_skill-teate-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-teate" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-teate-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1305,17 +1086,10 @@
 						  <input name="attr_char_skill-ijutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-ijutsu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-ijutsu-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-ijutsu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-ijutsu-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1329,17 +1103,10 @@
 						  <input name="attr_char_skill-sosei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-sosei" > </span>
-						  <select class='sheet-input' name="attr_char_skill-sosei-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
+						  <span class="skill-result" name=attr_char_skill-sosei" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-sosei-stat" />
 							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1347,23 +1114,15 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="saiku-u"> *Craftmanship/*細工 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-saiku" > </span>
-						  <select class='sheet-input' name="attr_char_skill-saiku-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-saiku" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-saiku-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1377,17 +1136,9 @@
 						  <input name="attr_char_skill-gikou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-gikou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-gikou-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-gikou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-gikou-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1401,17 +1152,11 @@
 						  <input name="attr_char_skill-geijutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-geijutsu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-geijutsu-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-geijutsu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-geijutsu-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Mentality/精神 </option>
 							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1425,17 +1170,11 @@
 						  <input name="attr_char_skill-soujuu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-soujuu" > </span>
-						  <select class='sheet-input' name="attr_char_skill-soujuu-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-soujuu" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-soujuu-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
 							  <option> Five Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1449,17 +1188,9 @@
 						  <input name="attr_char_skill-angou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-angou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-angou-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-angou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-angou-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1473,17 +1204,9 @@
 						  <input name="attr_char_skill-dennou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-dennou" > </span>
-						  <select class='sheet-input' name="attr_char_skill-dennou-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+						  <span class="skill-result" name=attr_char_skill-dennou" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-dennou-stat" />
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
-							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
 					  </select>
@@ -1497,15 +1220,9 @@
 						  <input name="attr_char_skill-inpei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-inpei" > </span>
-						  <select class='sheet-input' name="attr_char_skill-inpei-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+						  <span class="skill-result" name=attr_char_skill-inpei" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-inpei-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
 							  <option> Sociability/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
@@ -1515,22 +1232,14 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kouun-u"> *Good luck/*幸運 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kouun" > </span>
-						  <select class='sheet-input' name="attr_char_skill-kouun-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
+						  <span class="skill-result" name=attr_char_skill-kouun" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-kouun-stat" />
 							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
@@ -1545,16 +1254,8 @@
 						  <input name="attr_char_skill-kyouuun-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-kyouuun" > </span>
-						  <select class='sheet-input' name="attr_char_skill-kyouuun-stat" />
-							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
+						  <span class="skill-result" name=attr_char_skill-kyouuun" >0 </span>
+						  <select disabled class='sheet-input' name="attr_char_skill-kyouuun-stat" />
 							  <option> Luck/運勢 </option>
 						  </select>
 					  </span>
@@ -1569,7 +1270,7 @@
 						  <input name="attr_char_skill-sonota-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <span class="skill-result" name=attr_char_skill-sonota" > </span>
+						  <span class="skill-result" name=attr_char_skill-sonota" >0 </span>
 						  <select class='sheet-input' name="attr_char_skill-sonota-stat" />
 							  <option> Select a Stat </option>
 							  <option> Physique/身体 </option>

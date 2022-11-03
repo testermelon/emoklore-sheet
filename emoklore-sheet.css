@@ -131,11 +131,27 @@ legend {
 .sheet-label {
 	width:200px;
 	font-size: 14px;
+	margin-left:3px;
+}
+
+.sheet-label > select {
+	width:150px;
 }
 
 .sheet-input {
 	margin:2px;
-	height:24px;;
+	height:24px;
+	flex-grow:1;
+}
+
+.skill-result {
+	text-align:center;
+	display:inline-block;
+	width: 40px;
+}
+
+textarea {
+	min-height:100px;
 }
 
 
