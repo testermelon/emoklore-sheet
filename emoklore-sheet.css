@@ -112,6 +112,10 @@
 	border-bottom: 1px solid #111111;
 }
 
+.fieldset-info {
+	display:flex;
+	padding: 2px;
+}
 fieldset {
 	border-radius: 15px;
 	margin: 10px 0 10px 0;

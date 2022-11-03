@@ -13,7 +13,6 @@
 	</div>
 
 	<div class="sheet-tabs">
-
 		<div class="sheet-tab sheet-tab-basic">
 			<input type="radio" name="attr_tab" value="basic" checked="checked">
 			<span class="sheet-tab-label">Basic Info </span>
@@ -288,10 +287,11 @@
     		    <div class="sheet-content">
 					<fieldset>
 						<div class="fieldset-info" >
-							<label class='sheet-label' > Capability Point/能力ポイント+補正 : </label> <span name="attr_point-left" class="sheet-label" > 25 </span>
+							<span> Capability Point/能力ポイント+補正 : </span> 
+							<span name="attr_point-left" class="sheet-label" > 25 </span>
+							<label class='sheet-label' data-i18n="skillsupplement-u">Add Capability Pt./技能補正:</label>
+							<input name="attr_stat-add-point" class="sheet-input" type="number"> 
 						</div>
-					  <label class='sheet-label' data-i18n="skillsupplement-u">Add Capability Pt./技能補正:</label>
-					  <input name="attr_stat-add-point" class="sheet-input" type="number"> 
 						<br>
 					<br>
 					<div class="row">
@@ -353,10 +353,11 @@
 					<fieldset>
 						<legend> Skills/技能 </legend>
 						<div class="fieldset-info" >
-							<label class="sheet-label"> Skill Point/技能ポイント+補正 : </label> <span name="att_skill-point-left"> 30 </span>
+							<span class="sheet-label"> Skill Point/技能ポイント+補正 : </span> 
+							<span name="att_skill-point-left"> 30 </span>
+							<label class='sheet-label' data-i18n="skillsupplement-u">Add Skill Pt./技能補正:</label>
+							<input class="sheet-input" type="number"> 
 						</div>
-					  <label class='sheet-label' data-i18n="skillsupplement-u">Add Skill Pt./技能補正:</label>
-					  <input class="sheet-input" type="number"> 
 						<br>
 						<br>
 					<div class="row row-header">
