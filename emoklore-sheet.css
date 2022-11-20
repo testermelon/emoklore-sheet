@@ -1,5 +1,4 @@
  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
  html {
@@ -17,7 +16,7 @@
 .sheet-header {
 	width:100%;
 	font-size:12px;;
-	font-family:Comfortaa, sans-serif;
+	font-family: Comfortaa, sans-serif;
 }
 
 .img-char-token {
@@ -177,8 +176,8 @@ button .sheet-rollatrrib, button .sheet-rollskill{
 }
 
 h1 {
-	line-height:50px;
 	margin:5px;
+	padding:10px;
 }
 
 .sheet-attrblock input {
