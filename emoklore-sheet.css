@@ -113,6 +113,7 @@
 .fieldset-info {
 	display:flex;
 	padding: 2px;
+	align-items:center;
 }
 fieldset {
 	border-radius: 15px;
@@ -353,8 +354,13 @@ button:active {
 	cursor:pointer;
 }
 
-.fieldset_hidden { 
+.sheet_fieldset_hidden { 
 	border: none;
 	margin:0;
 	padding:0;
+}
+
+.sheet_point_left {
+	font-weight:bold;
+	color:blue;
 }

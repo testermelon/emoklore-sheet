@@ -25,48 +25,48 @@
 						<br>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="name-u">Name/名前:</label>
-						  <input type="text" class='sheet-input' name="attr_char_name" />
+						  <input type="text" class='sheet-input' name="attr_char-name" />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="age-u">Age/年齢:</label>
-						  <input type="text" class='sheet-input' name="attr_char_age"  />
+						  <input type="text" class='sheet-input' name="attr_char-age"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="age-u">Gender/性別:</label>
-						  <input type="text" class='sheet-input' name="attr_char_gender"  />
+						  <input type="text" class='sheet-input' name="attr_char-gender"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="hometown-u">Hometown/出身:</label>
-						  <input type="text" class='sheet-input' name="attr_char_hometown"  />
+						  <input type="text" class='sheet-input' name="attr_char-hometown"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="occupation-u">Occupation/職業:</label>
-						  <input type="text" class='sheet-input' name="attr_char_occupation"  />
+						  <input type="text" class='sheet-input' name="attr_char-occupation"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="personality-u">Personality/性格:</label>
-						  <input type="text" class='sheet-input' name="attr_char_personality"  />
+						  <input type="text" class='sheet-input' name="attr_char-personality"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="appearance-u">Appearance/概観的特徴:</label>
-						  <input type="text" class='sheet-input' name="attr_char_appearance"  />
+						  <input type="text" class='sheet-input' name="attr_char-appearance"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="personalhistory-u">Notable Past Events/経歴:</label>
-						  <input type="text" class='sheet-input' name="attr_char_personalhistory"  />
+						  <input type="text" class='sheet-input' name="attr_char-notablepastevents"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="relatedpeople-u">Related People/関係のある人々:</label>
-						  <input type="text" class='sheet-input' name="attr_char_relatedpeople"  />
+						  <input type="text" class='sheet-input' name="attr_char-relatedpeople"  />
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="likesdislikes-u">Likes and Dislikes/好きなもの・嫌いなもの:</label>
-						  <input type="text" class='sheet-input' name="attr_char_likesdislikes"  />
+						  <input type="text" class='sheet-input' name="attr_char-likesdislikes"  />
 						</div>
 						<!-- Skipping タグ for now. Reason: no clear use case in Roll20. -->
 						<div class="row">
 						  <label class='sheet-label' data-i18n="memo-u">Memo/メモ:</label>
-						  <textarea  class='sheet-input' name="attr_char_memo"  ></textarea>
+						  <textarea  class='sheet-input' name="attr_char-memo"  ></textarea>
 						</div>
 					</fieldset>
 
@@ -74,7 +74,7 @@
 						<legend> Resonance Info/共鳴情報 </legend>
 						<div class="row">
 						<label class='sheet-label' data-i18n="resonanceomote-u">Front/表:</label>
-						<select class="sheet-input" selected="select-please" name="attr-char-resonance-roots" >
+						<select class="sheet-input" selected="select-please" name="attr_char-resonance-front" >
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>Showing off/自己顕示 </option> 
@@ -137,8 +137,8 @@
 						</div>
 
 						<div class="row">
-						<label class='sheet-label' data-i18n="resonanceura-u">Inner/裏:</label>
-						<select class="sheet-input" selected="select-please" name="attr-char-resonance-roots" >
+						<label class='sheet-label' data-i18n="resonanceura-u">Back/裏:</label>
+						<select class="sheet-input" selected="select-please" name="attr_char-resonance-back" >
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>Showing off/自己顕示 </option> 
@@ -266,7 +266,7 @@
 					</fieldset>
 					<fieldset >
 						<legend> Reverberations Records/残響の記録 </legend>
-						<fieldset class="fieldset_hidden repeating_reverbrecords">
+						<fieldset class="sheet_fieldset_hidden repeating_reverbrecords">
 							<div class="row">
 								<label class="sheet-label"> Scenario Name/シナリオ名: </label>
 								<input class="sheet-input" type="text" name="attr_scenarioname">
@@ -281,23 +281,24 @@
 
 		<div class="sheet-tab sheet-tab-abilities">
 			<input type="radio" name="attr_tab" value="capabilities">
-			<span class="sheet-tab-label">Capabilities </span>
+			<span class="sheet-tab-label">Abilities </span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
 					<fieldset>
+						<legend> Ability Scores/能力値 </legend>
 						<div class="fieldset-info" >
-							<span> Capability Point/能力ポイント+補正 : </span> 
-							<input type="hidden" name="attr_capability-point-left" value="25"> 
-							<span name="attr_capability-point-left" class="sheet-label" > </span>
+							<span> Ability Score Left+Additions/能力ポイント+補正 : </span> 
+							<span name="attr_ability-point-left" class="sheet_point_left" >  25 </span>
+							<input type="hidden" name="attr_ability-point-left" value="25"> 
 						</div>
 						<div class="fieldset-info" >
-							<label class='sheet-label' data-i18n="skillsupplement-u">Add Capability Pt./技能補正:</label>
-							<input name="attr_capability-add-point" class="sheet-input" type="number"> 
+							<label class='sheet-label' data-i18n="skillsupplement-u">Additional Scores/技能補正:</label>
+							<input name="attr_ability-add-point" class="sheet-input" type="number"> 
 						</div>
 						<br>
 					<br>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="shintai-u">Physique/身体:</label>
+					  <label class='sheet-label' data-i18n="shintai-u">Fitness/身体:</label>
 					  <select class='sheet-input' name="attr_char_stat-shintai">
 						  <option> 0 </option>
 						  <option> 1 </option>
@@ -321,7 +322,7 @@
 					  </select>
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="seishin-u">Mentality/精神:</label>
+					  <label class='sheet-label' data-i18n="seishin-u">Spirit/精神:</label>
 					  <select  class='sheet-input' name="attr_char_stat-seishin" />
 						  <option> 0 </option>
 						  <option> 1 </option>
@@ -333,7 +334,7 @@
 					  </select>
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="gokan-u">Five Senses/五感:</label>
+					  <label class='sheet-label' data-i18n="gokan-u">Senses/五感:</label>
 					  <select  class='sheet-input' name="attr_char_stat-gokan" />
 						  <option> 0 </option>
 						  <option> 1 </option>
@@ -357,7 +358,7 @@
 					  </select>
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="miryoku-u">Charm/魅力:</label>
+					  <label class='sheet-label' data-i18n="miryoku-u">Charisma/魅力:</label>
 					  <select  class='sheet-input' name="attr_char_stat-miryoku" />
 						  <option> 0 </option>
 						  <option> 1 </option>
@@ -369,7 +370,7 @@
 					  </select>
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="shakai-u">Sociability/社会:</label>
+					  <label class='sheet-label' data-i18n="shakai-u">Social Standing/社会:</label>
 					  <select  class='sheet-input' name="attr_char_stat-shakai" />
 						  <option> 0 </option>
 						  <option> 1 </option>
@@ -382,7 +383,7 @@
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="unsei-u">Luck/運勢:</label>
-					  <input type="number" class='sheet-input' name="attr_char_stat-unsei" />
+					  <input type="number" min="1" max="6" class='sheet-input' name="attr_char_stat-unsei" />
 					  <button> Roll </button>
 					</div>
 					</fieldset>
@@ -390,19 +391,15 @@
 						<legend> Parameter/パラメータ </legend>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="hp-u">HP:</label>
-						  <span  class='sheet-input' 
-								 name="attr_char_stat-hp" 
-								 value="(@{char_stat-shintai}+10)" >
-								 10
-						  </span>
+						  <input type="hidden" name="attr_char-stat-hp">
+						  <!-- value="(@{char_stat-shintai}+10)"--> 
+						  <span  class='sheet-input' name="attr_char_stat-hp" > </span>
 						</div>
 						<div class="row">
 						  <label class='sheet-label' data-i18n="mp-u">MP:</label>
-						  <span  class='sheet-input' 
-								 name="attr_char_stat-mp" 
-								 value="(@{char_stat-seishin}+@{char_stat-chiryoku})">
-							  10
-						  </span>
+						  <input type="hidden" name="attr_char-stat-hp">
+						  <!-- value="(@{char_stat-seishin}+@{char_stat-chiryoku})" -->
+						  <span  class='sheet-input' name="attr_char_stat-mp" > </span>
 						</div>
 					</fieldset> 
     		    </div>
@@ -417,7 +414,9 @@
 						<legend> Skills/技能 </legend>
 						<div class="fieldset-info" >
 							<span class="sheet-label"> Skill Point/技能ポイント+補正 : </span> 
-							<span name="attr_skill-point-left"> 30 </span>
+						  <input type="hidden" name="attr_skill-point-left">
+						  <!-- value=30+Additionals  -->
+							<span name="attr_skill-point-left"> </span>
 						</div>
 						<div class="fieldset-info" >
 							<label class='sheet-label' data-i18n="skillsupplement-u">Add Skill Pt./技能補正:</label>
@@ -516,7 +515,7 @@
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-mapping-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-mapping" >0  </span>
 					  </span>
@@ -534,7 +533,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-chokkan-stat" />
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-chokkan" > 0 </span>
@@ -553,7 +552,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-kantei-stat" />
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-kantei" >0 </span>
@@ -572,7 +571,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-chikaku-stat" />
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-chikaku" >0 </span>
 					  </span>
@@ -590,7 +589,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-kansatsugan-stat" />
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-kansatsugan" >0 </span>
 					  </span>
@@ -608,7 +607,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-kikime-stat" />
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-kikime" >0 </span>
 					  </span>
@@ -626,7 +625,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-dokumi-stat" />
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-dokumi" >0 </span>
 					  </span>
@@ -644,7 +643,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-kikikanchi-stat" />
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-kikikanchi" >0 </span>
@@ -663,7 +662,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-reikan-stat" />
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-reikan" >0 </span>
@@ -682,7 +681,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-koushou-stat" />
-							  <option> Charm/魅力 </option>
+							  <option> Charisma/魅力 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-koushou" >0 </span>
 					  </span>
@@ -700,7 +699,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-shakoujutsu-stat" />
-							  <option> Sociability/社会 </option>
+							  <option> Social Standing/社会 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-shakoujutsu" >0 </span>
 					  </span>
@@ -736,7 +735,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-shinri-stat" />
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-shinri" >0 </span>
@@ -755,7 +754,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-miryou-stat" />
-							  <option> Charm/魅力 </option>
+							  <option> Charisma/魅力 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-miryou" >0 </span>
 					  </span>
@@ -810,7 +809,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-news-stat" />
-							  <option> Sociability/社会 </option>
+							  <option> Social Standing/社会 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-news" >0 </span>
 					  </span>
@@ -828,8 +827,8 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-jijoutsuu-stat" />
-							  <option> Five Senses/五感 </option>
-							  <option> Sociability/社会 </option>
+							  <option> Senses/五感 </option>
+							  <option> Social Standing/社会 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-jijoutsuu" >0 </span>
 					  </span>
@@ -846,8 +845,8 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-gyoukai-stat" />
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
+							  <option> Charisma/魅力 </option>
+							  <option> Social Standing/社会 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-gyoukai" >0 </span>
 					  </span>
@@ -864,7 +863,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-undou-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-undou" >0 </span>
 					  </span>
@@ -881,7 +880,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-speed-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-speed" >0 </span>
 					  </span>
@@ -898,7 +897,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-strength-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-strength" >0 </span>
 					  </span>
@@ -915,7 +914,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-acrobat-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 							  <option> Dexterity/器用 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-acrobat" >0 </span>
@@ -933,7 +932,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-dive-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-dive" >0 </span>
 					  </span>
@@ -950,7 +949,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-kakutou-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-kakutou" >0 </span>
 					  </span>
@@ -967,7 +966,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-bujutsu-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-bujutsu" >0 </span>
 					  </span>
@@ -984,9 +983,9 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-ougi-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-ougi" >0 </span>
 					  </span>
@@ -1021,7 +1020,7 @@
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-shageki-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-shageki" >0 </span>
 					  </span>
@@ -1038,7 +1037,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-seizon-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-seizon" >0 </span>
 					  </span>
@@ -1055,7 +1054,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-taikyuu-stat" />
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-taikyuu" >0 </span>
 					  </span>
@@ -1072,7 +1071,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-jiga-stat" />
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-jiga" >0 </span>
 					  </span>
@@ -1089,7 +1088,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select disabled class='sheet-input' name="attr_char_skill-konjou-stat" />
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-konjou" >0 </span>
 					  </span>
@@ -1141,7 +1140,7 @@
 					  </span>
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-sosei-stat" />
-							  <option> Mentality/精神 </option>
+							  <option> Spirit/精神 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-sosei" >0 </span>
@@ -1194,8 +1193,8 @@
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-geijutsu-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+							  <option> Spirit/精神 </option>
+							  <option> Senses/五感 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-geijutsu" >0 </span>
 					  </span>
@@ -1213,7 +1212,7 @@
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-soujuu-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Five Senses/五感 </option>
+							  <option> Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-soujuu" >0 </span>
@@ -1266,7 +1265,7 @@
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-inpei-stat" />
 							  <option> Dexterity/器用 </option>
-							  <option> Sociability/社会 </option>
+							  <option> Social Standing/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-inpei" >0 </span>
@@ -1319,13 +1318,13 @@
 					  <span class="sheet-label">
 						  <select class='sheet-input' name="attr_char_skill-sonota-stat" />
 							  <option> Select a Stat </option>
-							  <option> Physique/身体 </option>
+							  <option> Fitness/身体 </option>
 							  <option> Dexterity/器用 </option>
-							  <option> Mentality/精神 </option>
-							  <option> Five Senses/五感 </option>
+							  <option> Spirit/精神 </option>
+							  <option> Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
-							  <option> Charm/魅力 </option>
-							  <option> Sociability/社会 </option>
+							  <option> Charisma/魅力 </option>
+							  <option> Social Standing/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <span class="skill-result" name=attr_char_skill-sonota" >0 </span>
