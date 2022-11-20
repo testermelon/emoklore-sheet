@@ -332,3 +332,31 @@ table.sheet-xp td{
 	background: blue;
 }
 
+button {
+	border:none;
+	border-radius:5px;
+	background:slategrey;
+	color: white;
+	font-size:1em;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	align-items:center;
+	padding: 5px 10px 5px 10px;
+}
+
+button:hover {
+	background-color: teal;
+	cursor:pointer;
+}
+
+button:active {
+	background-color: salmon;
+	cursor:pointer;
+}
+
+.fieldset_hidden { 
+	border: none;
+	margin:0;
+	padding:0;
+}
