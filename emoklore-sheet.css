@@ -131,6 +131,7 @@ legend {
 	width:200px;
 	font-size: 14px;
 	margin-left:3px;
+	line-height:1.7em;
 }
 
 .sheet-label > select {
@@ -363,4 +364,9 @@ button:active {
 .sheet_point_left {
 	font-weight:bold;
 	color:blue;
+}
+
+.sheet-star {
+	font-weight:bold;
+	font-size:1.7em;
 }
