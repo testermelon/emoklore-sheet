@@ -1,5 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
  html {
 	 overflow-y:scroll;
@@ -15,7 +16,8 @@
 
 .sheet-header {
 	width:100%;
-	font-family:Caveat, cursive;
+	font-size:12px;;
+	font-family:Comfortaa, sans-serif;
 }
 
 .img-char-token {
