@@ -46,13 +46,15 @@ function getAffectedSkills(abilityName) {
 	//iterate on skills and list up matching ones
 }
 
+
+/*ABILITIES PAGE
+ */
+
 on(`change:ability-add-point`, () => {
 	calcAbilityPointLeft();
 });
 
 on(`change:ability-shintai`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 	//hp_max = 10 + ability-shintai
 	summingArgs( "hp_max", 10, "+", "ability-shintai");
@@ -60,57 +62,42 @@ on(`change:ability-shintai`, () => {
 });
 
 on(`change:ability-kiyou`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 	//SKILLS PAGE
 });
 
 on(`change:ability-seishin`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 	summingArgs( "ability-point-left", 	abilityPoint, 	"+", "ability-add-point", "-", "ability-shintai" );
 	//mp_max = ability-seishin + ability-chiryoku
-	
+	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
 });
 
 on(`change:ability-gokan`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 });
 
-
 on(`change:ability-chiryoku`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 	//mp_max = ability-seishin+ability-chiryoku
+	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
 });
 
 on(`change:ability-miryoku`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 });
 
 on(`change:ability-shakai`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	calcAbilityPointLeft();
 });
 
 on(`change:ability-unsei`, () => {
-	//ABILITIES PAGE 
-	//--------------
 });
 
 on(`clicked:unsei-roll`, () => {
-	//ABILITIES PAGE 
-	//--------------
 	//ability-unsei = 1d6;
-
+	let keberuntungan = Math.floor(Math.random() * 6 ) + 1;
+	summingArgs("ability-unsei", keberuntungan );
 });
 
 
