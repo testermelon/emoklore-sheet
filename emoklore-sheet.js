@@ -3,12 +3,13 @@ const abilityPoint = 25;
 //Functions
 
 /********************************
- * Shorten A = + B + C + D .... 
+ * Shorten A = CONSTANT + B + C + D .... 
  * as get(B,C,D,...) => set A 
  * toSet : A 
+ * konstanta : CONSTANT
  * getList is the rest: (sign, toGet) 
  */
-function summingArgs(toSet, ...getList) {
+function summingArgs(toSet, konstanta,  ...getList) {
 	let toGet = [];
 	let signs = [];
 	for(let i=0; i<getList.length; i++) {
@@ -23,10 +24,24 @@ function summingArgs(toSet, ...getList) {
 			if(signs[i] == "+" )
 				sum += values.[toGet[i]];
 		}
-		setAttrs( { toSet, sum } );
+		setAttrs( { toSet, sum + konstanta } );
 	}
 }
 
+function calcAbilityPointLeft() {
+	//ability-point-left = abilityPoint(25) + ability-add-point - (all abilities except luck) 
+	summingArgs( "ability-point-left", 
+		abilityPoint, 
+		"+", "ability-add-point", 
+		"-", "ability-shintai" 
+		"-", "ability-kiyou"
+		"-", "ability-seishin" 
+		"-", "ability-gokan" 
+		"-", "ability-chiryoku" 
+		"-", "ability-miryoku" 
+		"-", "ability-shakai" 
+	);
+}
 
 //return array of skills affected by ability
 function getAffectedSkills(abilityName) {
@@ -34,31 +49,30 @@ function getAffectedSkills(abilityName) {
 }
 
 on(`change:ability-add-point`, () => {
-	//ability-point-left = abilityPoint + ability-add-point - ability-shintai
-	summingArgs( "ability-point-left", 
-		"+", "ability-point", "+", "ability-add-point", "-", "ability-shintai" );
+	calcAbilityPointLeft();
 });
 
 on(`change:ability-shintai`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left 	= abilityPoint + ability-add-point - ability-shintai
-	//hp_max 				= ability-shintai + 10
+	calcAbilityPointLeft();
+	//hp_max = 10 + ability-shintai
+	summingArgs( "hp_max", 10, "+", "ability-shintai");
 	
 });
 
 on(`change:ability-kiyou`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-kiyou
-	
+	calcAbilityPointLeft();
 	//SKILLS PAGE
 });
 
 on(`change:ability-seishin`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-seishin
+	calcAbilityPointLeft();
+	summingArgs( "ability-point-left", 	abilityPoint, 	"+", "ability-add-point", "-", "ability-shintai" );
 	//mp_max = ability-seishin + ability-chiryoku
 	
 });
@@ -66,33 +80,32 @@ on(`change:ability-seishin`, () => {
 on(`change:ability-gokan`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-gokan
+	calcAbilityPointLeft();
 });
 
 
 on(`change:ability-chiryoku`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-chiryoku
+	calcAbilityPointLeft();
 	//mp_max = ability-seishin+ability-chiryoku
 });
 
 on(`change:ability-miryoku`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-miryoku
+	calcAbilityPointLeft();
 });
 
 on(`change:ability-shakai`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-shakai
+	calcAbilityPointLeft();
 });
 
 on(`change:ability-unsei`, () => {
 	//ABILITIES PAGE 
 	//--------------
-	//ability-point-left = abilityPoint + ability-add-point - ability-unsei
 });
 
 on(`clicked:unsei-roll`, () => {
