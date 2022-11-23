@@ -430,7 +430,7 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kyoumei-u">∞Resonance/∞共鳴:</label>
 					  <span class="sheet-label">
-						  <select name="attr_char_skill-kyoumei-lvl"> 
+						  <select name="attr_level-kyoumei"> 
 							  <option> 1 </option>
 							  <option> 2 </option>
 							  <option> 3 </option>
@@ -448,21 +448,22 @@
 					<div class="row row-header">
 						<span class="sheet-label" > Skill Name/技能名</span>
 						<span class="sheet-label" > Level/レベル</span>
-						<span class="sheet-label" > Assessment Value/判定値</span>
+						<span class="sheet-label" > Judgement Value/判定値</span>
 					</div>
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chousa-u">*Investigation/*調査:</label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="0" > 0</input>
-						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="1" checked> 1</input>
-						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-chousa-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="0" > 0</input>
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="1" checked> 1</input>
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-chousa-stat" />
+						  <select disabled class='sheet-input' name="attr_level-chousa-stat" />
 							  <option> Dexterity/器用 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-chousa" > 0  </span>
+						  <input type="hidden" name="attr_judge-chousa" value="0" >
+						  <span class="skill-result" name="attr_judge-chousa" > 0  </span>
 					  </span>
 						  <button type="roll" value="/roll" > Roll </button>
 					</div>
@@ -470,16 +471,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kensaku-u">Search/検索:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kensaku-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kensaku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kensaku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kensaku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-kensaku-stat" />
+						  <select disabled class='sheet-input' name="attr_level-kensaku-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kensaku" >0 </span>
+						  <input type="hidden" name="attr_judge-kensaku" value="0" >
+						  <span class="skill-result" name=attr_level-kensaku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -488,16 +490,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="dousatsu-u">Analysis/洞察:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-dousatsu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-dousatsu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-dousatsu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-dousatsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-dousatsu-stat" />
+						  <select disabled class='sheet-input' name="attr_level-dousatsu-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-dousatsu" >0 </span>
+						  <input type="hidden" name="attr_judge-dousatsu" value="0" >
+						  <span class="skill-result" name=attr_level-dousatsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -506,17 +509,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="mapping-u">Mapping/マッピング:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-mapping-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-mapping-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-mapping-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-mapping-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-mapping-stat" />
+						  <select class='sheet-input' name="attr_level-mapping-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-mapping" >0  </span>
+						  <input type="hidden" name="attr_judge-mapping" value="0" >
+						  <span class="skill-result" name=attr_level-mapping" >0  </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -525,17 +529,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chokkan-u">Intuition/直感:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-chokkan-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-chokkan-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-chokkan-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-chokkan-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-chokkan-stat" />
+						  <select class='sheet-input' name="attr_level-chokkan-stat" />
 							  <option> Spirit/精神 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-chokkan" > 0 </span>
+						  <input type="hidden" name="attr_judge-chokkan" value="0" >
+						  <span class="skill-result" name=attr_level-chokkan" > 0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -544,17 +549,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kantei-u">Appraisal/鑑定:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kantei-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kantei-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kantei-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kantei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-kantei-stat" />
+						  <select class='sheet-input' name="attr_level-kantei-stat" />
 							  <option> Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kantei" >0 </span>
+						  <input type="hidden" name="attr_judge-kantei" value="0" >
+						  <span class="skill-result" name=attr_level-kantei" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -563,16 +569,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chikaku-u">*Perception/*知覚:</label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="0" > 0</input>
-						  <input disabled checked name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-chikaku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="0" > 0</input>
+						  <input disabled checked name="attr_level-chikaku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-chikaku-stat" />
+						  <select disabled class='sheet-input' name="attr_level-chikaku-stat" />
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-chikaku" >0 </span>
+						  <input type="hidden" name="attr_judge-chikaku" value="0" >
+						  <span class="skill-result" name=attr_level-chikaku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -581,16 +588,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kansatsugan-u">Observant Eye/観察眼:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kansatsugan-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kansatsugan-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kansatsugan-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kansatsugan-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-kansatsugan-stat" />
+						  <select disabled class='sheet-input' name="attr_level-kansatsugan-stat" />
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kansatsugan" >0 </span>
+						  <input type="hidden" name="attr_judge-kansatsugan" value="0" >
+						  <span class="skill-result" name=attr_level-kansatsugan" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -599,16 +607,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kikime-u">Keen Ear/聞き耳:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kikime-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kikime-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kikime-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kikime-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-kikime-stat" />
+						  <select disabled class='sheet-input' name="attr_level-kikime-stat" />
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kikime" >0 </span>
+						  <input type="hidden" name="attr_judge-kikime" value="0" >
+						  <span class="skill-result" name=attr_level-kikime" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -617,16 +626,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="dokumi-u">Detect Poison/毒見:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-dokumi-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-dokumi-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-dokumi-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-dokumi-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-dokumi-stat" />
+						  <select disabled class='sheet-input' name="attr_level-dokumi-stat" />
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-dokumi" >0 </span>
+						  <input type="hidden" name="attr_judge-dokumi" value="0" >
+						  <span class="skill-result" name=attr_level-dokumi" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -635,17 +645,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kikikanchi-u">Crisis Detection/危機感知:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kikikanchi-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kikikanchi-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kikikanchi-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kikikanchi-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-kikikanchi-stat" />
+						  <select class='sheet-input' name="attr_level-kikikanchi-stat" />
 							  <option> Senses/五感 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kikikanchi" >0 </span>
+						  <input type="hidden" name="attr_judge-kikikanchi" value="0" >
+						  <span class="skill-result" name=attr_level-kikikanchi" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -654,17 +665,18 @@
 					<div class="row">
 						<label class='sheet-label' data-i18n="reikan-u"><span class="sheet-star">★</span>Sixth Sense<span class="sheet-star">★</span>霊感:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-reikan-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-reikan-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-reikan-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-reikan-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-reikan-stat" />
+						  <select class='sheet-input' name="attr_level-reikan-stat" />
 							  <option> Spirit/精神 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-reikan" >0 </span>
+						  <input type="hidden" name="attr_judge-reikan" value="0" >
+						  <span class="skill-result" name=attr_level-reikan" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -673,16 +685,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="koushou-u">*Negotiation/*交渉:</label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-koushou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-koushou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-koushou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-koushou-stat" />
 							  <option> Charisma/魅力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-koushou" >0 </span>
+						  <input type="hidden" name="attr_judge-koushou" value="0" >
+						  <span class="skill-result" name=attr_level-koushou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -691,16 +704,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="shakoujutsu-u">Societal Arts/社交術:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-shakoujutsu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-shakoujutsu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-shakoujutsu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-shakoujutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-shakoujutsu-stat" />
+						  <select disabled class='sheet-input' name="attr_level-shakoujutsu-stat" />
 							  <option> Social Standing/社会 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-shakoujutsu" >0 </span>
+						  <input type="hidden" name="attr_judge-shakoujutsu" value="0" >
+						  <span class="skill-result" name=attr_level-shakoujutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -709,16 +723,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="debate-u">Debate/ディベート:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-debate-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-debate-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-debate-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-debate-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-debate-stat" />
+						  <select disabled class='sheet-input' name="attr_level-debate-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-debate" >0 </span>
+						  <input type="hidden" name="attr_judge-debate" value="0" >
+						  <span class="skill-result" name=attr_level-debate" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -727,17 +742,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="shinri-u">Mentality/心理:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-shinri-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-shinri-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-shinri-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-shinri-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-shinri-stat" />
+						  <select class='sheet-input' name="attr_level-shinri-stat" />
 							  <option> Spirit/精神 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-shinri" >0 </span>
+						  <input type="hidden" name="attr_judge-shinri" value="0" >
+						  <span class="skill-result" name=attr_level-shinri" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -746,16 +762,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="miryou-u">Charm/魅了:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-miryou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-miryou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-miryou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-miryou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-miryou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-miryou-stat" />
 							  <option> Charisma/魅力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-miryou" >0 </span>
+						  <input type="hidden" name="attr_judge-miryou" value="0" >
+						  <span class="skill-result" name=attr_level-miryou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -764,16 +781,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="chishiki-u">*Knowledge/*知識:</label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-chishiki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-chishiki" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-chishiki-stat" />
+						  <select disabled class='sheet-input' name="attr_level-chishiki-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-chishiki" >0 </span>
+						  <input type="hidden" name="attr_judge-chishiki" value="0" >
+						  <span class="skill-result" name=attr_level-chishiki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -782,16 +800,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="senmonchishiki-u"> Expert Knowledge/専門知識:</label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-senmonchishiki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-senmonchishiki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-senmonchishiki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-senmonchishiki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-senmonchishiki-stat" />
+						  <select disabled class='sheet-input' name="attr_level-senmonchishiki-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-senmonchishiki" >0 </span>
+						  <input type="hidden" name="attr_judge-senmonchishiki" value="0" >
+						  <span class="skill-result" name=attr_level-senmonchishiki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -801,16 +820,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="news-u"> *News/*ニュース: </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-news-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-news" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-news-stat" />
+						  <select disabled class='sheet-input' name="attr_level-news-stat" />
 							  <option> Social Standing/社会 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-news" >0 </span>
+						  <input type="hidden" name="attr_judge-news" value="0" >
+						  <span class="skill-result" name=attr_level-news" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -819,17 +839,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="jijoutsuu-u"> Gossip/事情通 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-jijoutsuu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-jijoutsuu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-jijoutsuu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-jijoutsuu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-jijoutsuu-stat" />
+						  <select class='sheet-input' name="attr_level-jijoutsuu-stat" />
 							  <option> Senses/五感 </option>
 							  <option> Social Standing/社会 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-jijoutsuu" >0 </span>
+						  <input type="hidden" name="attr_judge-jijoutsuu" value="0" >
+						  <span class="skill-result" name=attr_level-jijoutsuu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -837,17 +858,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="gyoukai-u"> Industry/業界 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-gyoukai-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-gyoukai-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-gyoukai-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-gyoukai-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-gyoukai-stat" />
+						  <select class='sheet-input' name="attr_level-gyoukai-stat" />
 							  <option> Charisma/魅力 </option>
 							  <option> Social Standing/社会 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-gyoukai" >0 </span>
+						  <input type="hidden" name="attr_judge-gyoukai" value="0" >
+						  <span class="skill-result" name=attr_level-gyoukai" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -855,16 +877,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="undou-u"> *Movement/*運動 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled  checked name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-undou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled  checked name="attr_level-undou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-undou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-undou-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-undou" >0 </span>
+						  <input type="hidden" name="attr_judge-undou" value="0" >
+						  <span class="skill-result" name=attr_level-undou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -872,16 +895,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="speed-u"> Speed/スピード </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-speed-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-speed-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-speed-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-speed-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-speed-stat" />
+						  <select disabled class='sheet-input' name="attr_level-speed-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-speed" >0 </span>
+						  <input type="hidden" name="attr_judge-speed" value="0" >
+						  <span class="skill-result" name=attr_level-speed" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -889,16 +913,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="strength-u"> Strength/ストレングス </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-strength-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-strength-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-strength-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-strength-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-strength-stat" />
+						  <select disabled class='sheet-input' name="attr_level-strength-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-strength" >0 </span>
+						  <input type="hidden" name="attr_judge-strength" value="0" >
+						  <span class="skill-result" name=attr_level-strength" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -906,17 +931,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="acrobat-u"> Acrobat/アクロバット </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-acrobat-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-acrobat-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-acrobat-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-acrobat-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-acrobat-stat" />
+						  <select class='sheet-input' name="attr_level-acrobat-stat" />
 							  <option> Fitness/身体 </option>
 							  <option> Dexterity/器用 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-acrobat" >0 </span>
+						  <input type="hidden" name="attr_judge-acrobat" value="0" >
+						  <span class="skill-result" name=attr_level-acrobat" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -924,16 +950,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="dive-u"> Dive/ダイブ </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-dive-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-dive-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-dive-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-dive-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-dive-stat" />
+						  <select disabled class='sheet-input' name="attr_level-dive-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-dive" >0 </span>
+						  <input type="hidden" name="attr_judge-dive" value="0" >
+						  <span class="skill-result" name=attr_level-dive" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -941,16 +968,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kakutou-u"> *Fighting/*格闘 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-kakutou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-kakutou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-kakutou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-kakutou-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kakutou" >0 </span>
+						  <input type="hidden" name="attr_judge-kakutou" value="0" >
+						  <span class="skill-result" name=attr_level-kakutou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -958,16 +986,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="bujutsu-u"> Martial Arts/武術 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-bujutsu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-bujutsu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-bujutsu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-bujutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-bujutsu-stat" />
+						  <select disabled class='sheet-input' name="attr_level-bujutsu-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-bujutsu" >0 </span>
+						  <input type="hidden" name="attr_judge-bujutsu" value="0" >
+						  <span class="skill-result" name=attr_level-bujutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -975,18 +1004,19 @@
 					<div class="row">
 						<label class='sheet-label' data-i18n="ougi-u"> <span class="sheet-star">★</span>Special Arts/<span class="sheet-star">★</span>奥義 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-ougi-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-ougi-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-ougi-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-ougi-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-ougi" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-ougi" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-ougi" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-ougi" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-ougi-stat" />
+						  <select class='sheet-input' name="attr_level-ougi-stat" />
 							  <option> Fitness/身体 </option>
 							  <option> Dexterity/器用 </option>
 							  <option> Spirit/精神 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-ougi" >0 </span>
+						  <input type="hidden" name="attr_judge-ougi" value="0" >
+						  <span class="skill-result" name=attr_level-ougi" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -994,16 +1024,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="touteki-u"> *Throwing/*投擲 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-touteki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-touteki" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-touteki-stat" />
+						  <select disabled class='sheet-input' name="attr_level-touteki-stat" />
 							  <option> Dexterity/器用 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-touteki" >0 </span>
+						  <input type="hidden" name="attr_judge-touteki" value="0" >
+						  <span class="skill-result" name=attr_level-touteki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1011,17 +1042,18 @@
 					<div class="row">
 						<label class='sheet-label' data-i18n="shageki-u"> <span class="sheet-star">★</span>Shooting/<span class="sheet-star">★</span>射撃 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-shageki-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-shageki-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-shageki-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-shageki-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-shageki-stat" />
+						  <select class='sheet-input' name="attr_level-shageki-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-shageki" >0 </span>
+						  <input type="hidden" name="attr_judge-shageki" value="0" >
+						  <span class="skill-result" name=attr_level-shageki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1029,16 +1061,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="seizon-u"> *Survival/*生存 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled  checked name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-seizon-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled  checked name="attr_level-seizon" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-seizon-stat" />
+						  <select disabled class='sheet-input' name="attr_level-seizon-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-seizon" >0 </span>
+						  <input type="hidden" name="attr_judge-seizon" value="0" >
+						  <span class="skill-result" name=attr_level-seizon" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1046,16 +1079,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="taikyuu-u"> Endurance/耐久 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-taikyuu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-taikyuu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-taikyuu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-taikyuu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-taikyuu-stat" />
+						  <select disabled class='sheet-input' name="attr_level-taikyuu-stat" />
 							  <option> Fitness/身体 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-taikyuu" >0 </span>
+						  <input type="hidden" name="attr_judge-taikyuu" value="0" >
+						  <span class="skill-result" name=attr_level-taikyuu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1063,16 +1097,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="jiga-u"> *Ego/*自我 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-jiga-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-jiga" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-jiga-stat" />
+						  <select disabled class='sheet-input' name="attr_level-jiga-stat" />
 							  <option> Spirit/精神 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-jiga" >0 </span>
+						  <input type="hidden" name="attr_judge-jiga" value="0" >
+						  <span class="skill-result" name=attr_level-jiga" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1080,16 +1115,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="konjou-u"> Will/根性 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-konjou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-konjou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-konjou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-konjou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-konjou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-konjou-stat" />
 							  <option> Spirit/精神 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-konjou" >0 </span>
+						  <input type="hidden" name="attr_judge-konjou" value="0" >
+						  <span class="skill-result" name=attr_level-konjou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1097,16 +1133,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="teate-u"> *Treatment/*手当て </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-teate-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-teate" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-teate-stat" />
+						  <select disabled class='sheet-input' name="attr_level-teate-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-teate" >0 </span>
+						  <input type="hidden" name="attr_judge-teate" value="0" >
+						  <span class="skill-result" name=attr_level-teate" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1114,17 +1151,18 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="ijutsu-u"> Medical Technique/医術 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-ijutsu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-ijutsu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-ijutsu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-ijutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-ijutsu-stat" />
+						  <select class='sheet-input' name="attr_level-ijutsu-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-ijutsu" >0 </span>
+						  <input type="hidden" name="attr_judge-ijutsu" value="0" >
+						  <span class="skill-result" name=attr_level-ijutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1132,17 +1170,18 @@
 					<div class="row">
 						<label class='sheet-label' data-i18n="sosei-u"> <span class="sheet-star">★</span>Resuscitation/<span class="sheet-star">★</span>蘇生 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-sosei-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-sosei-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-sosei-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-sosei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-sosei-stat" />
+						  <select class='sheet-input' name="attr_level-sosei-stat" />
 							  <option> Spirit/精神 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-sosei" >0 </span>
+						  <input type="hidden" name="attr_judge-sosei" value="0" >
+						  <span class="skill-result" name=attr_level-sosei" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1150,16 +1189,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="saiku-u"> *Craft/*細工 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-saiku-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-saiku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-saiku-stat" />
+						  <select disabled class='sheet-input' name="attr_level-saiku-stat" />
 							  <option> Dexterity/器用 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-saiku" >0 </span>
+						  <input type="hidden" name="attr_judge-saiku" value="0" >
+						  <span class="skill-result" name=attr_level-saiku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1167,16 +1207,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="gikou-u"> Technique/技巧 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-gikou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-gikou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-gikou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-gikou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-gikou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-gikou-stat" />
 							  <option> Dexterity/器用 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-gikou" >0 </span>
+						  <input type="hidden" name="attr_judge-gikou" value="0" >
+						  <span class="skill-result" name=attr_level-gikou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1184,18 +1225,19 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="geijutsu-u"> Art/芸術 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-geijutsu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-geijutsu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-geijutsu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-geijutsu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-geijutsu-stat" />
+						  <select class='sheet-input' name="attr_level-geijutsu-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Spirit/精神 </option>
 							  <option> Senses/五感 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-geijutsu" >0 </span>
+						  <input type="hidden" name="attr_judge-geijutsu" value="0" >
+						  <span class="skill-result" name=attr_level-geijutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1203,18 +1245,19 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="soujuu-u"> Maneuvering/操縦 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-soujuu-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-soujuu-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-soujuu-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-soujuu-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-soujuu-stat" />
+						  <select class='sheet-input' name="attr_level-soujuu-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Senses/五感 </option>
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-soujuu" >0 </span>
+						  <input type="hidden" name="attr_judge-soujuu" value="0" >
+						  <span class="skill-result" name=attr_level-soujuu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1222,16 +1265,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="angou-u"> Cryptography/暗号 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-angou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-angou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-angou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-angou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-angou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-angou-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-angou" >0 </span>
+						  <input type="hidden" name="attr_judge-angou" value="0" >
+						  <span class="skill-result" name=attr_level-angou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1239,16 +1283,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="dennnou-u"> Cyber/電脳 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-dennou-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-dennou-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-dennou-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-dennou-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-dennou-stat" />
+						  <select disabled class='sheet-input' name="attr_level-dennou-stat" />
 							  <option> Intelligence/知力 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-dennou" >0 </span>
+						  <input type="hidden" name="attr_judge-dennou" value="0" >
+						  <span class="skill-result" name=attr_level-dennou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1256,18 +1301,19 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="inpei-u"> Concealment/隠匿 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-inpei-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-inpei-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-inpei-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-inpei-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-inpei-stat" />
+						  <select class='sheet-input' name="attr_level-inpei-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Social Standing/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-inpei" >0 </span>
+						  <input type="hidden" name="attr_judge-inpei" value="0" >
+						  <span class="skill-result" name=attr_level-inpei" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1275,16 +1321,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kouun-u"> *Good Fortune/*幸運 </label>
 					  <span class="sheet-label">
-						  <input disabled name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input disabled checked name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input disabled name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input disabled name="attr_char_skill-kouun-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input disabled checked name="attr_level-kouun" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-kouun-stat" />
+						  <select disabled class='sheet-input' name="attr_level-kouun-stat" />
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kouun" >0 </span>
+						  <input type="hidden" name="attr_judge-kouun" value="0" >
+						  <span class="skill-result" name=attr_level-kouun" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1292,16 +1339,17 @@
 					<div class="row">
 					  <label class='sheet-label' data-i18n="kyouun-u"> Greater Fortune/強運 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-kyouuun-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-kyouuun-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-kyouuun-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-kyouuun-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-kyouuun" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kyouuun" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kyouuun" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kyouuun" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select disabled class='sheet-input' name="attr_char_skill-kyouuun-stat" />
+						  <select disabled class='sheet-input' name="attr_level-kyouuun-stat" />
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-kyouuun" >0 </span>
+						  <input type="hidden" name="attr_judge-kyouun" value="0" >
+						  <span class="skill-result" name=attr_level-kyouuun" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1309,13 +1357,13 @@
 					<div class="row">
 						<label class='sheet-label' data-i18n="sonota-u"> *Others/*その他 </label>
 					  <span class="sheet-label">
-						  <input name="attr_char_skill-sonota-lvl" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_char_skill-sonota-lvl" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_char_skill-sonota-lvl" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_char_skill-sonota-lvl" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-sonota" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-sonota" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-sonota" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-sonota" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_char_skill-sonota-stat" />
+						  <select class='sheet-input' name="attr_level-sonota-stat" />
 							  <option> Select a Stat </option>
 							  <option> Fitness/身体 </option>
 							  <option> Dexterity/器用 </option>
@@ -1326,7 +1374,8 @@
 							  <option> Social Standing/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <span class="skill-result" name=attr_char_skill-sonota" >0 </span>
+						  <input type="hidden" name="attr_judge-sonota" value="0" >
+						  <span class="skill-result" name=attr_level-sonota" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>

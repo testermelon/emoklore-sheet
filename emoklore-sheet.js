@@ -8,14 +8,14 @@ on(`change:ability-add-point`, () => {
 
 on(`change:ability-shintai`, () => {
 	//ability-point-left = abilityPoint + ability-add-point - ability-shintai
-	//
 	//hp_max = ability-shintai + 10
 	
-	//
 });
 
 on(`change:ability-kiyou`, () => {
 	//ability-point-left = abilityPoint + ability-add-point - ability-kiyou
+	
+	//judge-chousa = ability-kiyou + level-chousa
 });
 
 on(`change:ability-seishin`, () => {
