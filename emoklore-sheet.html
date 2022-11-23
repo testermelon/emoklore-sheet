@@ -285,6 +285,7 @@
 							<span> Ability Score Left+Additions/能力ポイント+補正 : </span> 
 							<span name="attr_ability-point-left" class="sheet_point_left" >  </span>
 							<input type="hidden" name="attr_ability-point-left" value="25"> 
+							<input type "hidden" name="attr_ability-point" disabled value="25">
 						</div>
 						<div class="fieldset-info" >
 							<label class='sheet-label' data-i18n="skillsupplement-u">Additional Scores/技能補正:</label>
@@ -481,7 +482,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kensaku" value="0" >
-						  <span class="skill-result" name=attr_level-kensaku" >0 </span>
+						  <span class="skill-result" name="attr_judge-kensaku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -500,7 +501,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dousatsu" value="0" >
-						  <span class="skill-result" name=attr_level-dousatsu" >0 </span>
+						  <span class="skill-result" name="attr_judge-dousatsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -520,7 +521,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-mapping" value="0" >
-						  <span class="skill-result" name=attr_level-mapping" >0  </span>
+						  <span class="skill-result" name="attr_judge-mapping" >0  </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -540,7 +541,7 @@
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chokkan" value="0" >
-						  <span class="skill-result" name=attr_level-chokkan" > 0 </span>
+						  <span class="skill-result" name="attr_judge-chokkan" > 0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -560,7 +561,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kantei" value="0" >
-						  <span class="skill-result" name=attr_level-kantei" >0 </span>
+						  <span class="skill-result" name="attr_judge-kantei" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -579,7 +580,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chikaku" value="0" >
-						  <span class="skill-result" name=attr_level-chikaku" >0 </span>
+						  <span class="skill-result" name="attr_judge-chikaku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -598,7 +599,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kansatsugan" value="0" >
-						  <span class="skill-result" name=attr_level-kansatsugan" >0 </span>
+						  <span class="skill-result" name="attr_judge-kansatsugan" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -617,7 +618,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kikime" value="0" >
-						  <span class="skill-result" name=attr_level-kikime" >0 </span>
+						  <span class="skill-result" name="attr_judge-kikime" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -636,7 +637,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dokumi" value="0" >
-						  <span class="skill-result" name=attr_level-dokumi" >0 </span>
+						  <span class="skill-result" name="attr_judge-dokumi" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -656,7 +657,7 @@
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kikikanchi" value="0" >
-						  <span class="skill-result" name=attr_level-kikikanchi" >0 </span>
+						  <span class="skill-result" name="attr_judge-kikikanchi" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -676,7 +677,7 @@
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-reikan" value="0" >
-						  <span class="skill-result" name=attr_level-reikan" >0 </span>
+						  <span class="skill-result" name="attr_judge-reikan" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -695,7 +696,7 @@
 							  <option> Charisma/魅力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-koushou" value="0" >
-						  <span class="skill-result" name=attr_level-koushou" >0 </span>
+						  <span class="skill-result" name="attr_judge-koushou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -714,7 +715,7 @@
 							  <option> Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-shakoujutsu" value="0" >
-						  <span class="skill-result" name=attr_level-shakoujutsu" >0 </span>
+						  <span class="skill-result" name="attr_judge-shakoujutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -733,7 +734,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-debate" value="0" >
-						  <span class="skill-result" name=attr_level-debate" >0 </span>
+						  <span class="skill-result" name="attr_judge-debate" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -753,7 +754,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-shinri" value="0" >
-						  <span class="skill-result" name=attr_level-shinri" >0 </span>
+						  <span class="skill-result" name="attr_judge-shinri" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -772,7 +773,7 @@
 							  <option> Charisma/魅力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-miryou" value="0" >
-						  <span class="skill-result" name=attr_level-miryou" >0 </span>
+						  <span class="skill-result" name="attr_judge-miryou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -791,7 +792,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chishiki" value="0" >
-						  <span class="skill-result" name=attr_level-chishiki" >0 </span>
+						  <span class="skill-result" name="attr_judge-chishiki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -810,7 +811,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-senmonchishiki" value="0" >
-						  <span class="skill-result" name=attr_level-senmonchishiki" >0 </span>
+						  <span class="skill-result" name="attr_judge-senmonchishiki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -830,7 +831,7 @@
 							  <option> Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-news" value="0" >
-						  <span class="skill-result" name=attr_level-news" >0 </span>
+						  <span class="skill-result" name="attr_judge-news" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -850,7 +851,7 @@
 							  <option> Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-jijoutsuu" value="0" >
-						  <span class="skill-result" name=attr_level-jijoutsuu" >0 </span>
+						  <span class="skill-result" name="attr_judge-jijoutsuu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -869,7 +870,7 @@
 							  <option> Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-gyoukai" value="0" >
-						  <span class="skill-result" name=attr_level-gyoukai" >0 </span>
+						  <span class="skill-result" name="attr_judge-gyoukai" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -887,7 +888,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-undou" value="0" >
-						  <span class="skill-result" name=attr_level-undou" >0 </span>
+						  <span class="skill-result" name="attr_judge-undou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -905,7 +906,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-speed" value="0" >
-						  <span class="skill-result" name=attr_level-speed" >0 </span>
+						  <span class="skill-result" name="attr_judge-speed" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -923,7 +924,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-strength" value="0" >
-						  <span class="skill-result" name=attr_level-strength" >0 </span>
+						  <span class="skill-result" name="attr_judge-strength" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -942,7 +943,7 @@
 							  <option> Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-acrobat" value="0" >
-						  <span class="skill-result" name=attr_level-acrobat" >0 </span>
+						  <span class="skill-result" name="attr_judge-acrobat" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -960,7 +961,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dive" value="0" >
-						  <span class="skill-result" name=attr_level-dive" >0 </span>
+						  <span class="skill-result" name="attr_judge-dive" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -978,7 +979,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kakutou" value="0" >
-						  <span class="skill-result" name=attr_level-kakutou" >0 </span>
+						  <span class="skill-result" name="attr_judge-kakutou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -996,7 +997,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-bujutsu" value="0" >
-						  <span class="skill-result" name=attr_level-bujutsu" >0 </span>
+						  <span class="skill-result" name="attr_judge-bujutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1016,7 +1017,7 @@
 							  <option> Spirit/精神 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-ougi" value="0" >
-						  <span class="skill-result" name=attr_level-ougi" >0 </span>
+						  <span class="skill-result" name="attr_judge-ougi" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1034,7 +1035,7 @@
 							  <option> Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-touteki" value="0" >
-						  <span class="skill-result" name=attr_level-touteki" >0 </span>
+						  <span class="skill-result" name="attr_judge-touteki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1053,7 +1054,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-shageki" value="0" >
-						  <span class="skill-result" name=attr_level-shageki" >0 </span>
+						  <span class="skill-result" name="attr_judge-shageki" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1071,7 +1072,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-seizon" value="0" >
-						  <span class="skill-result" name=attr_level-seizon" >0 </span>
+						  <span class="skill-result" name="attr_judge-seizon" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1089,7 +1090,7 @@
 							  <option> Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-taikyuu" value="0" >
-						  <span class="skill-result" name=attr_level-taikyuu" >0 </span>
+						  <span class="skill-result" name="attr_judge-taikyuu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1107,7 +1108,7 @@
 							  <option> Spirit/精神 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-jiga" value="0" >
-						  <span class="skill-result" name=attr_level-jiga" >0 </span>
+						  <span class="skill-result" name="attr_judge-jiga" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1125,7 +1126,7 @@
 							  <option> Spirit/精神 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-konjou" value="0" >
-						  <span class="skill-result" name=attr_level-konjou" >0 </span>
+						  <span class="skill-result" name="attr_judge-konjou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1143,7 +1144,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-teate" value="0" >
-						  <span class="skill-result" name=attr_level-teate" >0 </span>
+						  <span class="skill-result" name="attr_judge-teate" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1162,7 +1163,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-ijutsu" value="0" >
-						  <span class="skill-result" name=attr_level-ijutsu" >0 </span>
+						  <span class="skill-result" name="attr_judge-ijutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1181,7 +1182,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-sosei" value="0" >
-						  <span class="skill-result" name=attr_level-sosei" >0 </span>
+						  <span class="skill-result" name="attr_judge-sosei" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1199,7 +1200,7 @@
 							  <option> Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-saiku" value="0" >
-						  <span class="skill-result" name=attr_level-saiku" >0 </span>
+						  <span class="skill-result" name="attr_judge-saiku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1217,7 +1218,7 @@
 							  <option> Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-gikou" value="0" >
-						  <span class="skill-result" name=attr_level-gikou" >0 </span>
+						  <span class="skill-result" name="attr_judge-gikou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1237,7 +1238,7 @@
 							  <option> Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-geijutsu" value="0" >
-						  <span class="skill-result" name=attr_level-geijutsu" >0 </span>
+						  <span class="skill-result" name="attr_judge-geijutsu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1257,7 +1258,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-soujuu" value="0" >
-						  <span class="skill-result" name=attr_level-soujuu" >0 </span>
+						  <span class="skill-result" name="attr_judge-soujuu" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1275,7 +1276,7 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-angou" value="0" >
-						  <span class="skill-result" name=attr_level-angou" >0 </span>
+						  <span class="skill-result" name="attr_judge-angou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1293,27 +1294,27 @@
 							  <option> Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dennou" value="0" >
-						  <span class="skill-result" name=attr_level-dennou" >0 </span>
+						  <span class="skill-result" name="attr_judge-dennou" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
 					</div>
 					<div class="row">
-					  <label class='sheet-label' data-i18n="inpei-u"> Concealment/隠匿 </label>
+					  <label class='sheet-label' data-i18n="intoku-u"> Concealment/隠匿 </label>
 					  <span class="sheet-label">
-						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_level-inpei" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-label">
-						  <select class='sheet-input' name="attr_level-inpei-stat" />
+						  <select class='sheet-input' name="attr_level-intoku-stat" />
 							  <option> Dexterity/器用 </option>
 							  <option> Social Standing/社会 </option>
 							  <option> Luck/運勢 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-inpei" value="0" >
-						  <span class="skill-result" name=attr_level-inpei" >0 </span>
+						  <input type="hidden" name="attr_judge-intoku" value="0" >
+						  <span class="skill-result" name="attr_judge-intoku" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1331,7 +1332,7 @@
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kouun" value="0" >
-						  <span class="skill-result" name=attr_level-kouun" >0 </span>
+						  <span class="skill-result" name="attr_judge-kouun" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1349,7 +1350,7 @@
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kyouun" value="0" >
-						  <span class="skill-result" name=attr_level-kyouuun" >0 </span>
+						  <span class="skill-result" name="attr_judge-kyouuun" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
@@ -1375,7 +1376,7 @@
 							  <option> Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-sonota" value="0" >
-						  <span class="skill-result" name=attr_level-sonota" >0 </span>
+						  <span class="skill-result" name="attr_judge-sonota" >0 </span>
 					  </span>
 						  <button > Roll </button>
 					  </select>
