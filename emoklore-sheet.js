@@ -1,6 +1,3 @@
-const abilityPoint = 25;
-
-//Functions
 
 /********************************
  * Shorten A = CONSTANT + B + C + D .... 
@@ -28,8 +25,9 @@ function summingArgs(toSet, konstanta,  ...getList) {
 	}
 }
 
+//ability-point-left = abilityPoint(25) + ability-add-point - (all abilities except luck) 
 function calcAbilityPointLeft() {
-	//ability-point-left = abilityPoint(25) + ability-add-point - (all abilities except luck) 
+	const abilityPoint = 25;
 	summingArgs( "ability-point-left", 
 		abilityPoint, 
 		"+", "ability-add-point", 
