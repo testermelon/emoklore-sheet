@@ -1,4 +1,7 @@
 
+console.log("script triggered");
+window.alert("script triggered");
+
 /********************************
  * Shorten A = CONSTANT + B + C + D .... 
  * as get(B,C,D,...) => set A 
@@ -6,7 +9,9 @@
  * konstanta : CONSTANT
  * getList is the rest: (sign, toGet) 
  */
-function summingArgs(toSet, konstanta,  ...getList) {
+
+
+const  summingArgs = (toSet, konstanta,  ...getList) => {
 	let toGet = [];
 	let signs = [];
 	for(let i=0; i<getList.length; i++) {
@@ -17,32 +22,33 @@ function summingArgs(toSet, konstanta,  ...getList) {
 		let sum = 0;
 		for(let i=0; i<toGet.length; i++) {
 			if(signs[i] == "-" ) 
-				sum -= values.[toGet[i]];
+				sum -= parseInt(values[toGet[i]]) ;
 			if(signs[i] == "+" )
-				sum += values.[toGet[i]];
+				sum += parseInt(values[toGet[i]]) ;
 		}
-		setAttrs( { toSet, sum + konstanta } );
-	}
+		sum += konstanta;
+		setAttrs( { toSet :sum } );
+	});
 }
 
 //ability-point-left = abilityPoint(25) + ability-add-point - (all abilities except luck) 
-function calcAbilityPointLeft() {
+const calcAbilityPointLeft = () => {
 	const abilityPoint = 25;
 	summingArgs( "ability-point-left", 
 		abilityPoint, 
 		"+", "ability-add-point", 
-		"-", "ability-shintai" 
-		"-", "ability-kiyou"
-		"-", "ability-seishin" 
-		"-", "ability-gokan" 
-		"-", "ability-chiryoku" 
-		"-", "ability-miryoku" 
-		"-", "ability-shakai" 
+		"-", "ability-shintai", 
+		"-", "ability-kiyou",
+		"-", "ability-seishin" ,
+		"-", "ability-gokan" ,
+		"-", "ability-chiryoku" ,
+		"-", "ability-miryoku" ,
+		"-", "ability-shakai" ,
 	);
 }
 
 //return array of skills affected by ability
-function getAffectedSkills(abilityName) {
+const getAffectedSkills = (abilityName) => {
 	//iterate on skills and list up matching ones
 }
 
