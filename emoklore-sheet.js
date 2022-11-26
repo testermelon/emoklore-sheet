@@ -27,7 +27,9 @@ const  summingArgs = (toSet, konstanta,  ...getList) => {
 				sum += parseInt(values[toGet[i]]) ;
 		}
 		sum += konstanta;
-		setAttrs( { toSet :sum } );
+		let obj = {};
+		obj[toSet] = sum;
+		setAttrs(obj);
 	});
 }
 
