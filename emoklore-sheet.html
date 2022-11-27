@@ -18,57 +18,57 @@
 						<legend class="fieldset-legend" >Basic Info/基本情報</legend>
 						<img class="img-char-avatar" name="attr_character_avatar" >
 						<br>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Name/名前:</label> 
-							<input type="text" class='sheet-input' name="attr_char-name" title="@{attr_char-name}">
+							<input type="text" name="attr_name" >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Age/年齢:</label>
-							<input type="text" class='sheet-input' name="attr_char-age"  title="@{attr_char-age}">
+							<input type="text" name="attr_age"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Gender/性別:</label>
-							<input type="text" class='sheet-input' name="attr_char-gender"  title="@{attr_char-gender}">
+							<input type="text" class='sheet-input' name="attr_gender"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Hometown/出身:</label>
-							<input type="text" class='sheet-input' name="attr_char-hometown"  title="@{attr_char-hometown}">
+							<input type="text" class='sheet-input' name="attr_hometown"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Occupation/職業:</label>
-							<input type="text" class='sheet-input' name="attr_char-occupation"  title="@{attr_char-occupation}">
+							<input type="text" class='sheet-input' name="attr_occupation"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Personality/性格:</label>
-							<input type="text" class='sheet-input' name="attr_char-personality"  title="@{attr_char-personality}">
+							<input type="text" class='sheet-input' name="attr_personality"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Appearance/概観的特徴:</label>
-							<input type="text" class='sheet-input' name="attr_char-appearance"  title="@{attr_char-appearance}">
+							<input type="text" class='sheet-input' name="attr_appearance"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Notable Past Events/経歴:</label>
-							<input type="text" class='sheet-input' name="attr_char-notablepastevents"  title="@{attr_char-notablepastevents}">
+							<input type="text" class='sheet-input' name="attr_notablepastevents"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Related People/関係のある人々:</label>
-							<input type="text" class='sheet-input' name="attr_char-relatedpeople"  title="@{attr_char-relatedpeople}">
+							<input type="text" class='sheet-input' name="attr_relatedpeople"  >
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Likes and Dislikes/好きなもの・嫌いなもの:</label>
-							<input type="text" class='sheet-input' name="attr_char-likesdislikes"  title="@{attr_char-likesdislikes}">
+							<input type="text" class='sheet-input' name="attr_likesdislikes"  >
 						</div>
 						<!-- Skipping タグ for now. Reason: no clear use case in Roll20. -->
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Memo/メモ:</label>
-							<textarea  class='sheet-input-textarea' name="attr_char-memo" title="@{attr_char-char-memo}"></textarea>
+							<textarea  class='sheet-input-textarea' name="attr_memo" ></textarea>
 						</div>
 					</fieldset>
 					<fieldset class="fieldset-roundedcorner" >
 						<legend class="fieldset-legend" > Resonance Info/共鳴情報 </legend>
-						<div class="row">
+						<div class="chardata-row">
 						<label class='sheet-row-label' >Front/表:</label>
-						<select class="sheet-input" name="attr_char-resonance-front" title="@{attr_char-resonance-front}">
+						<select class="sheet-input" name="attr_resonancefront" >
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>  Acknowledgement (Desire) / 自己顕示【欲望】</option> 
@@ -130,9 +130,9 @@
 						</select>
 						</div>
 
-						<div class="row">
+						<div class="chardata-row">
 						<label class='sheet-row-label' >Back/裏:</label>
-						<select class="sheet-input" name="attr_char-resonance-back" title="@{attr_char-resonance-back}">
+						<select class="sheet-input" name="attr_resonanceback" >
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>Acknowledgement/自己顕示 </option> 
@@ -195,9 +195,9 @@
 						</select>
 						</div>
 
-						<div class="row">
+						<div class="chardata-row">
 						<label class='sheet-row-label' >Roots/ルーツ:</label>
-						<select class="sheet-input" name="attr_char-resonance-roots" title="@{attr_char-resonance-roots}">
+						<select class="sheet-input" name="attr_resonanceroots" >
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>Acknowledgement/自己顕示 </option> 
@@ -264,9 +264,9 @@
 						<legend> Reverberations Records/残響の記録 </legend>
 						<fieldset class="repeating_reverbrecords">
 							<label class="reverb-row-item"> Scenario Name/シナリオ名: </label>
-							<input class="reverb-row-item" type="text" name="attr_scenarioname" title="@{attr_scenario}" >
+							<input class="reverb-row-item" type="text" name="attr_scenarioname" >
 							<label class="reverb-row-item"> Emotions/感情: </label>
-							<input class="reverb-row-item" type="text" name="attr_emotions" title="@{attr_emotions}" >
+							<input class="reverb-row-item" type="text" name="attr_emotions" >
 						</fieldset>
 					</fieldset>
 				</div> <!-- sheet-content-->
@@ -281,42 +281,42 @@
 						<legend class="fieldset-legend" > Ability Scores/能力値 </legend>
 						<div class="fieldset-info" >
 							<span> Ability Score Left+Additions/能力ポイント+補正 : </span> 
-							<span name="attr_ability-point-left" title="@{attr_ability-point-left}" class="sheet_point_left" ></span>
-							<input type="hidden" name="attr_ability-point-left" value="25"> 
+							<span name="attr_abilitypointleft"  ></span>
+							<input type="hidden" name="attr_abilitypointleft" value="25"> 
 						</div>
 						<div class="fieldset-info" >
 							<label class='sheet-row-label' >Additional Scores/技能補正:</label>
-							<input name="attr_ability-add-point" title="@{attr_ability-add-point}"class="sheet-input-number" type="number"> 
+							<input name="attr_abilityaddpoint" class="sheet-input-number" type="number"> 
 						</div>
 						<br>
 						<br>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Fitness/身体:</label>
-							<select class='sheet-input' name="attr_ability-shintai">
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option> 
+							<select name="attr_abilityshintai" >
+								<option value="0" > 0 </option>
+								<option value="1" > 1 </option>
+								<option value="2" > 2 </option>
+								<option value="3" > 3 </option>
+								<option value="4" > 4 </option>
+								<option value="5" > 5 </option>
+								<option value="6" > 6 </option> 
 							</select>
 						</div>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Dexterity/器用:</label> 
-							<select class='sheet-input' name="attr_ability-kiyou" >
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option> 
+							<select name="attr_abilitykiyou" >
+								<option value="0" > 0 </option>
+								<option value="1" > 1 </option>
+								<option value="2" > 2 </option>
+								<option value="3" > 3 </option>
+								<option value="4" > 4 </option>
+								<option value="5" > 5 </option>
+								<option value="6" > 6 </option> 
 							</select>
 						</div>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Spirit/精神:</label> 
-							<select  class='sheet-input' name="attr_ability-seishin" >
+							<select  class='sheet-input' name="attr_abilityseishin" >
 								<option> 0 </option>
 								<option> 1 </option>
 								<option> 2 </option>
@@ -326,9 +326,9 @@
 								<option> 6 </option>
 						  </select>
 						</div>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Senses/五感:</label> 
-							<select  class='sheet-input' name="attr_ability-gokan" >
+							<select  class='sheet-input' name="attr_abilitygokan" >
 								<option> 0 </option>
 								<option> 1 </option>
 								<option> 2 </option>
@@ -338,9 +338,9 @@
 								<option> 6 </option>
 						  </select>
 						</div>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Intelligence/知力:</label> 
-							<select  class='sheet-input' name="attr_ability-chiryoku" >
+							<select  class='sheet-input' name="attr_abilitychiryoku" >
 								<option> 0 </option>
 								<option> 1 </option>
 								<option> 2 </option>
@@ -350,9 +350,9 @@
 								<option> 6 </option>
 						  </select>
 						</div>
-						<div class="row"> 
+						<div class="chardata-row"> 
 							<label class='sheet-row-label' >Charisma/魅力:</label> 
-							<select  class='sheet-input' name="attr_ability-miryoku" >
+							<select  class='sheet-input' name="attr_abilitymiryoku" >
 								<option> 0 </option>
 								<option> 1 </option>
 								<option> 2 </option>
@@ -362,9 +362,9 @@
 								<option> 6 </option>
 						  </select>
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Social Standing/社会:</label>
-							<select  class='sheet-input' name="attr_ability-shakai" >
+							<select  class='sheet-input' name="attr_abilityshakai" >
 								<option> 0 </option>
 								<option> 1 </option>
 								<option> 2 </option>
@@ -374,27 +374,26 @@
 								<option> 6 </option>
 							</select>
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >Luck/運勢:</label>
-							<input type="number" min="1" max="6" class='sheet-input' name="attr_ability-unsei" >
+							<input type="number" min="1" max="6" class='sheet-input' name="attr_abilityunsei" >
 							<button type="action" name="act_unsei-roll"> Roll </button>
 						</div>
 					</fieldset>
 					<fieldset class="fieldset-roundedcorner" >
 						<legend class="fieldset-legend" > Parameter/パラメータ </legend>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >HP:</label>
-							<input type="number" class="sheet-input-number" name="attr_hp">
-							<input type="hidden" name="attr_hp_max">
+							<input type="number"  name="attr_hp">
+							<input type="hidden" name="attr_hp_max" value="0" >
 							<span> / </span>
-							<span class="sheet-input-number" name="attr_hp_max" ></span>
-							<button type="action" name="act_reset-maxhp"> Max HP= 0 </button>
+							<span  name="attr_hp_max" ></span>
 							<!-- value="(@{ability-shintai}+10)"--> 
 						</div>
-						<div class="row">
+						<div class="chardata-row">
 							<label class='sheet-row-label' >MP:</label>
 							<input type="number" class="sheet-input-number"  name="attr_mp">
-							<input type="hidden" name="attr_mp_max">
+							<input type="hidden" name="attr_mp_max" value="0" >
 							<span> / </span>
 							<span  class='sheet-input-number' name="attr_mp" ></span>
 							<!-- value="(@{ability-seishin}+@{ability-chiryoku})" -->
@@ -412,9 +411,9 @@
 						<legend class="fieldset-legend" > Skills/技能 </legend>
 						<div class="fieldset-info" >
 							<span class="sheet-row-label"> Skill Point/技能ポイント+補正 : </span> 
-						  <input type="hidden" name="attr_skill-point-left">
+						  <input type="hidden" name="attr_skillpointleft">
 						  <!-- value=30+Additionals  -->
-							<span name="attr_skill-point-left"></span>
+							<span name="attr_skillpointleft"></span>
 						</div>
 						<div class="fieldset-info" >
 							<label class='sheet-row-label' >Add Skill Pt./技能補正:</label>
@@ -426,10 +425,10 @@
 						<span class="sheet-row-label" > Skill Name/技能名</span>
 						<span class="sheet-row-label" > Level/レベル</span>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >∞Resonance/∞共鳴:</label>
 					  <span class="sheet-row-label">
-						  <select name="attr_level-kyoumei"> 
+						  <select name="attr_levelkyoumei"> 
 							  <option> 1 </option>
 							  <option> 2 </option>
 							  <option> 3 </option>
@@ -451,7 +450,7 @@
 						<span class="sheet-row-label" > Level/レベル</span>
 						<span class="sheet-row-label" > Judgement Value/判定値</span>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >*Investigation/*調査:</label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="0" > 0</input>
@@ -469,13 +468,13 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chousa}d10[Investigation Check]" > Roll </button>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Search/検索:</label>
 					  <span class="sheet-row-label">
-						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_level-kensaku" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_levelkensaku"  type="radio" value="0" checked> 0</input>
+						  <input name="attr_levelkensaku"  type="radio" value="1"> 1</input>
+						  <input name="attr_levelkensaku"  type="radio" value="2"> 2</input>
+						  <input name="attr_levelkensaku"  type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kensaku-stat" >
@@ -487,13 +486,13 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kensaku}d10[Search Check]" > Roll </button>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Analysis/洞察:</label>
 					  <span class="sheet-row-label">
-						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_leveldousatsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_leveldousatsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_leveldousatsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_leveldousatsu" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-dousatsu-stat" >
@@ -506,13 +505,13 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Mapping/マッピング:</label>
 					  <span class="sheet-row-label">
-						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="3"> 3</input>
+						  <input name="attr_levelmapping" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_levelmapping" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_levelmapping" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_levelmapping" class="radio-numbered" type="radio" value="3"> 3</input>
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-mapping-stat" >
@@ -526,7 +525,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Intuition/直感:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -546,7 +545,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Appraisal/鑑定:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -566,7 +565,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >*Perception/*知覚:</label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="0" > 0</input>
@@ -585,7 +584,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Observant Eye/観察眼:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -604,7 +603,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Keen Ear/聞き耳:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -623,7 +622,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Detect Poison/毒見:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -642,7 +641,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Crisis Detection/危機感知:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -662,7 +661,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 						<label class='sheet-row-label' ><span class="sheet-star">★</span>Sixth Sense<span class="sheet-star">★</span>霊感:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -682,7 +681,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >*Negotiation/*交渉:</label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -701,7 +700,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Societal Arts/社交術:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -720,7 +719,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Debate/ディベート:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -739,7 +738,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Mentality/心理:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -759,7 +758,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >Charm/魅了:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -778,7 +777,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' >*Knowledge/*知識:</label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -797,7 +796,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Expert Knowledge/専門知識:</label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -817,7 +816,7 @@
 					</div>
 
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *News/*ニュース: </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -836,7 +835,7 @@
 					  </select>
 					</div>
 
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Gossip/事情通 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -855,7 +854,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-jijoutsuu}d10[Gossip Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Industry/業界 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -874,7 +873,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-gyoukai}d10[Industry Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Movement/*運動 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -892,7 +891,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-undou}d10[Movement Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Speed/スピード </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -910,7 +909,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-speed}d10[Speed Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Strength/ストレングス </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -928,7 +927,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-strength}d10[Strength Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Acrobat/アクロバット </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -948,7 +947,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-acrobat}d10[Acrobat Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Dive/ダイブ </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -967,7 +966,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dive}d10[Dive Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Fighting/*格闘 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -986,7 +985,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kakutou}d10[Fighting Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Martial Arts/武術 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1005,7 +1004,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-bujutsu}d10[Martial Arts Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 						<label class='sheet-row-label' > <span class="sheet-star">★</span>Special Arts/<span class="sheet-star">★</span>奥義 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-ougi" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1026,7 +1025,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-ougi}d10[Special Arts Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Throwing/*投擲 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1045,7 +1044,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-touteki}d10[Throwing Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 						<label class='sheet-row-label' > <span class="sheet-star">★</span>Shooting/<span class="sheet-star">★</span>射撃 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1065,7 +1064,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shageki}d10[Shooting Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Survival/*生存 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1084,7 +1083,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-seizon}d10[Survival Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Endurance/耐久 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1103,7 +1102,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-taikyuu}d10[Endurance Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Ego/*自我 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1122,7 +1121,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-jiga}d10[Ego Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Will/根性 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1141,7 +1140,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-konjou}d10[Will Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Treatment/*手当て </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1160,7 +1159,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-teate}d10[Treatment Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Medical Technique/医術 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1180,7 +1179,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-ijutsu}d10[Medical Technique Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 						<label class='sheet-row-label' > <span class="sheet-star">★</span>Resuscitation/<span class="sheet-star">★</span>蘇生 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1200,7 +1199,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-sosei}d10[Resuscitation Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Craft/*細工 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1219,7 +1218,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-saiku}d10[Craft Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Technique/技巧 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1238,7 +1237,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-gikou}d10[Technique Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Art/芸術 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1259,7 +1258,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-geijutsu}d10[Art Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Maneuvering/操縦 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1280,7 +1279,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-soujuu}d10[Maneuvering Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Cryptography/暗号 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1299,7 +1298,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-angou}d10[Cryptography Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Cyber/電脳 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1318,7 +1317,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dennou}d10[Cyber Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Concealment/隠匿 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1339,7 +1338,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-intoku}d10[Concealment Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Good Fortune/*幸運 </label>
 					  <span class="sheet-row-label">
 						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1358,7 +1357,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kouun}d10[Good Fortune Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 					  <label class='sheet-row-label' > Greater Fortune/強運 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-kyouun" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1377,7 +1376,7 @@
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kyouun}d10[Greater Fortune Check]" > Roll </button>
 					  </select>
 					</div>
-					<div class="row">
+					<div class="chardata-row">
 						<label class='sheet-row-label' > *Others/*その他 </label>
 					  <span class="sheet-row-label">
 						  <input name="attr_level-sonota" class="radio-numbered" type="radio" value="0" checked> 0</input>
@@ -1446,20 +1445,20 @@ const  summingArgs = (toSet, konstanta,  ...getList) => {
 	});
 }
 
-//ability-point-left = abilityPoint(25) + ability-add-point - (all abilities except luck) 
+//ability-point-left = abilityPoint(25) + abilityaddpoint - (all abilities except luck) 
 const calcAbilityPointLeft = () => {
 	console.log("calcAbilityPointLeft triggered");
 	const abilityPoint = 25;
-	summingArgs( "ability-point-left", 
+	summingArgs( "abilitypointleft", 
 		abilityPoint, 
-		"+", "ability-add-point", 
-		"-", "ability-shintai", 
-		"-", "ability-kiyou",
-		"-", "ability-seishin" ,
-		"-", "ability-gokan" ,
-		"-", "ability-chiryoku" ,
-		"-", "ability-miryoku" ,
-		"-", "ability-shakai" ,
+		"+", "abilityaddpoint", 
+		"-", "abilityshintai", 
+		"-", "abilitykiyou",
+		"-", "abilityseishin" ,
+		"-", "abilitygokan" ,
+		"-", "abilitychiryoku" ,
+		"-", "abilitymiryoku" ,
+		"-", "abilityshakai" ,
 	);
 }
 
@@ -1472,64 +1471,64 @@ const getAffectedSkills = (abilityName) => {
 /*ABILITIES PAGE
  */
 
-on(`change:ability-add-point`, () => {
+on(`change:abilityaddpoint`, () => {
 	console.log("onchange set 1");
 	calcAbilityPointLeft();
 });
 
-on(`change:ability-shintai`, () => {
+on(`change:abilityshintai`, () => {
 	console.log("onchange set 2");
 	calcAbilityPointLeft();
-	//hp_max = 10 + ability-shintai
-	summingArgs( "hp_max", 10, "+", "ability-shintai");
+	//hp_max = 10 + abilityshintai
+	summingArgs( "hp_max", 10, "+", "abilityshintai");
 	
 });
 
-on(`change:ability-kiyou`, () => {
+on(`change:abilitykiyou`, () => {
 	console.log("onchange set 3");
 	calcAbilityPointLeft();
 	//SKILLS PAGE
 });
 
-on(`change:ability-seishin`, () => {
+on(`change:abilityseishin`, () => {
 	console.log("onchange set 4");
 	calcAbilityPointLeft();
-	summingArgs( "ability-point-left", 	abilityPoint, 	"+", "ability-add-point", "-", "ability-shintai" );
-	//mp_max = ability-seishin + ability-chiryoku
-	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+	summingArgs( "abilitypointleft", 	abilityPoint, 	"+", "abilityaddpoint", "-", "abilityshintai" );
+	//mp_max = abilityseishin + abilitychiryoku
+	summingArgs( "mp_max", 	0 , "+", "abilityseishin", "+", "abilitychiryoku" );
 });
 
-on(`change:ability-gokan`, () => {
+on(`change:abilitygokan`, () => {
 	console.log("onchange set 5");
 	calcAbilityPointLeft();
 });
 
-on(`change:ability-chiryoku`, () => {
+on(`change:abilitychiryoku`, () => {
 	console.log("onchange set 6");
 	calcAbilityPointLeft();
-	//mp_max = ability-seishin+ability-chiryoku
-	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+	//mp_max = abilityseishin+abilitychiryoku
+	summingArgs( "mp_max", 	0 , "+", "abilityseishin", "+", "abilitychiryoku" );
 });
 
-on(`change:ability-miryoku`, () => {
+on(`change:abilitymiryoku`, () => {
 	console.log("onchange set 7");
 	calcAbilityPointLeft();
 });
 
-on(`change:ability-shakai`, () => {
+on(`change:abilityshakai`, () => {
 	console.log("onchange set 8");
 	calcAbilityPointLeft();
 });
 
-on(`change:ability-unsei`, () => {
+on(`change:abilityunsei`, () => {
 	console.log("onchange set 9");
 });
 
-on(`clicked:unsei-roll`, () => {
+on(`clicked:unseiroll`, () => {
 	console.log("onchange set a");
-	//ability-unsei = 1d6;
+	//abilityunsei = 1d6;
 	let keberuntungan = Math.floor(Math.random() * 6 ) + 1;
-	summingArgs("ability-unsei", keberuntungan );
+	summingArgs("abilityunsei", keberuntungan );
 });
 
 </script>

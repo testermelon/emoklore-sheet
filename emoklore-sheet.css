@@ -26,6 +26,7 @@
 	padding:10px;
 	font-family: 'Comfortaa', sans-serif;
 	font-size:1.5em;
+	color:teal;
 }
 
 .img-char-token {
@@ -128,7 +129,7 @@
 	min-height:300px;
 }
 
-.row {
+.chardata-row {
 	display:flex;
 	padding: 2px;
 	border-bottom: 1px solid #111111;
