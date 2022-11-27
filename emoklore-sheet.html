@@ -20,55 +20,55 @@
 						<br>
 						<div class="row"> 
 							<label class='sheet-row-label' >Name/名前:</label> 
-							<input type="text" class='sheet-input' name="attr_char-name" >
+							<input type="text" class='sheet-input' name="attr_char-name" title="@{attr_char-name}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Age/年齢:</label>
-							<input type="text" class='sheet-input' name="attr_char-age"  >
+							<input type="text" class='sheet-input' name="attr_char-age"  title="@{attr_char-age}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Gender/性別:</label>
-							<input type="text" class='sheet-input' name="attr_char-gender"  >
+							<input type="text" class='sheet-input' name="attr_char-gender"  title="@{attr_char-gender}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Hometown/出身:</label>
-							<input type="text" class='sheet-input' name="attr_char-hometown"  >
+							<input type="text" class='sheet-input' name="attr_char-hometown"  title="@{attr_char-hometown}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Occupation/職業:</label>
-							<input type="text" class='sheet-input' name="attr_char-occupation"  >
+							<input type="text" class='sheet-input' name="attr_char-occupation"  title="@{attr_char-occupation}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Personality/性格:</label>
-							<input type="text" class='sheet-input' name="attr_char-personality"  >
+							<input type="text" class='sheet-input' name="attr_char-personality"  title="@{attr_char-personality}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Appearance/概観的特徴:</label>
-							<input type="text" class='sheet-input' name="attr_char-appearance"  >
+							<input type="text" class='sheet-input' name="attr_char-appearance"  title="@{attr_char-appearance}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Notable Past Events/経歴:</label>
-							<input type="text" class='sheet-input' name="attr_char-notablepastevents"  >
+							<input type="text" class='sheet-input' name="attr_char-notablepastevents"  title="@{attr_char-notablepastevents}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Related People/関係のある人々:</label>
-							<input type="text" class='sheet-input' name="attr_char-relatedpeople"  >
+							<input type="text" class='sheet-input' name="attr_char-relatedpeople"  title="@{attr_char-relatedpeople}">
 						</div>
 						<div class="row">
 							<label class='sheet-row-label' >Likes and Dislikes/好きなもの・嫌いなもの:</label>
-							<input type="text" class='sheet-input' name="attr_char-likesdislikes"  >
+							<input type="text" class='sheet-input' name="attr_char-likesdislikes"  title="@{attr_char-likesdislikes}">
 						</div>
 						<!-- Skipping タグ for now. Reason: no clear use case in Roll20. -->
 						<div class="row">
 							<label class='sheet-row-label' >Memo/メモ:</label>
-							<textarea  class='sheet-input-textarea' name="attr_char-memo"  ></textarea>
+							<textarea  class='sheet-input-textarea' name="attr_char-memo" title="@{attr_char-char-memo}"></textarea>
 						</div>
 					</fieldset>
 					<fieldset class="fieldset-roundedcorner" >
 						<legend class="fieldset-legend" > Resonance Info/共鳴情報 </legend>
 						<div class="row">
 						<label class='sheet-row-label' >Front/表:</label>
-						<select class="sheet-input" name="attr_char-resonance-front" >
+						<select class="sheet-input" name="attr_char-resonance-front" title="@{attr_char-resonance-front}">
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>  Acknowledgement (Desire) / 自己顕示【欲望】</option> 
@@ -132,7 +132,7 @@
 
 						<div class="row">
 						<label class='sheet-row-label' >Back/裏:</label>
-						<select class="sheet-input" name="attr_char-resonance-back" >
+						<select class="sheet-input" name="attr_char-resonance-back" title="@{attr_char-resonance-back}">
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>Acknowledgement/自己顕示 </option> 
@@ -197,7 +197,7 @@
 
 						<div class="row">
 						<label class='sheet-row-label' >Roots/ルーツ:</label>
-						<select class="sheet-input" name="attr-char-resonance-roots" >
+						<select class="sheet-input" name="attr_char-resonance-roots" title="@{attr_char-resonance-roots}">
 							<option value='select-please'> Please Select/選択してください </option> 
 							<optgroup label="Desire/欲望"> 
 								<option>Acknowledgement/自己顕示 </option> 
@@ -262,13 +262,11 @@
 					</fieldset>
 					<fieldset class="fieldset-roundedcorner"  >
 						<legend> Reverberations Records/残響の記録 </legend>
-						<fieldset class="sheet_fieldset_hidden repeating_reverbrecords">
-							<div class="row ">
-								<label class="reverb-row-item"> Scenario Name/シナリオ名: </label>
-								<input class="reverb-row-item" type="text" name="attr_scenarioname">
-								<label class="reverb-row-item"> Emotions/感情: </label>
-								<input class="reverb-row-item" type="text" name="attr_emotions">
-							</div>
+						<fieldset class="repeating_reverbrecords">
+							<label class="reverb-row-item"> Scenario Name/シナリオ名: </label>
+							<input class="reverb-row-item" type="text" name="attr_scenarioname" title="@{attr_scenario}" >
+							<label class="reverb-row-item"> Emotions/感情: </label>
+							<input class="reverb-row-item" type="text" name="attr_emotions" title="@{attr_emotions}" >
 						</fieldset>
 					</fieldset>
 				</div> <!-- sheet-content-->
@@ -283,12 +281,12 @@
 						<legend class="fieldset-legend" > Ability Scores/能力値 </legend>
 						<div class="fieldset-info" >
 							<span> Ability Score Left+Additions/能力ポイント+補正 : </span> 
-							<span name="attr_ability-point-left" class="sheet_point_left" ></span>
+							<span name="attr_ability-point-left" title="@{attr_ability-point-left}" class="sheet_point_left" ></span>
 							<input type="hidden" name="attr_ability-point-left" value="25"> 
 						</div>
 						<div class="fieldset-info" >
 							<label class='sheet-row-label' >Additional Scores/技能補正:</label>
-							<input name="attr_ability-add-point" class="sheet-input-number" type="number"> 
+							<input name="attr_ability-add-point" title="@{attr_ability-add-point}"class="sheet-input-number" type="number"> 
 						</div>
 						<br>
 						<br>
@@ -390,6 +388,7 @@
 							<input type="hidden" name="attr_hp_max">
 							<span> / </span>
 							<span class="sheet-input-number" name="attr_hp_max" ></span>
+							<button type="action" name="act_reset-maxhp"> Max HP= 0 </button>
 							<!-- value="(@{ability-shintai}+10)"--> 
 						</div>
 						<div class="row">
@@ -1412,4 +1411,125 @@
 </div>
 
 <script type="text/worker">
+
+console.log("script triggered");
+
+/********************************
+ * Shorten A = CONSTANT + B + C + D .... 
+ * as get(B,C,D,...) => set A 
+ * toSet : A 
+ * konstanta : CONSTANT
+ * getList is the rest: (sign, toGet) 
+ */
+
+
+const  summingArgs = (toSet, konstanta,  ...getList) => {
+	console.log("summingArgs triggered");
+	let toGet = [];
+	let signs = [];
+	for(let i=0; i<getList.length; i++) {
+		toGet.push(getList[2*i-1]);	
+		signs.push(getList[2*i]);	
+	}
+	getAttrs(toGet, values => {
+		let sum = 0;
+		for(let i=0; i<toGet.length; i++) {
+			if(signs[i] == "-" ) 
+				sum -= parseInt(values[toGet[i]]) ;
+			if(signs[i] == "+" )
+				sum += parseInt(values[toGet[i]]) ;
+		}
+		sum += konstanta;
+		let obj = {};
+		obj[toSet] = sum;
+		setAttrs(obj);
+	});
+}
+
+//ability-point-left = abilityPoint(25) + ability-add-point - (all abilities except luck) 
+const calcAbilityPointLeft = () => {
+	console.log("calcAbilityPointLeft triggered");
+	const abilityPoint = 25;
+	summingArgs( "ability-point-left", 
+		abilityPoint, 
+		"+", "ability-add-point", 
+		"-", "ability-shintai", 
+		"-", "ability-kiyou",
+		"-", "ability-seishin" ,
+		"-", "ability-gokan" ,
+		"-", "ability-chiryoku" ,
+		"-", "ability-miryoku" ,
+		"-", "ability-shakai" ,
+	);
+}
+
+//return array of skills affected by ability
+const getAffectedSkills = (abilityName) => {
+	//iterate on skills and list up matching ones
+}
+
+
+/*ABILITIES PAGE
+ */
+
+on(`change:ability-add-point`, () => {
+	console.log("onchange set 1");
+	calcAbilityPointLeft();
+});
+
+on(`change:ability-shintai`, () => {
+	console.log("onchange set 2");
+	calcAbilityPointLeft();
+	//hp_max = 10 + ability-shintai
+	summingArgs( "hp_max", 10, "+", "ability-shintai");
+	
+});
+
+on(`change:ability-kiyou`, () => {
+	console.log("onchange set 3");
+	calcAbilityPointLeft();
+	//SKILLS PAGE
+});
+
+on(`change:ability-seishin`, () => {
+	console.log("onchange set 4");
+	calcAbilityPointLeft();
+	summingArgs( "ability-point-left", 	abilityPoint, 	"+", "ability-add-point", "-", "ability-shintai" );
+	//mp_max = ability-seishin + ability-chiryoku
+	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+});
+
+on(`change:ability-gokan`, () => {
+	console.log("onchange set 5");
+	calcAbilityPointLeft();
+});
+
+on(`change:ability-chiryoku`, () => {
+	console.log("onchange set 6");
+	calcAbilityPointLeft();
+	//mp_max = ability-seishin+ability-chiryoku
+	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+});
+
+on(`change:ability-miryoku`, () => {
+	console.log("onchange set 7");
+	calcAbilityPointLeft();
+});
+
+on(`change:ability-shakai`, () => {
+	console.log("onchange set 8");
+	calcAbilityPointLeft();
+});
+
+on(`change:ability-unsei`, () => {
+	console.log("onchange set 9");
+});
+
+on(`clicked:unsei-roll`, () => {
+	console.log("onchange set a");
+	//ability-unsei = 1d6;
+	let keberuntungan = Math.floor(Math.random() * 6 ) + 1;
+	summingArgs("ability-unsei", keberuntungan );
+});
+
 </script>
