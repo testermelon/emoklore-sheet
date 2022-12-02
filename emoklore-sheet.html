@@ -1530,7 +1530,7 @@ const setSingleJudgement = (skill) => {
 	getAttrs( [`level-${skill}`,`level-${skill}-stat`].concat(listAttrsAbilities), (values) => {
 		lvl = parseInt(values[`level-${skill}`]) || 0 ;
 		abi = parseInt(values[ values[`level-${skill}-stat`] ]) || 0 ;
-		setAttrs({[`judge-${skill}`], lvl+abil });
+		setAttrs({[`judge-${skill}`] :lvl+abil });
 	});
 };
 
