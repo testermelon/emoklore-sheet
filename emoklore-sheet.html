@@ -269,122 +269,122 @@
 			<span class="sheet-tab-label">Abilities </span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
-						<div class="fieldset-legend" > Ability Scores/能力値 </div>
-						<div class="fieldset-info" >
-							<label class='sheet-row-label' >Point Adjustment/技能補正:</label>
-							<input name="attr_ability-add-point" class="sheet-input-number" type="number" value="0"> 
-						</div>
-						<div class="fieldset-info" >
-							<span class="sheet-row-label"> Ability Points/能力ポイント: </span> 
-							<span class="point-left-indicator" name="attr_ability-point-left"  ></span>
-							<input type="hidden" name="attr_ability-point-left" value="25"> 
-						</div>
-						<div class="chardata-row"> 
-							<label class='sheet-row-label' >Fitness/身体:</label>
-							<select class='sheet-input' name="attr_ability-shintai" >
-								<option value="0" > 0 </option>
-								<option value="1" > 1 </option>
-								<option value="2" > 2 </option>
-								<option value="3" > 3 </option>
-								<option value="4" > 4 </option>
-								<option value="5" > 5 </option>
-								<option value="6" > 6 </option> 
-							</select>
-						</div>
-						<div class="chardata-row"> 
-							<label class='sheet-row-label' >Dexterity/器用:</label> 
-							<select class='sheet-input' name="attr_ability-kiyou" >
-								<option value="0" > 0 </option>
-								<option value="1" > 1 </option>
-								<option value="2" > 2 </option>
-								<option value="3" > 3 </option>
-								<option value="4" > 4 </option>
-								<option value="5" > 5 </option>
-								<option value="6" > 6 </option> 
-							</select>
-						</div>
-						<div class="chardata-row"> 
-							<label class='sheet-row-label' >Spirit/精神:</label> 
-							<select  class='sheet-input' name="attr_ability-seishin" >
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option>
-						  </select>
-						</div>
-						<div class="chardata-row"> 
-							<label class='sheet-row-label' >Senses/五感:</label> 
-							<select  class='sheet-input' name="attr_ability-gokan" >
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option>
-						  </select>
-						</div>
-						<div class="chardata-row"> 
-							<label class='sheet-row-label' >Intelligence/知力:</label> 
-							<select  class='sheet-input' name="attr_ability-chiryoku" >
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option>
-						  </select>
-						</div>
-						<div class="chardata-row"> 
-							<label class='sheet-row-label' >Charisma/魅力:</label> 
-							<select  class='sheet-input' name="attr_ability-miryoku" >
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option>
-						  </select>
-						</div>
-						<div class="chardata-row">
-							<label class='sheet-row-label' >Social Standing/社会:</label>
-							<select  class='sheet-input' name="attr_ability-shakai" >
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option>
-							</select>
-						</div>
-						<div class="chardata-row">
-							<label class='sheet-row-label' >Luck/運勢:</label>
-							<input type="number" min="1" max="6" class='sheet-input' name="attr_ability-unsei" >
-							<button type="action" name="act_unsei-roll"> Roll </button>
-						</div>
-						<div class="fieldset-legend" > Parameter/パラメータ </div>
-						<div class="chardata-row">
-							<label class='sheet-row-label' >HP:</label>
-							<input type="number" class="sheet-input-number" name="attr_hp">
-							<span> / </span>
-							<input type="hidden" name="attr_hp_max" >
-							<span  class='sheet-input-number' name="attr_hp_max" ></span>
-							<!-- value="(@{ability-shintai}+10)"--> 
-						</div>
-						<div class="chardata-row">
-							<label class='sheet-row-label' >MP:</label>
-							<input type="number" class="sheet-input-number"  name="attr_mp">
-							<span> / </span>
-							<input type="hidden" name="attr_mp_max" >
-							<span  class='sheet-input-number' name="attr_mp_max" ></span>
-							<!-- value="(@{ability-seishin}+@{ability-chiryoku})" -->
-						</div>
+					<div class="fieldset-legend" > Ability Scores/能力値 </div>
+					<div class="fieldset-info" >
+						<label class='sheet-row-label' >Point Adjustment/技能補正:</label>
+						<input name="attr_ability-add-point" class="sheet-input-number" type="number" value="0"> 
+					</div>
+					<div class="fieldset-info" >
+						<span class="sheet-row-label"> Ability Points/能力ポイント: </span> 
+						<span class="point-left-indicator" name="attr_ability-point-left"  ></span>
+						<input type="hidden" name="attr_ability-point-left" value="25"> 
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Fitness/身体:</label>
+						<select class='sheet-input' name="attr_ability-shintai" >
+							<option value="0" > 0 </option>
+							<option value="1" > 1 </option>
+							<option value="2" > 2 </option>
+							<option value="3" > 3 </option>
+							<option value="4" > 4 </option>
+							<option value="5" > 5 </option>
+							<option value="6" > 6 </option> 
+						</select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Dexterity/器用:</label> 
+						<select class='sheet-input' name="attr_ability-kiyou" >
+							<option value="0" > 0 </option>
+							<option value="1" > 1 </option>
+							<option value="2" > 2 </option>
+							<option value="3" > 3 </option>
+							<option value="4" > 4 </option>
+							<option value="5" > 5 </option>
+							<option value="6" > 6 </option> 
+						</select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Spirit/精神:</label> 
+						<select  class='sheet-input' name="attr_ability-seishin" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Senses/五感:</label> 
+						<select  class='sheet-input' name="attr_ability-gokan" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Intelligence/知力:</label> 
+						<select  class='sheet-input' name="attr_ability-chiryoku" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Charisma/魅力:</label> 
+						<select  class='sheet-input' name="attr_ability-miryoku" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Social Standing/社会:</label>
+						<select  class='sheet-input' name="attr_ability-shakai" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+						</select>
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Luck/運勢:</label>
+						<input type="number" min="1" max="6" class='sheet-input' name="attr_ability-unsei" >
+						<button type="action" name="act_unsei-roll"> Roll </button>
+					</div>
+					<div class="fieldset-legend" > Parameter/パラメータ </div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >HP:</label>
+						<input type="number" class="sheet-input-number" name="attr_hp">
+						<span> / </span>
+						<input type="hidden" name="attr_hp_max" >
+						<span  class='sheet-input-number' name="attr_hp_max" ></span>
+						<!-- value="(@{ability-shintai}+10)"--> 
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >MP:</label>
+						<input type="number" class="sheet-input-number"  name="attr_mp">
+						<span> / </span>
+						<input type="hidden" name="attr_mp_max" >
+						<span  class='sheet-input-number' name="attr_mp_max" ></span>
+						<!-- value="(@{ability-seishin}+@{ability-chiryoku})" -->
+					</div>
     		    </div>
     		</div>
     	</div>
@@ -411,7 +411,7 @@
 					<div class="chardata-row">
 					  <label class='sheet-row-label' >∞Resonance/∞共鳴:</label>
 					  <span class="sheet-row-label">
-						  <select name="attr_levelkyoumei"> 
+						  <select name="attr_level-kyoumei"> 
 							  <option> 1 </option>
 							  <option> 2 </option>
 							  <option> 3 </option>
@@ -443,7 +443,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-chousa-stat" >
-							  <option> Dexterity/器用 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chousa" value="0" >
 						  <span class="skill-result" name="attr_judge-chousa" ></span>
@@ -461,7 +461,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kensaku-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kensaku" value="0" >
 						  <span class="skill-result" name="attr_judge-kensaku" ></span>
@@ -479,7 +479,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-dousatsu-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dousatsu" value="0" >
 						  <span class="skill-result" name="attr_judge-dousatsu" ></span>
@@ -498,8 +498,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-mapping-stat" >
-							  <option> Dexterity/器用 </option>
-							  <option> Senses/五感 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-mapping" value="0" >
 						  <span class="skill-result" name="attr_judge-mapping" ></span>
@@ -518,8 +518,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-chokkan-stat" >
-							  <option> Spirit/精神 </option>
-							  <option> Luck/運勢 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chokkan" value="0" >
 						  <span class="skill-result" name="attr_judge-chokkan" > </span>
@@ -538,8 +538,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-kantei-stat" >
-							  <option> Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kantei" value="0" >
 						  <span class="skill-result" name="attr_judge-kantei" ></span>
@@ -558,7 +558,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-chikaku-stat" >
-							  <option> Senses/五感 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chikaku" value="0" >
 						  <span class="skill-result" name="attr_judge-chikaku" ></span>
@@ -577,7 +577,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kansatsugan-stat" >
-							  <option> Senses/五感 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kansatsugan" value="0" >
 						  <span class="skill-result" name="attr_judge-kansatsugan" ></span>
@@ -596,7 +596,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kikime-stat" >
-							  <option> Senses/五感 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kikime" value="0" >
 						  <span class="skill-result" name="attr_judge-kikime" ></span>
@@ -615,7 +615,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-dokumi-stat" >
-							  <option> Senses/五感 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dokumi" value="0" >
 						  <span class="skill-result" name="attr_judge-dokumi" ></span>
@@ -634,8 +634,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-kikikanchi-stat" >
-							  <option> Senses/五感 </option>
-							  <option> Luck/運勢 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kikikanchi" value="0" >
 						  <span class="skill-result" name="attr_judge-kikikanchi" ></span>
@@ -654,8 +654,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-reikan-stat" >
-							  <option> Spirit/精神 </option>
-							  <option> Luck/運勢 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-reikan" value="0" >
 						  <span class="skill-result" name="attr_judge-reikan" ></span>
@@ -674,7 +674,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-koushou-stat" >
-							  <option> Charisma/魅力 </option>
+							  <option value="ability-miryoku" > Charisma/魅力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-koushou" value="0" >
 						  <span class="skill-result" name="attr_judge-koushou" ></span>
@@ -693,7 +693,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-shakoujutsu-stat" >
-							  <option> Social Standing/社会 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-shakoujutsu" value="0" >
 						  <span class="skill-result" name="attr_judge-shakoujutsu" ></span>
@@ -712,7 +712,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-debate-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-debate" value="0" >
 						  <span class="skill-result" name="attr_judge-debate" ></span>
@@ -731,8 +731,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-shinri-stat" >
-							  <option> Spirit/精神 </option>
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-shinri" value="0" >
 						  <span class="skill-result" name="attr_judge-shinri" ></span>
@@ -751,7 +751,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-miryou-stat" >
-							  <option> Charisma/魅力 </option>
+							  <option value="ability-miryoku" > Charisma/魅力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-miryou" value="0" >
 						  <span class="skill-result" name="attr_judge-miryou" ></span>
@@ -770,7 +770,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-chishiki-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-chishiki" value="0" >
 						  <span class="skill-result" name="attr_judge-chishiki" ></span>
@@ -792,7 +792,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-senmonchishiki-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-senmonchishiki" value="0" >
 						  <span class="skill-result" name="attr_judge-senmonchishiki" ></span>
@@ -813,7 +813,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-news-stat" >
-							  <option> Social Standing/社会 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-news" value="0" >
 						  <span class="skill-result" name="attr_judge-news" ></span>
@@ -832,8 +832,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-jijoutsuu-stat" >
-							  <option> Senses/五感 </option>
-							  <option> Social Standing/社会 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-jijoutsuu" value="0" >
 						  <span class="skill-result" name="attr_judge-jijoutsuu" ></span>
@@ -855,8 +855,8 @@
 						  </span>
 						  <span class="sheet-row-label">
 							  <select class='sheet-input' name="attr_level-gyoukai-stat" >
-								  <option> Charisma/魅力 </option>
-								  <option> Social Standing/社会 </option>
+								  <option value="ability-miryoku" > Charisma/魅力 </option>
+								  <option value="ability-shakai" > Social Standing/社会 </option>
 							  </select>
 							  <input type="hidden" name="attr_judge-gyoukai" value="0" >
 							  <span class="skill-result" name="attr_judge-gyoukai" ></span>
@@ -875,7 +875,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-undou-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-undou" value="0" >
 						  <span class="skill-result" name="attr_judge-undou" ></span>
@@ -893,7 +893,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-speed-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-speed" value="0" >
 						  <span class="skill-result" name="attr_judge-speed" ></span>
@@ -911,7 +911,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-strength-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-strength" value="0" >
 						  <span class="skill-result" name="attr_judge-strength" ></span>
@@ -929,8 +929,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-acrobat-stat" >
-							  <option> Fitness/身体 </option>
-							  <option> Dexterity/器用 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-acrobat" value="0" >
 						  <span class="skill-result" name="attr_judge-acrobat" ></span>
@@ -949,7 +949,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-dive-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dive" value="0" >
 						  <span class="skill-result" name="attr_judge-dive" ></span>
@@ -968,7 +968,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kakutou-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kakutou" value="0" >
 						  <span class="skill-result" name="attr_judge-kakutou" ></span>
@@ -991,7 +991,7 @@
 						  </span>
 						  <span class="sheet-row-label">
 							  <select disabled class='sheet-input' name="attr_level-bujutsu-stat" >
-								  <option> Fitness/身体 </option>
+								  <option value="ability-shintai" > Fitness/身体 </option>
 							  </select>
 							  <input type="hidden" name="attr_judge-bujutsu" value="0" >
 							  <span class="skill-result" name="attr_judge-bujutsu" ></span>
@@ -1013,9 +1013,9 @@
 						</span> 
 						<span class="sheet-row-label">
 							<select class='sheet-input' name="attr_level-ougi-stat" >
-								<option> Fitness/身体 </option>
-								<option> Dexterity/器用 </option>
-								<option> Spirit/精神 </option>
+								<option value="ability-shintai" > Fitness/身体 </option>
+								<option value="ability-kiyou" > Dexterity/器用 </option>
+								<option value="ability-seishin" > Spirit/精神 </option>
 							</select>
 							<input type="hidden" name="attr_judge-ougi" value="0" >
 							<span class="skill-result" name="attr_judge-ougi" ></span> 
@@ -1033,7 +1033,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-touteki-stat" >
-							  <option> Dexterity/器用 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-touteki" value="0" >
 						  <span class="skill-result" name="attr_judge-touteki" ></span>
@@ -1056,8 +1056,8 @@
 						  </span>
 						  <span class="sheet-row-label">
 							  <select class='sheet-input' name="attr_level-shageki-stat" >
-								  <option> Dexterity/器用 </option>
-								  <option> Senses/五感 </option>
+								  <option value="ability-kiyou" > Dexterity/器用 </option>
+								  <option value="ability-gokan" > Senses/五感 </option>
 							  </select>
 							  <input type="hidden" name="attr_judge-shageki" value="0" >
 							  <span class="skill-result" name="attr_judge-shageki" ></span>
@@ -1077,7 +1077,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-seizon-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-seizon" value="0" >
 						  <span class="skill-result" name="attr_judge-seizon" ></span>
@@ -1096,7 +1096,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-taikyuu-stat" >
-							  <option> Fitness/身体 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-taikyuu" value="0" >
 						  <span class="skill-result" name="attr_judge-taikyuu" ></span>
@@ -1115,7 +1115,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-jiga-stat" >
-							  <option> Spirit/精神 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-jiga" value="0" >
 						  <span class="skill-result" name="attr_judge-jiga" ></span>
@@ -1134,7 +1134,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-konjou-stat" >
-							  <option> Spirit/精神 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-konjou" value="0" >
 						  <span class="skill-result" name="attr_judge-konjou" ></span>
@@ -1153,7 +1153,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-teate-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-teate" value="0" >
 						  <span class="skill-result" name="attr_judge-teate" ></span>
@@ -1172,8 +1172,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-ijutsu-stat" >
-							  <option> Dexterity/器用 </option>
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-ijutsu" value="0" >
 						  <span class="skill-result" name="attr_judge-ijutsu" ></span>
@@ -1192,8 +1192,8 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-sosei-stat" >
-							  <option> Spirit/精神 </option>
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-sosei" value="0" >
 						  <span class="skill-result" name="attr_judge-sosei" ></span>
@@ -1212,7 +1212,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-saiku-stat" >
-							  <option> Dexterity/器用 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-saiku" value="0" >
 						  <span class="skill-result" name="attr_judge-saiku" ></span>
@@ -1235,7 +1235,7 @@
 						  </span>
 						  <span class="sheet-row-label">
 							  <select disabled class='sheet-input' name="attr_level-gikou-stat" >
-								  <option> Dexterity/器用 </option>
+								  <option value="ability-kiyou" > Dexterity/器用 </option>
 							  </select>
 							  <input type="hidden" name="attr_judge-gikou" value="0" >
 							  <span class="skill-result" name="attr_judge-gikou" ></span>
@@ -1257,9 +1257,9 @@
 						  </span>
 						  <span class="sheet-row-label">
 							  <select class='sheet-input' name="attr_level-geijutsu-stat" >
-								  <option> Dexterity/器用 </option>
-								  <option> Spirit/精神 </option>
-								  <option> Senses/五感 </option>
+								  <option value="ability-kiyou" > Dexterity/器用 </option>
+								  <option value="ability-seishin" > Spirit/精神 </option>
+								  <option value="ability-gokan" > Senses/五感 </option>
 							  </select>
 							  <input type="hidden" name="attr_judge-geijutsu" value="0" >
 							  <span class="skill-result" name="attr_judge-geijutsu" ></span>
@@ -1283,9 +1283,9 @@
 						  </span>
 						  <span class="sheet-row-label">
 							  <select class='sheet-input' name="attr_level-soujuu-stat" >
-								  <option> Dexterity/器用 </option>
-								  <option> Senses/五感 </option>
-								  <option> Intelligence/知力 </option>
+								  <option value="ability-kiyou" > Dexterity/器用 </option>
+								  <option value="ability-gokan" > Senses/五感 </option>
+								  <option value="ability-chiryoku" > Intelligence/知力 </option>
 							  </select>
 							  <input type="hidden" name="attr_judge-soujuu" value="0" >
 							  <span class="skill-result" name="attr_judge-soujuu" ></span>
@@ -1305,7 +1305,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-angou-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-angou" value="0" >
 						  <span class="skill-result" name="attr_judge-angou" ></span>
@@ -1324,7 +1324,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-dennou-stat" >
-							  <option> Intelligence/知力 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-dennou" value="0" >
 						  <span class="skill-result" name="attr_judge-dennou" ></span>
@@ -1343,9 +1343,9 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-intoku-stat" >
-							  <option> Dexterity/器用 </option>
-							  <option> Social Standing/社会 </option>
-							  <option> Luck/運勢 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-intoku" value="0" >
 						  <span class="skill-result" name="attr_judge-intoku" ></span>
@@ -1364,7 +1364,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kouun-stat" >
-							  <option> Luck/運勢 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kouun" value="0" >
 						  <span class="skill-result" name="attr_judge-kouun" ></span>
@@ -1383,7 +1383,7 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select disabled class='sheet-input' name="attr_level-kyouun-stat" >
-							  <option> Luck/運勢 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-kyouun" value="0" >
 						  <span class="skill-result" name="attr_judge-kyouun" ></span>
@@ -1402,15 +1402,14 @@
 					  </span>
 					  <span class="sheet-row-label">
 						  <select class='sheet-input' name="attr_level-sonota-stat" >
-							  <option> Select a Stat </option>
-							  <option> Fitness/身体 </option>
-							  <option> Dexterity/器用 </option>
-							  <option> Spirit/精神 </option>
-							  <option> Senses/五感 </option>
-							  <option> Intelligence/知力 </option>
-							  <option> Charisma/魅力 </option>
-							  <option> Social Standing/社会 </option>
-							  <option> Luck/運勢 </option>
+							  <option value="ability-shintai" > Fitness/身体 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+							  <option value="ability-miryoku" > Charisma/魅力 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
 						  <input type="hidden" name="attr_judge-sonota" value="0" >
 						  <span class="skill-result" name="attr_judge-sonota" ></span>
@@ -1426,19 +1425,15 @@
 
 <script type="text/worker">
 
-console.log("script triggered");
-
 /********************************
  * Shorten A = CONSTANT + B + C + D .... 
  * as get(B,C,D,...) => set A 
  * toSet : A 
  * konstanta : CONSTANT
  * getList is the rest: (sign, toGet) 
- */
-
+ ***********************************/
 
 const  summingArgs = (toSet, konstanta,  ...getList) => {
-	console.log("summingArgs triggered");
 	let toGet = [];
 	let signs = [];
 	for(let i=0; i<getList.length; i++) {
@@ -1462,7 +1457,6 @@ const  summingArgs = (toSet, konstanta,  ...getList) => {
 
 //ability-point-left = abilityPoint(25) + abilityaddpoint - (all abilities except luck) 
 const calcAbilityPointLeft = () => {
-	console.log("calcAbilityPointLeft triggered");
 	const abilityPoint = 25;
 	summingArgs( "ability-point-left", 
 		abilityPoint, 
@@ -1475,100 +1469,130 @@ const calcAbilityPointLeft = () => {
 		"-", "ability-miryoku" ,
 		"-", "ability-shakai" ,
 	);
-}
+};
 
-const staticSkills = [
-//list of all skills that is not in repeating
+const listAttrsAbilities = [
+	"abiity-shintai", 
+	"abiity-kiyou", 
+	"abiity-seishin", 
+	"abiity-gokan", 
+	"abiity-chiryoku", 
+	"abiity-miryoku", 
+	"abiity-shakai", 
+	"abiity-unsei", 
 ];
 
-const levelSkillAttrs = staticSkills.map( 
-skill => `level-${skill}`);
+//list of all skills that is not in repeating
+const listNonrepSkills = [
+	"chousa", 		"kensaku", 		"mapping", 		"chokkan", 
+	"kantei", 		"chikaku", 		"kansatsugan", 	"kikime", 
+	"dokumi", 		"kikikanchi", 	"reikan", 		"koushou", 
+	"shakoujutsu", 	"debate", 		"shinri", 		"miryou", 
+	"chishiki", 	"news", 		"jijoutsuu", 	"undou", 
+	"speed", 		"strength", 	"acrobat", 		"dive", 
+	"kakutou", 		"touteki", 		"seizon", 		"taikyuu",
+	"jiga", 		"konjou", 		"teate", 		"ijutsu", 
+	"sosei", 		"saiku", 		"angou", 		"dennou", 
+	"intoku", 		"kouun", 		"kyouun",
+];
 
-const statSkillAttrs = staticSkills.map( 
-skill => `level-${skill}-stat`);
+//list of all skills that is not in repeating
+const listRepSkills = [
+	"senmonchishiki", 
+	"gyoukai", 
+	"bujutsu", 
+	"ougi", 
+	"shageki", 
+	"gikou", 
+	"art", 
+	"soujuu", 
+];
+
+const listAttrsLevel 	= listNonrepSkills.map( skill => `level-${skill}`);
+const listAttrsJudgeref	= listNonrepSkills.map( skill => `level-${skill}-stat`); 
 
 // set judgement value according to level + ability
 // except repeating sections
 const setAllJudgement = (abilityName) => {
-// get levels and ability settings attr names in an array 
-// call getAttrs
-	//iterate on skills and recalculate matching ones
-	//set up array of judgement attrs to set
-	//call setAttrs
-
+	//obtain all judgement ability references 
+	getAttrs( listAttrsJudgeref, (judgerefs) => {
+		//iterate on skills and recalculate matching ones
+		judgerefs.forEach( (abil, ref) => {
+			if(abil == abilityName) {
+				skill = ref.replace('level-','').replace('-stat','');
+				setSingleJudgement(skill);
+			};
+		}); //map.forEach
+	}); //getAttrs closure
 };
 
 const setSingleJudgement = (skill) => {
-// get
-getAttrs([`level-${skill}`,`level-${skill}-stat`,
-`allAbilities`], 
-(values) => {
-//setAttrs({[`judgement-${skill}`], "level+abil"});
-});
+	getAttrs( [`level-${skill}`,`level-${skill}-stat`].concat(listAttrsAbilities), (values) => {
+		lvl = parseInt(values[`level-${skill}`]) || 0 ;
+		abi = parseInt(values[ values[`level-${skill}-stat`] ]) || 0 ;
+		setAttrs({[`judge-${skill}`], lvl+abil });
+	});
 };
 
+/*RESPOND TO CHANGES IN ABILITIES PAGE */
 
-/*ABILITIES PAGE
- */
-
-on(`change:ability-add-point`, () => {
-	console.log("onchange set 1");
-	calcAbilityPointLeft();
-});
+on(`change:ability-add-point`, () => { calcAbilityPointLeft(); });
 
 on(`change:ability-shintai`, () => {
-	console.log("onchange set 2");
 	calcAbilityPointLeft();
-	//hp_max = 10 + ability-shintai
 	summingArgs( "hp_max", 10, "+", "ability-shintai");
-	
+	setAllJudgement('shintai');
 });
 
 on(`change:ability-kiyou`, () => {
-	console.log("onchange set 3");
 	calcAbilityPointLeft();
-	//SKILLS PAGE
+	setAllJudgement('kiyou');
 });
 
 on(`change:ability-seishin`, () => {
-	console.log("onchange set 4");
 	calcAbilityPointLeft();
-	summingArgs( "ability-point-left", 	abilityPoint, 	"+", "ability-add-point", "-", "ability-shintai" );
-	//mp_max = ability-seishin + ability-chiryoku
 	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+	setAllJudgement('seishin');
 });
 
 on(`change:ability-gokan`, () => {
-	console.log("onchange set 5");
 	calcAbilityPointLeft();
+	setAllJudgement('gokan');
 });
 
 on(`change:ability-chiryoku`, () => {
-	console.log("onchange set 6");
 	calcAbilityPointLeft();
-	//mp_max = ability-seishin+ability-chiryoku
 	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+	setAllJudgement('chiryoku');
 });
 
 on(`change:ability-miryoku`, () => {
-	console.log("onchange set 7");
 	calcAbilityPointLeft();
+	setAllJudgement('miryoku');
 });
 
 on(`change:ability-shakai`, () => {
-	console.log("onchange set 8");
 	calcAbilityPointLeft();
+	setAllJudgement('shakai');
 });
 
 on(`change:ability-unsei`, () => {
-	console.log("onchange set 9");
+	setAllJudgement('unsei');
 });
 
 on(`clicked:unsei-roll`, () => {
-	console.log("onchange set a");
 	//abilityunsei = 1d6;
 	let keberuntungan = Math.floor(Math.random() * 6 ) + 1;
 	summingArgs("ability-unsei", keberuntungan );
+});
+
+
+/*RESPOND TO CHANGES IN SKILLS PAGE */
+
+listNonrepSkills.forEach( (skill) => {
+	on(`change:level-${skill}`, () => {
+		setSingleJudgement(skill);
+	});
 });
 
 </script>

@@ -131,7 +131,10 @@
 .chardata-row {
 	display:flex;
 	padding: 2px;
-	border-bottom: 1px solid #111111;
+	border-radius:5px;
+	margin:5px;
+	color:#2d2d2d;
+	background:#dde0e6;
 }
 
 .fieldset-info {
@@ -173,23 +176,32 @@ fieldset {
 .sheet-content .sheet-row-label {
 	width:200px;
 	font-size: 14px;
-	margin-left:3px;
-	line-height:1.7em;
+	margin: auto 5px;
 	color:inherit;
 	font-weight:normal;
 }
 
 .sheet-row-label > select {
 	width:150px;
+	background-color:white;
+}
+.sheet-row-label > select[disabled] {
+	background-color:transparent;
 }
 
 .sheet-input {
 	margin:2px;
-	height:24px;
 	flex-grow:1;
+	height:24px;
 	background-color:#FAFAFA;
 	border: 1px solid slategray;
 	border-radius:5px;
+	font-size:12px;
+	padding:0;
+}
+
+select.sheet-input {
+	padding:0;
 }
 
 .skill-result {
@@ -268,6 +280,12 @@ fieldset {
 	font-size:1.7em;
 }
 
+.point-left-indicator {
+	color: white;
+	background-color:teal;
+	width:45px;
+	text-align:center;
+
 .repitem .reverb-row-item, .sheet-repitem .reverb-row-item {
 	margin-left:10px;
 	font-size:12px;
@@ -285,4 +303,5 @@ input.reverb-row-item {
 	margin: 0 10px 0 10px;
 	width: 50px;
 	text-align: center;
+	padding:0;
 }
