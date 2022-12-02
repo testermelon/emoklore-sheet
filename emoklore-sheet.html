@@ -1481,9 +1481,11 @@ const staticSkills = [
 //list of all skills that is not in repeating
 ];
 
-staticSkills.forEach( skill => {};
+const levelSkillAttrs = staticSkills.map( 
+skill => `level-${skill}`);
 
-
+const statSkillAttrs = staticSkills.map( 
+skill => `level-${skill}-stat`);
 
 // set judgement value according to level + ability
 // except repeating sections
@@ -1498,8 +1500,10 @@ const setAllJudgement = (abilityName) => {
 
 const setSingleJudgement = (skill) => {
 // get
-getAttrs([`level-@{skill}`,`level-@{skill}-stat`,`allAbilities`], (values) => {
-//setAttrs({[`judgement-@{skill}`], "level+abil"});
+getAttrs([`level-${skill}`,`level-${skill}-stat`,
+`allAbilities`], 
+(values) => {
+//setAttrs({[`judgement-${skill}`], "level+abil"});
 });
 };
 
