@@ -1477,10 +1477,31 @@ const calcAbilityPointLeft = () => {
 	);
 }
 
-//return array of skills affected by ability
-const getAffectedSkills = (abilityName) => {
-	//iterate on skills and list up matching ones
-}
+const staticSkills = [
+//list of all skills that is not in repeating
+];
+
+staticSkills.forEach( skill => {};
+
+
+
+// set judgement value according to level + ability
+// except repeating sections
+const setAllJudgement = (abilityName) => {
+// get levels and ability settings attr names in an array 
+// call getAttrs
+	//iterate on skills and recalculate matching ones
+	//set up array of judgement attrs to set
+	//call setAttrs
+
+};
+
+const setSingleJudgement = (skill) => {
+// get
+getAttrs([`level-@{skill}`,`level-@{skill}-stat`,`allAbilities`], (values) => {
+//setAttrs({[`judgement-@{skill}`], "level+abil"});
+});
+};
 
 
 /*ABILITIES PAGE
