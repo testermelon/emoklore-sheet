@@ -1515,15 +1515,14 @@ const listAttrsJudgeref	= listNonrepSkills.map( skill => `level-${skill}-stat`);
 // except repeating sections
 const setAllJudgement = (abilityName) => {
 	//obtain all judgement ability references 
-	getAttrs( listAttrsJudgeref, (judgerefs) => {
+	getAttrs( listAttrsJudgeref, (values) => {
 		//iterate on skills and recalculate matching ones
-		judgerefs.forEach( (abil, ref) => {
-			if(abil == abilityName) {
-				skill = ref.replace('level-','').replace('-stat','');
+		listNonrepSkills.forEach( (skills) => {
+			if(values[skill] == abilityName) {
 				setSingleJudgement(skill);
 			};
-		}); //map.forEach
-	}); //getAttrs closure
+		}); //forEach
+	}); //getAttrs
 };
 
 const setSingleJudgement = (skill) => {
