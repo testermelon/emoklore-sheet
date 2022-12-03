@@ -1518,7 +1518,8 @@ const setAllJudgement = (abilityName) => {
 	getAttrs( listAttrsJudgeref, (values) => {
 		//iterate on skills and recalculate matching ones
 		listNonrepSkills.forEach( (skills) => {
-			if(values[skill] == abilityName) {
+		let ref = `level-${skill}-stat`;
+			if(values[ref] == abilityName) {
 				setSingleJudgement(skill);
 			};
 		}); //forEach
