@@ -255,9 +255,9 @@
 					<div class="fieldset-legend"> Reverberations Records/残響の記録 </div>
 					<fieldset class="repeating_reverbrecords">
 						<div class="sheet-repitem">
-							<label class="reverb-row-item"> Scenario Name/シナリオ名: </label>
+							<span class="reverb-row-item"> Scenario Name/シナリオ名: </label>
 							<input class="reverb-row-item" type="text" name="attr_scenario-name" >
-							<label class="reverb-row-item"> Emotions/感情: </label>
+							<span class="reverb-row-item"> Emotions/感情: </label>
 							<input class="reverb-row-item" type="text" name="attr_emotions" >
 						</div>
 					</fieldset>
@@ -1530,7 +1530,7 @@ const setSingleJudgement = (skill) => {
 	getAttrs( [`level-${skill}`,`level-${skill}-stat`].concat(listAttrsAbilities), (values) => {
 		lvl = parseInt(values[`level-${skill}`]) || 0 ;
 		abi = parseInt(values[ values[`level-${skill}-stat`] ]) || 0 ;
-		setAttrs({[`judge-${skill}`] :lvl+abil });
+		setAttrs({[`judge-${skill}`] :lvl+abi });
 	});
 };
 
