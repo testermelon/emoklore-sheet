@@ -2142,10 +2142,14 @@ const listAttrsJudgeref	= listNonrepSkills.map( skill => `level-${skill}-abiref`
 	3. Update each 'judge-${skill}' on change of `level-${skill}-abiref`
 */
 
-
-
-
-
+TAS.repeating('skill-senmonchishiki')
+    .attrs(listAttrsAbilities)
+    .fields('level-senmonchishiki','level-senmonchishiki-abiref','judge-senmonchishiki')
+    .tap(function(rowSet,attrSet){
+        if(lgDebug) console.log('RowSet has keys: '+_.keys(rowSet).join(', '));
+        if(lgDebug) console.log('AttrSet has keys: '+_.keys(attrSet).join(', '));
+    })
+    .execute();
 
 
 /* START OF HELPER FUNCTIONS DEFINITIONS */
@@ -2197,7 +2201,7 @@ const calcAbilityPointLeft = () => {
 };
 
 //calculate skill cost 
-const skillCost = (lvl, skill) {
+const skillCost = (lvl, skill) => {
 	let cost = lvl * 5; 
 	if(	skill == 'reikan'	) cost *= 2;
 	if(	skill == 'sosei' 	) cost *= 2;
@@ -2207,10 +2211,10 @@ const skillCost = (lvl, skill) {
 // set judgement value according to level + ability
 // except repeating sections
 const setAllJudgement = (abilityName) => {
-	if(lgDebug == true) console.log('setAllJudgement');
+	if(lgDebug) console.log('setAllJudgement');
 	//obtain all judgement ability references 
 	getAttrs( listAttrsJudgeref, (values) => {
-		if(lgDebug == true) console.log(JSON.parse(JSON.stringify(values)));
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 		//iterate on skills and recalculate matching ones
 		listNonrepSkills.forEach( (skill) => {
 			let ref = `level-${skill}-abiref`;
@@ -2223,9 +2227,9 @@ const setAllJudgement = (abilityName) => {
 
 // set judgement value according to level + ability for one skill
 const setSingleJudgement = (skill) => {
-	if(lgDebug == true) console.log('setSingleJudgement');
+	if(lgDebug) console.log('setSingleJudgement');
 	getAttrs( [`level-${skill}`,`level-${skill}-abiref`].concat(listAttrsAbilities), (values) => {
-		if(lgDebug == true) console.log(JSON.parse(JSON.stringify(values)));
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 		lvl = parseInt(values[`level-${skill}`]) || 0 ;
 		abi = parseInt(values[ values[`level-${skill}-abiref`] ]) || 0 ;
 		setAttrs({[`judge-${skill}`] :lvl+abi });
@@ -2235,18 +2239,20 @@ const setSingleJudgement = (skill) => {
 
 const calcSkillPointLeft = () => {
 	getAttrs(listAttrsLevel, (values) => {
-		if(lgDebug == true) console.log('calcSkillPt');
-		if(lgDebug == true) console.log(JSON.parse(JSON.stringify(values)));
+		if(lgDebug) console.log('calcSkillPt');
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 		//initially 30
 		let sum = 30; 
-		listAttrsLevel.forEach( (skill) => {
+		listAttrsLevel.forEach( skill => {
 			let lvl = values[skill];
 			//check with skill cost table elsewhere
 			sum -= skillCost(lvl, skill);
-		}
-		setAttrs({ skill-point-left : sum });
-	}
-}
+		});
+		let obj = {};
+		obj[skill-point-left] = sum;
+		setAttrs( obj );
+	});
+};
 
 /*RESPOND TO CHANGES IN ABILITIES PAGE */
 
