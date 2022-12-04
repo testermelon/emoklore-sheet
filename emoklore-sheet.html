@@ -2249,7 +2249,7 @@ const setAllJudgement = (abilityName) => {
 const setSingleJudgement = (skill) => {
 	if(lgDebug) console.log('setSingleJudgement');
 
-	let attrToGet = [`level-${skill}`,`level-${skill}-abiref`].push(listAttrsAbilities);
+	let attrToGet = [`level-${skill}`,`level-${skill}-abiref`].concat(listAttrsAbilities);
 	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
 
 	getAttrs(attrToGet, (values) => {
@@ -2271,7 +2271,7 @@ const setSingleJudgement = (skill) => {
 const calcSkillPointLeft = () => {
 	if(lgDebug) console.log('calcSkillPointLeft()');
 
-	let attrToGet = [`skill-add-point`].push(listAttrsAbilities);
+	let attrToGet = [`skill-add-point`].concat(listAttrsAbilities);
 	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
 
 	getAttrs(attrToGet, (values) => {
