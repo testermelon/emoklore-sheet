@@ -2120,14 +2120,14 @@ const lgDebug = true;
 
 //List of abilities attr names 
 const listAttrsAbilities = [
-	"abiity-shintai", 
-	"abiity-kiyou", 
-	"abiity-seishin", 
-	"abiity-gokan", 
-	"abiity-chiryoku", 
-	"abiity-miryoku", 
-	"abiity-shakai", 
-	"abiity-unsei", 
+	"ability-shintai", 
+	"ability-kiyou", 
+	"ability-seishin", 
+	"ability-gokan", 
+	"ability-chiryoku", 
+	"ability-miryoku", 
+	"ability-shakai", 
+	"ability-unsei", 
 ];
 
 //list of all skills that is not in repeating
@@ -2145,7 +2145,7 @@ const listNonrepSkills = [
 ];
 
 //list of all skills that is not in repeating
-const listRepSkills = [
+const listRepeatingSkills = [
 	"senmonchishiki", 
 	"gyoukai", 
 	"bujutsu", 
@@ -2216,11 +2216,14 @@ const calcAbilityPointLeft = () => {
 
 //calculate skill cost 
 const skillCost = (lvl, skill) => {
-	if(lgDebug) console.log('skillCost()');
 
 	let cost = lvl * 5; 
 	if(	skill == 'reikan'	) cost *= 2;
 	if(	skill == 'sosei' 	) cost *= 2;
+
+	if(lgDebug) console.log(`cost(${lvl},${skill}: ${cost}`);
+
+	return cost;
 }
 
 
@@ -2236,9 +2239,9 @@ const setAllJudgement = (abilityName) => {
 		//iterate on skills and recalculate matching ones
 		listNonrepSkills.forEach( (skill) => {
 			let ref = `level-${skill}-abiref`;
-			if(lgDebug) console.log(`ref: ${ref}`);
+			if(lgDebug) console.log(`ref: ${ref} `);
 			if(lgDebug) console.log(`abilityName: ${abilityName}`);
-			if(values[ref] == abilityName ) {
+			if(values[ref] == `ability-${abilityName}` ) {
 				setSingleJudgement(skill);
 			};
 		}); //forEach
@@ -2353,6 +2356,8 @@ on(`clicked:unsei-roll`, () => {
 
 /*RESPOND TO CHANGES IN SKILLS PAGE */
 
+on(`change:skill-add-point`, () => { calcSkillPointLeft(); });
+
 listNonrepSkills.forEach( (skill) => {
 
 	//change of skill level
@@ -2368,18 +2373,22 @@ listNonrepSkills.forEach( (skill) => {
 
 });
 
-on(`change:repeating_skill-senmonchishiki`, (eventInfo) => {
-	if(lgDebug) console.log('changed:senmonchishiki');
-	if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
+listRepeatingSkills.forEach( (skill) => {
 
-	TAS.repeating('skill-senmonchishiki')
-		.attrs('ability-fitness','ability-seishin')
-		.fields('level-senmonchishiki','level-senmonchishiki-abiref','judge-senmonchishiki')
-		.tap(function(rowSet,attrSet){
-			if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
-			if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-		})
-		.execute();
+	on(`change:repeating_skill-${skill}`, (eventInfo) => {
+		if(lgDebug) console.log(`changed: ${skill}`);
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
+
+		TAS.repeating(`skill-${skill}`)
+			.attrs(listAttrsAbilities)
+			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
+			.tap(function(rowSet,attrSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+			})
+			.execute();
+	});
+
 });
 
 </script>
