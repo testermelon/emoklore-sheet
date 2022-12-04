@@ -2193,8 +2193,10 @@ const skillCost = (lvl, skill) {
 // set judgement value according to level + ability
 // except repeating sections
 const setAllJudgement = (abilityName) => {
+	console.log('setAllJudgement');
 	//obtain all judgement ability references 
 	getAttrs( listAttrsJudgeref, (values) => {
+		console.log(values);
 		//iterate on skills and recalculate matching ones
 		console.log(values);
 		listNonrepSkills.forEach( (skill) => {
@@ -2210,6 +2212,7 @@ const setAllJudgement = (abilityName) => {
 
 // set judgement value according to level + ability for one skill
 const setSingleJudgement = (skill) => {
+	console.log('setSingleJudgement');
 	getAttrs( [`level-${skill}`,`level-${skill}-stat`].concat(listAttrsAbilities), (values) => {
 		console.log(values);
 		lvl = parseInt(values[`level-${skill}`]) || 0 ;
@@ -2221,6 +2224,8 @@ const setSingleJudgement = (skill) => {
 
 const calcSkillPointLeft = () => {
 	getAttrs(listAttrsLevel, (values) => {
+		console.log('calcSkillPt');
+		console.log(values);
 		//initially 30
 		let sum = 30; 
 		listAttrsLevel.forEach( (skill) => {
@@ -2228,6 +2233,7 @@ const calcSkillPointLeft = () => {
 			//check with skill cost table elsewhere
 			sum -= skillCost(lvl, skill);
 		}
+		console.log(sum);
 		setAttrs({ skill-point-left : sum });
 	}
 }
