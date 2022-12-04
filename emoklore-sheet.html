@@ -2192,12 +2192,6 @@ const listRepeatingSkills = [
 const listAttrsLevel 	= listNonrepSkills.map( skill => `level-${skill}`);
 const listAttrsJudgeref	= listNonrepSkills.map( skill => `level-${skill}-abiref`); 
 
-/* what needs to be done for repeating skills? 
-	1. Update 'skill-point-left' on:change of `level-${skill}`
-	2. Update each 'judge-${skill}' on change of `level-${skill}`
-	3. Update each 'judge-${skill}' on change of `level-${skill}-abiref`
-*/
-
 /* START OF HELPER FUNCTIONS DEFINITIONS */
 
 /********************************
@@ -2252,6 +2246,9 @@ const skillCost = (lvl, skill) => {
 	let cost = lvl * 5; 
 	if(	skill == 'reikan'	) cost *= 2;
 	if(	skill == 'sosei' 	) cost *= 2;
+	if( skill == 'ougi' 	) cost *= 2;
+	if( skill == 'shageki' 	) cost *= 2;
+	if( skill == 'ougi' 	) cost *= 2;
 
 	if(lgDebug) console.log(`cost(${lvl},${skill}: ${cost}`);
 
@@ -2321,7 +2318,35 @@ const calcSkillPointLeft = () => {
 			//check with skill cost table elsewhere
 			sum -= skillCost(lvl, skill);
 		});
-		if(lgDebug) console.log(`sum = ${sum}`);
+		if(lgDebug) console.log(`NonR sum = ${sum}`);
+
+		//Repeating Skills cost sum
+		listRepeatingSkills.forEach( (skill) => {
+			TAS.repeating(`skill-${skill}`)
+				.attrs(listAttrsLevel)
+				.attrs('skill-point-left')
+				.fields(`level-${skill}` )
+				.reduce(function(memo,row,attrSet,id,rowSet){
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+					
+					lvl = row[`level-${skill}`]; 
+					memo += skillCost(lvl,skill) ;
+					return memo;
+
+				}, 0 , function(rowSet,attrSet){
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+
+					sum -= memo;
+				})
+				.execute();
+			if(lgDebug) console.log(`Total sum = ${sum}`);
+		}); //Repeating skills forEach
 
 		let obj = {};
 		obj['skill-point-left'] = sum;
@@ -2405,6 +2430,13 @@ listNonrepSkills.forEach( (skill) => {
 
 });
 
+/* what needs to be done for repeating skills? 
+	1. Update 'skill-point-left' on:change of `level-${skill}`
+	2. Update each 'judge-${skill}' on change of `level-${skill}`
+	3. Update each 'judge-${skill}' on change of `level-${skill}-abiref`
+*/
+
+
 listRepeatingSkills.forEach( (skill) => {
 
 	on(`change:repeating_skill-${skill}`, (eventInfo) => {
@@ -2414,11 +2446,20 @@ listRepeatingSkills.forEach( (skill) => {
 		TAS.repeating(`skill-${skill}`)
 			.attrs(listAttrsAbilities)
 			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
-			.tap(function(rowSet,attrSet){
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+			.each(function(row,attrSet,id,rowSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+				
+				let abiref = row[`level-${skill}-abiref`];
+				row[`judge-${skill}`] = row[`level-${skill}`] + attrSet[abiref];
+			},function(rowSet,attrSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 			})
 			.execute();
+
 	});
 
 });
