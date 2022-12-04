@@ -274,7 +274,7 @@
 						<label class='sheet-row-label' >Point Adjustment/技能補正:</label>
 						<input name="attr_ability-add-point" class="sheet-input-number" type="number" value="0"> 
 					</div>
-					<div class="fieldset-info" >
+					<div class="fieldset-info make-sticky" >
 						<span class="sheet-row-label"> Ability Points/能力ポイント: </span> 
 						<span class="point-left-indicator" name="attr_ability-point-left"  ></span>
 						<input type="hidden" name="attr_ability-point-left" value="25"> 
@@ -373,7 +373,7 @@
 						<label class='sheet-row-label' >HP:</label>
 						<input type="number" class="sheet-input-number" name="attr_hp">
 						<span> / </span>
-						<input type="hidden" name="attr_hp_max" >
+						<input type="hidden" name="attr_hp_max" value="10" >
 						<span  class='sheet-input-number' name="attr_hp_max" ></span>
 						<!-- value="(@{ability-shintai}+10)"--> 
 					</div>
@@ -831,7 +831,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-shakai" > Social Standing/社会 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-news" value="0" >
+						  <input type="hidden" name="attr_judge-news" value="1" >
 						  <span class="skill-result" name="attr_judge-news" ></span>
 					  </span>
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-news}d10[News Check]" > Roll </button>
@@ -896,7 +896,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-undou" value="0" >
+						  <input type="hidden" name="attr_judge-undou" value="1" >
 						  <span class="skill-result" name="attr_judge-undou" ></span>
 					  </span>
 					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-undou}d10[Movement Check]" > Roll </button>
@@ -993,7 +993,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-kakutou" value="0" >
+						  <input type="hidden" name="attr_judge-kakutou" value="1" >
 						  <span class="skill-result" name="attr_judge-kakutou" ></span>
 					  </span>
 						  
@@ -1064,7 +1064,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-kiyou" > Dexterity/器用 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-touteki" value="0" >
+						  <input type="hidden" name="attr_judge-touteki" value="1" >
 						  <span class="skill-result" name="attr_judge-touteki" ></span>
 					  </span>
 						  
@@ -1111,7 +1111,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-shintai" > Fitness/身体 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-seizon" value="0" >
+						  <input type="hidden" name="attr_judge-seizon" value="1" >
 						  <span class="skill-result" name="attr_judge-seizon" ></span>
 					  </span>
 						  
@@ -1151,7 +1151,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-seishin" > Spirit/精神 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-jiga" value="0" >
+						  <input type="hidden" name="attr_judge-jiga" value="1" >
 						  <span class="skill-result" name="attr_judge-jiga" ></span>
 					  </span>
 						  
@@ -1191,7 +1191,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-chiryoku" > Intelligence/知力 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-teate" value="0" >
+						  <input type="hidden" name="attr_judge-teate" value="1" >
 						  <span class="skill-result" name="attr_judge-teate" ></span>
 					  </span>
 						  
@@ -1251,7 +1251,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-kiyou" > Dexterity/器用 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-saiku" value="0" >
+						  <input type="hidden" name="attr_judge-saiku" value="1" >
 						  <span class="skill-result" name="attr_judge-saiku" ></span>
 					  </span>
 						  
@@ -1413,7 +1413,7 @@
 						  <select disabled class='sheet-input' >
 							  <option value="ability-unsei" > Luck/運勢 </option>
 						  </select>
-						  <input type="hidden" name="attr_judge-kouun" value="0" >
+						  <input type="hidden" name="attr_judge-kouun" value="1" >
 						  <span class="skill-result" name="attr_judge-kouun" ></span>
 					  </span>
 						  
@@ -2186,6 +2186,7 @@ const listRepeatingSkills = [
 	"gikou", 
 	"art", 
 	"soujuu", 
+	"sonota", 
 ];
 
 //generate atts names for skills 
@@ -2243,14 +2244,32 @@ const calcAbilityPointLeft = () => {
 //calculate skill cost 
 const skillCost = (lvl, skill) => {
 
-	let cost = lvl * 5; 
+	let cost = 0;
+
+	//fixed level skills
+	if(	skill == 'chousa'	) cost = 0;
+	if(	skill == 'chikaku'	) cost = 0;
+	if(	skill == 'koushou'	) cost = 0;
+	if(	skill == 'chishiki'	) cost = 0;
+	if(	skill == 'news'	) cost = 0;
+	if(	skill == 'undou'	) cost = 0;
+	if(	skill == 'kakutou'	) cost = 0;
+	if(	skill == 'touteki'	) cost = 0;
+	if(	skill == 'seizon'	) cost = 0;
+	if(	skill == 'jiga'	) cost = 0;
+	if(	skill == 'teate'	) cost = 0;
+	if(	skill == 'saiku'	) cost = 0;
+	if(	skill == 'kouun'	) cost = 0;
+
+	cost = lvl * 5; 
+
 	if(	skill == 'reikan'	) cost *= 2;
 	if(	skill == 'sosei' 	) cost *= 2;
 	if( skill == 'ougi' 	) cost *= 2;
 	if( skill == 'shageki' 	) cost *= 2;
 	if( skill == 'ougi' 	) cost *= 2;
 
-	if(lgDebug) console.log(`cost(${lvl},${skill}: ${cost}`);
+	if(lgDebug) console.log(`cost(${lvl},${skill}) : ${cost}`);
 
 	return cost;
 }
@@ -2337,7 +2356,7 @@ const calcSkillPointLeft = () => {
 					memo += skillCost(lvl,skill) ;
 					return memo;
 
-				}, 0 , function(rowSet,attrSet){
+				}, 0 , function(memon,rowSet,attrSet){
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
@@ -2453,13 +2472,14 @@ listRepeatingSkills.forEach( (skill) => {
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 				
 				let abiref = row[`level-${skill}-abiref`];
-				row[`judge-${skill}`] = row[`level-${skill}`] + attrSet[abiref];
+				let lvl = parseInt(row[`level-${skill}`]) || 0;
+				let abi = parseInt(attrSet[abiref]) || 0;
+				row[`judge-${skill}`] =  lvl + abi ;
 			},function(rowSet,attrSet){
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 			})
 			.execute();
-
 	});
 
 });

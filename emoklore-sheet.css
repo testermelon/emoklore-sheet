@@ -141,14 +141,40 @@
 	background: #c4c4c4;
 }
 
+.repcontainer {
+	background-color: #dde0e6;
+	color:#2d2d2d;
+	background:#dde0e6;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+
 .repcontainer .chardata-row {
-	margin: 0;
+	margin: 0; 
+	margin-left: 5px;
+}
+
+.repcontainer .sheet-input[type=text] {
+  width: 180px;
+}
+
+.repcontainer .sheet-row-label {
+  padding: 0;
+  padding: ;
 }
 
 .fieldset-info {
 	display:flex;
 	padding: 2px;
 	align-items:center;
+}
+
+.make-sticky {
+  position: sticky;
+  top: 0;
+  background: #ffffffa8;
+  z-index: 10;
 }
 
 fieldset {
@@ -317,10 +343,6 @@ input.reverb-row-item {
 	padding:0;
 }
 
-.repcontainer {
-	background-color: #B9D9D9;
-	border-radius: 5px;
-	margin: 5px;
-}
+
 
 
