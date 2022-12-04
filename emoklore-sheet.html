@@ -2249,7 +2249,10 @@ const setAllJudgement = (abilityName) => {
 const setSingleJudgement = (skill) => {
 	if(lgDebug) console.log('setSingleJudgement');
 
-	getAttrs( listAttrsAbilities.push([`level-${skill}`,`level-${skill}-abiref`]) , (values) => {
+	let attrToGet = [`level-${skill}`,`level-${skill}-abiref`].push(listAttrsAbilities);
+	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
+
+	getAttrs(attrToGet, (values) => {
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 
 		let lvl = parseInt(values[`level-${skill}`]) || 0 ;
@@ -2258,7 +2261,7 @@ const setSingleJudgement = (skill) => {
 
 		let obj= {};
 		obj[`judge-${skill}`] = result;
-		if(lgDebug) console.log(obj);
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(obj)));
 
 		setAttrs(obj);
 	});
@@ -2266,14 +2269,18 @@ const setSingleJudgement = (skill) => {
 
 
 const calcSkillPointLeft = () => {
-	getAttrs(listAttrsLevel.push('skill-add-point'), (values) => {
-		if(lgDebug) console.log('calcSkillPt');
+	if(lgDebug) console.log('calcSkillPointLeft()');
+
+	let attrToGet = [`skill-add-point`].push(listAttrsAbilities);
+	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
+
+	getAttrs(attrToGet, (values) => {
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 
 		//initially 30
 		let sum = 30+ values['skill-add-point'] ; 
 		listAttrsLevel.forEach( (skill)=> {
-			if(lgDebug) console.log('calcSkillPt');
+			if(lgDebug) console.log('calcSkillPt-');
 
 			let lvl = values[skill];
 			//check with skill cost table elsewhere
@@ -2366,11 +2373,11 @@ on(`change:repeating_skill-senmonchishiki`, (eventInfo) => {
 	if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
 
 	TAS.repeating('skill-senmonchishiki')
-		.attrs(listAttrsAbilities)
+		.attrs('ability-fitness','ability-seishin')
 		.fields('level-senmonchishiki','level-senmonchishiki-abiref','judge-senmonchishiki')
 		.tap(function(rowSet,attrSet){
-			if(lgDebug) console.log('RowSet has keys: '+_.keys(rowSet).join(', '));
-			if(lgDebug) console.log('AttrSet has keys: '+_.keys(attrSet).join(', '));
+			if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+			if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 		})
 		.execute();
 });
