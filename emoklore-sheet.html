@@ -2249,7 +2249,7 @@ const setAllJudgement = (abilityName) => {
 const setSingleJudgement = (skill) => {
 	if(lgDebug) console.log('setSingleJudgement');
 
-	getAttrs( listAttrsAbilities.push([`level-${skill}`,`level-${skill}-abiref`], (values) => {
+	getAttrs( listAttrsAbilities.push([`level-${skill}`,`level-${skill}-abiref`]) , (values) => {
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 
 		let lvl = parseInt(values[`level-${skill}`]) || 0 ;
