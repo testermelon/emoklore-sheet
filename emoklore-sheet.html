@@ -859,7 +859,7 @@
 					</div>
 					<div class="repcontainer">
 						<label class='sheet-row-label' > Industry/業界 </label>
-						<fieldset class="repeating_skill-ougi">
+						<fieldset class="repeating_skill-gyoukai">
 							<div class="chardata-row">
 							  <span class="sheet-row-label">
 								  <input name="attr_skillname-gyoukai" class="sheet-input" type="text" >
@@ -2356,7 +2356,7 @@ const calcSkillPointLeft = () => {
 					memo += skillCost(lvl,skill) ;
 					return memo;
 
-				}, 0 , function(memon,rowSet,attrSet){
+				}, 0 , function(memo,rowSet,attrSet){
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
