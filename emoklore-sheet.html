@@ -2276,7 +2276,6 @@ return 0;
 
 
 // set judgement value according to level + ability
-// except repeating sections
 const setAllJudgement = (abilityName) => {
 	if(lgDebug) console.log('setAllJudgement()');
 
@@ -2294,6 +2293,26 @@ const setAllJudgement = (abilityName) => {
 			};
 		}); //forEach
 	}); //getAttrs
+	
+	listRepeatingSkills.forEach( (skill) => {
+			TAS.repeating(`skill-${skill}`)
+				.attrs(`ability-${abilityName}`)
+				.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`)
+				.each(function(row,attrSet,id,rowSet){
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+					
+					if(row[`level-${skill}-abiref`] == `ability-${abilityName}`) {
+                                            row[`judge-{skill}`] = row[`level-${skill}`] + attrSet[`ability-${abilityName}`];
+					};
+			        }, function(rowSet,attrSet){
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+
+				})
+				.execute();
 };
 
 // set judgement value according to level + ability for one skill
