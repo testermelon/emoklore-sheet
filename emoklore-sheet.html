@@ -1,8 +1,3 @@
-<head>
-<link rel="stylesheet" type="text/css" href="emoklore-sheet.css" >
-<meta charset="utf-8">
-</head>
-
 <div class='sheet-container'>
     <div class='sheet-header'> 
 		<img name="attr_character_avatar" class="img-char-avatar" >
@@ -2245,30 +2240,36 @@ const calcAbilityPointLeft = () => {
 const skillCost = (lvl, skill) => {
 
 	//fixed level skills
-	if((	skill == 'chousa'	) ||
+	if(
+	(	skill == 'chousa'	) ||
 	(	skill == 'chikaku'	) ||
 	(	skill == 'koushou'	) ||
 	(	skill == 'chishiki'	) ||
-	(	skill == 'news'	) ||
+	(	skill == 'news'		) ||
 	(	skill == 'undou'	) ||
 	(	skill == 'kakutou'	) ||
 	(	skill == 'touteki'	) ||
 	(	skill == 'seizon'	) ||
-	(	skill == 'jiga'	) ||
+	(	skill == 'jiga'		) ||
 	(	skill == 'teate'	) ||
 	(	skill == 'saiku'	) ||
 	(	skill == 'kouun'	)
-	) { 
-console.log("cost = 0");
-return 0;
-};
+	){ 
+		console.log("cost = 0");
+		return 0;
+	};
+
 	let cost = lvl * 5; 
-	if(	skill == 'reikan'	) cost *= 2;
-	if(	skill == 'sosei' 	) cost *= 2;
-	if( skill == 'ougi' 	) cost *= 2;
-	if( skill == 'shageki' 	) cost *= 2;
-	if( skill == 'ougi' 	) cost *= 2;
-	if( skill == 'sonota' 	) cost *= 2;
+	if(
+	( skill == 'reikan'		) ||
+	( skill == 'sosei' 		) ||
+	( skill == 'ougi' 		) ||
+	( skill == 'shageki' 	) ||
+	( skill == 'ougi' 		) ||
+	( skill == 'sonota' 	)
+	){
+		cost *= 2;
+	};
 
 	if(lgDebug) console.log(`cost(${lvl},${skill}) : ${cost}`);
 
@@ -2296,24 +2297,27 @@ const setAllJudgement = (abilityName) => {
 	}); //getAttrs
 	
 	listRepeatingSkills.forEach( (skill) => {
-			TAS.repeating(`skill-${skill}`)
-				.attrs(`ability-${abilityName}`)
-				.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`)
-				.each(function(row,attrSet,id,rowSet){
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
-					
-					if(row[`level-${skill}-abiref`] == `ability-${abilityName}`) {
-                                            row[`judge-{skill}`] = (parseInt(row[`level-${skill}`]) || 0) + (parseInt(attrSet[`ability-${abilityName}`]) || 0);
-					};
-			        }, function(rowSet,attrSet){
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+		TAS.repeating(`skill-${skill}`)
+			.attrs(`ability-${abilityName}`)
+			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`)
+			.each(function(row,attrSet,id,rowSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+				
+				if(row[`level-${skill}-abiref`] == `ability-${abilityName}`) {
+					row[`judge-{skill}`] = 
+						(parseInt(row[`level-${skill}`]) || 0)
+						+
+						(parseInt(attrSet[`ability-${abilityName}`]) || 0);
+				};
+			}, function(rowSet,attrSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 
-				})
-				.execute();
+			})
+			.execute();
 	});
 };
 
@@ -2351,10 +2355,8 @@ const calcSkillPointLeft = () => {
 
 		//initially 30
 		let sum = 30+ values['skill-add-point'] ; 
-		listAttrsLevel.forEach( (skill)=> {
-			if(lgDebug) console.log('calcSkillPt-');
-
-			let lvl = values[skill];
+		listNonrepSkills.forEach( (skill)=> {
+			let lvl = values[`level-${skill}`];
 			//check with skill cost table elsewhere
 			sum -= skillCost(lvl, skill);
 		});
