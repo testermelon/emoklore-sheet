@@ -2176,7 +2176,7 @@ const listNonrepSkills = [
 	"intoku", 		"kouun", 		"kyouun",		
 ];
 
-//list of all skills that is not in repeating
+//list of all skills in repeating
 const listRepeatingSkills = [
 	"senmonchishiki", 
 	"gyoukai", 
@@ -2305,7 +2305,7 @@ const setAllJudgement = (abilityName) => {
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 					
 					if(row[`level-${skill}-abiref`] == `ability-${abilityName}`) {
-                                            row[`judge-{skill}`] = row[`level-${skill}`] + attrSet[`ability-${abilityName}`];
+                                            row[`judge-{skill}`] = (parseInt(row[`level-${skill}`]) || 0) + (parseInt(attrSet[`ability-${abilityName}`]) || 0);
 					};
 			        }, function(rowSet,attrSet){
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
