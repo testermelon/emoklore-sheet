@@ -2500,6 +2500,8 @@ listRepeatingSkills.forEach( (skill) => {
 			},function(rowSet,attrSet){
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+
+				calcSkillPointLeft();
 			})
 			.execute();
 	});
