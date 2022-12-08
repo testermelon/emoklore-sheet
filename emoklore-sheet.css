@@ -345,4 +345,6 @@ input.reverb-row-item {
 
 
 
-
+.ui-dialog .charsheet .repcontrol_edit {
+  float: none;
+}

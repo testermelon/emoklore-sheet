@@ -1,0 +1,2509 @@
+<div class='sheet-container'>
+    <div class='sheet-header'> 
+		<img name="attr_character_avatar" class="img-char-avatar" >
+		<h1 class="heading-title">  Emo-klore TRPG - [Resonator] Sheet </h1>
+	</div>
+	<div class="sheet-tabs">
+		<div class="sheet-tab sheet-tab-basic">
+			<input type="radio" name="attr_tab" value="basic" checked="checked">
+			<span class="sheet-tab-label">Basic Info </span>
+			<div class="sheet-tab-content">
+				<div class="sheet-content">
+					<div class="fieldset-legend" >Basic Info/基本情報</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Name/名前:</label> 
+						<input class="sheet-input" type="text" name="attr_name" >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Age/年齢:</label>
+						<input class="sheet-input" type="text" name="attr_age"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Gender/性別:</label>
+						<input type="text" class='sheet-input' name="attr_gender"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Hometown/出身:</label>
+						<input type="text" class='sheet-input' name="attr_hometown"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Occupation/職業:</label>
+						<input type="text" class='sheet-input' name="attr_occupation"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Personality/性格:</label>
+						<input type="text" class='sheet-input' name="attr_personality"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Appearance/概観的特徴:</label>
+						<input type="text" class='sheet-input' name="attr_appearance"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Notable Past Events/経歴:</label>
+						<input type="text" class='sheet-input' name="attr_notable-past-events"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Related People/関係のある人々:</label>
+						<input type="text" class='sheet-input' name="attr_related-people"  >
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Likes and Dislikes/好きなもの・嫌いなもの:</label>
+						<input type="text" class='sheet-input' name="attr_likes-dislikes"  >
+					</div>
+					<!-- Skipping タグ for now. Reason: no clear use case in Roll20. -->
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Memo/メモ:</label>
+						<textarea  class='sheet-input sheet-input-textarea' name="attr_memo" ></textarea>
+					</div>
+					<div class="fieldset-legend" > Resonance Info/共鳴情報 </div>
+					<div class="chardata-row">
+					<label class='sheet-row-label' >Front/表:</label>
+					<select class="sheet-input" name="attr_resonance-front" >
+						<option value='select-please'> Please Select/選択してください </option> 
+						<optgroup label="Desire/欲望"> 
+							<option>  Acknowledgement (Desire) / 自己顕示【欲望】</option> 
+							<option>Posession (Desire) / 所有【欲望】 </option> 
+							<option>Instinct (Desire) / 本能【欲望】 </option> 
+							<option>Destruction (Desire) / 破壊【欲望】 </option> 
+							<option>Pride (Desire) / 優越感【欲望】 </option> 
+							<option>Laziness (Desire) / 怠惰【欲望】 </option> 
+							<option>Escape (Desire) / 逃避【欲望】 </option> 
+							<option>Curiosity (Desire) / 好奇心【欲望】 </option> 
+							<option>Thrill (Desire) / スリル【欲望】 </option> 
+						</optgroup> 
+						<optgroup label="Passion/情念"> 
+							<option> Joy (Passion) / 喜び【情念】 </option> 
+							<option> Anger (Passion) / 怒り【情念】 </option>
+							<option> Sadness (Passion) / 悲しみ【情念】 </option>
+							<option> Happiness (Passion) / 幸福【情念】 </option>
+							<option> Anxiety (Passion) / 不安【情念】 </option>
+							<option> Disgust (Passion) / 嫌悪【情念】 </option>
+							<option> Fear (Passion) / 恐怖【情念】 </option>
+							<option> Grudge (Passion) / 恨み【情念】 </option>
+							<option> Envy (Passion) / 嫉妬【情念】 </option>
+						</optgroup> 
+						<optgroup label="Ideals/理想"> 
+							<option> Justice (Ideals) / 正義【理想】 </option> 
+							<option> Worship (Ideals) / 崇拝【理想】 </option>
+							<option> Good and Evil (Ideals) / 善悪【理想】 </option>
+							<option> Hope (Ideals) / 希望【理想】 </option>
+							<option> Improvement (Ideals) / 向上【理想】 </option>
+							<option> Reason (Ideals) / 理性【理想】 </option>
+							<option> Glory (Ideals) / 勝利【理想】 </option>
+							<option> Order (Ideals) / 秩序【理想】 </option>
+							<option> Admiration (Ideals) / 憧憬【理想】 </option>
+							<option> Selflessness (Ideals) / 無我【理想】 </option>
+						</optgroup> 
+						<optgroup label="Relationship/関係">
+							<option> Friendship (Relationship) / 友情【関係】 </option>
+							<option> Love (Relationship) / 愛【関係】 </option>
+							<option> Admiration (Relationship) / 恋【関係】 </option>
+							<option> Dependence (Relationship) / 依存【関係】 </option>
+							<option> Respect (Relationship) / 尊敬【関係】 </option>
+							<option> Contempt (Relationship) / 軽蔑【関係】 </option>
+							<option> Asylum (Relationship) / 庇護【関係】 </option>
+							<option> Domination (Relationship) / 支配【関係】 </option>
+							<option> Service (Relationship) / 奉仕【関係】 </option>
+							<option> Spoiling (Relationship) / 甘え【関係】 </option>
+						</optgroup>
+						<optgroup label="Scar/傷">
+							<option> Regret (Scar) / 後悔【傷】 </option>
+							<option> Loneliness (Scar) / 孤独【傷】 </option>
+							<option> Resignation (Scar) / 諦観【傷】</option> 
+							<option> Despair (Scar) / 絶望【傷】 </option>
+							<option> Denial (Scar) / 否定【傷】 </option>
+							<option> Doubt (Scar) / 疑念【傷】 </option>
+							<option> Guilt (Scar) / 罪悪感【傷】 </option>
+							<option> Insanity (Scar) / 狂気【傷】 </option>
+							<option> Inferiority Complex (Scar) / 劣等感【傷】 </option>
+						</optgroup>
+					</select>
+					</div>
+
+					<div class="chardata-row">
+					<label class='sheet-row-label' >Back/裏:</label>
+					<select class="sheet-input" name="attr_resonance-back" >
+						<option value='select-please'> Please Select/選択してください </option> 
+						<optgroup label="Desire/欲望"> 
+							<option>  Acknowledgement (Desire) / 自己顕示【欲望】</option> 
+							<option>Posession (Desire) / 所有【欲望】 </option> 
+							<option>Instinct (Desire) / 本能【欲望】 </option> 
+							<option>Destruction (Desire) / 破壊【欲望】 </option> 
+							<option>Pride (Desire) / 優越感【欲望】 </option> 
+							<option>Laziness (Desire) / 怠惰【欲望】 </option> 
+							<option>Escape (Desire) / 逃避【欲望】 </option> 
+							<option>Curiosity (Desire) / 好奇心【欲望】 </option> 
+							<option>Thrill (Desire) / スリル【欲望】 </option> 
+						</optgroup> 
+						<optgroup label="Passion/情念"> 
+							<option> Joy (Passion) / 喜び【情念】 </option> 
+							<option> Anger (Passion) / 怒り【情念】 </option>
+							<option> Sadness (Passion) / 悲しみ【情念】 </option>
+							<option> Happiness (Passion) / 幸福【情念】 </option>
+							<option> Anxiety (Passion) / 不安【情念】 </option>
+							<option> Disgust (Passion) / 嫌悪【情念】 </option>
+							<option> Fear (Passion) / 恐怖【情念】 </option>
+							<option> Grudge (Passion) / 恨み【情念】 </option>
+							<option> Envy (Passion) / 嫉妬【情念】 </option>
+						</optgroup> 
+						<optgroup label="Ideals/理想"> 
+							<option> Justice (Ideals) / 正義【理想】 </option> 
+							<option> Worship (Ideals) / 崇拝【理想】 </option>
+							<option> Good and Evil (Ideals) / 善悪【理想】 </option>
+							<option> Hope (Ideals) / 希望【理想】 </option>
+							<option> Improvement (Ideals) / 向上【理想】 </option>
+							<option> Reason (Ideals) / 理性【理想】 </option>
+							<option> Glory (Ideals) / 勝利【理想】 </option>
+							<option> Order (Ideals) / 秩序【理想】 </option>
+							<option> Admiration (Ideals) / 憧憬【理想】 </option>
+							<option> Selflessness (Ideals) / 無我【理想】 </option>
+						</optgroup> 
+						<optgroup label="Relationship/関係">
+							<option> Friendship (Relationship) / 友情【関係】 </option>
+							<option> Love (Relationship) / 愛【関係】 </option>
+							<option> Admiration (Relationship) / 恋【関係】 </option>
+							<option> Dependence (Relationship) / 依存【関係】 </option>
+							<option> Respect (Relationship) / 尊敬【関係】 </option>
+							<option> Contempt (Relationship) / 軽蔑【関係】 </option>
+							<option> Asylum (Relationship) / 庇護【関係】 </option>
+							<option> Domination (Relationship) / 支配【関係】 </option>
+							<option> Service (Relationship) / 奉仕【関係】 </option>
+							<option> Spoiling (Relationship) / 甘え【関係】 </option>
+						</optgroup>
+						<optgroup label="Scar/傷">
+							<option> Regret (Scar) / 後悔【傷】 </option>
+							<option> Loneliness (Scar) / 孤独【傷】 </option>
+							<option> Resignation (Scar) / 諦観【傷】</option> 
+							<option> Despair (Scar) / 絶望【傷】 </option>
+							<option> Denial (Scar) / 否定【傷】 </option>
+							<option> Doubt (Scar) / 疑念【傷】 </option>
+							<option> Guilt (Scar) / 罪悪感【傷】 </option>
+							<option> Insanity (Scar) / 狂気【傷】 </option>
+							<option> Inferiority Complex (Scar) / 劣等感【傷】 </option>
+						</optgroup>
+					</select>
+					</div>
+
+					<div class="chardata-row">
+					<label class='sheet-row-label' >Roots/ルーツ:</label>
+					<select class="sheet-input" name="attr_resonance-roots" >
+						<option value='select-please'> Please Select/選択してください </option> 
+						<optgroup label="Desire/欲望"> 
+							<option>  Acknowledgement (Desire) / 自己顕示【欲望】</option> 
+							<option>Posession (Desire) / 所有【欲望】 </option> 
+							<option>Instinct (Desire) / 本能【欲望】 </option> 
+							<option>Destruction (Desire) / 破壊【欲望】 </option> 
+							<option>Pride (Desire) / 優越感【欲望】 </option> 
+							<option>Laziness (Desire) / 怠惰【欲望】 </option> 
+							<option>Escape (Desire) / 逃避【欲望】 </option> 
+							<option>Curiosity (Desire) / 好奇心【欲望】 </option> 
+							<option>Thrill (Desire) / スリル【欲望】 </option> 
+						</optgroup> 
+						<optgroup label="Passion/情念"> 
+							<option> Joy (Passion) / 喜び【情念】 </option> 
+							<option> Anger (Passion) / 怒り【情念】 </option>
+							<option> Sadness (Passion) / 悲しみ【情念】 </option>
+							<option> Happiness (Passion) / 幸福【情念】 </option>
+							<option> Anxiety (Passion) / 不安【情念】 </option>
+							<option> Disgust (Passion) / 嫌悪【情念】 </option>
+							<option> Fear (Passion) / 恐怖【情念】 </option>
+							<option> Grudge (Passion) / 恨み【情念】 </option>
+							<option> Envy (Passion) / 嫉妬【情念】 </option>
+						</optgroup> 
+						<optgroup label="Ideals/理想"> 
+							<option> Justice (Ideals) / 正義【理想】 </option> 
+							<option> Worship (Ideals) / 崇拝【理想】 </option>
+							<option> Good and Evil (Ideals) / 善悪【理想】 </option>
+							<option> Hope (Ideals) / 希望【理想】 </option>
+							<option> Improvement (Ideals) / 向上【理想】 </option>
+							<option> Reason (Ideals) / 理性【理想】 </option>
+							<option> Glory (Ideals) / 勝利【理想】 </option>
+							<option> Order (Ideals) / 秩序【理想】 </option>
+							<option> Admiration (Ideals) / 憧憬【理想】 </option>
+							<option> Selflessness (Ideals) / 無我【理想】 </option>
+						</optgroup> 
+						<optgroup label="Relationship/関係">
+							<option> Friendship (Relationship) / 友情【関係】 </option>
+							<option> Love (Relationship) / 愛【関係】 </option>
+							<option> Admiration (Relationship) / 恋【関係】 </option>
+							<option> Dependence (Relationship) / 依存【関係】 </option>
+							<option> Respect (Relationship) / 尊敬【関係】 </option>
+							<option> Contempt (Relationship) / 軽蔑【関係】 </option>
+							<option> Asylum (Relationship) / 庇護【関係】 </option>
+							<option> Domination (Relationship) / 支配【関係】 </option>
+							<option> Service (Relationship) / 奉仕【関係】 </option>
+							<option> Spoiling (Relationship) / 甘え【関係】 </option>
+						</optgroup>
+						<optgroup label="Scar/傷">
+							<option> Regret (Scar) / 後悔【傷】 </option>
+							<option> Loneliness (Scar) / 孤独【傷】 </option>
+							<option> Resignation (Scar) / 諦観【傷】</option> 
+							<option> Despair (Scar) / 絶望【傷】 </option>
+							<option> Denial (Scar) / 否定【傷】 </option>
+							<option> Doubt (Scar) / 疑念【傷】 </option>
+							<option> Guilt (Scar) / 罪悪感【傷】 </option>
+							<option> Insanity (Scar) / 狂気【傷】 </option>
+							<option> Inferiority Complex (Scar) / 劣等感【傷】 </option>
+						</optgroup>
+					</select>
+					</div>
+					<div class="fieldset-legend"> Reverberations Records/残響の記録 </div>
+					<fieldset class="repeating_reverbrecords">
+						<div class="sheet-repitem">
+							<span class="reverb-row-item"> Scenario Name/シナリオ名: </label>
+							<input class="reverb-row-item" type="text" name="attr_scenario-name" >
+							<span class="reverb-row-item"> Emotions/感情: </label>
+							<input class="reverb-row-item" type="text" name="attr_emotions" >
+						</div>
+					</fieldset>
+				</div>
+			</div> <!-- sheet-content-->
+		</div> <!-- sheet-tab-basic -->
+		<div class="sheet-tab sheet-tab-abilities">
+			<input type="radio" name="attr_tab" value="abilities">
+			<span class="sheet-tab-label">Abilities </span>
+    		<div class="sheet-tab-content">
+    		    <div class="sheet-content">
+					<div class="fieldset-legend" > Ability Scores/能力値 </div>
+					<div class="fieldset-info" >
+						<label class='sheet-row-label' >Point Adjustment/技能補正:</label>
+						<input name="attr_ability-add-point" class="sheet-input-number" type="number" value="0"> 
+					</div>
+					<div class="fieldset-info make-sticky" >
+						<span class="sheet-row-label"> Ability Points/能力ポイント: </span> 
+						<span class="point-left-indicator" name="attr_ability-point-left"  ></span>
+						<input type="hidden" name="attr_ability-point-left" value="25"> 
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Fitness/身体:</label>
+						<select class='sheet-input' name="attr_ability-shintai" >
+							<option value="0" > 0 </option>
+							<option value="1" > 1 </option>
+							<option value="2" > 2 </option>
+							<option value="3" > 3 </option>
+							<option value="4" > 4 </option>
+							<option value="5" > 5 </option>
+							<option value="6" > 6 </option> 
+						</select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Dexterity/器用:</label> 
+						<select class='sheet-input' name="attr_ability-kiyou" >
+							<option value="0" > 0 </option>
+							<option value="1" > 1 </option>
+							<option value="2" > 2 </option>
+							<option value="3" > 3 </option>
+							<option value="4" > 4 </option>
+							<option value="5" > 5 </option>
+							<option value="6" > 6 </option> 
+						</select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Spirit/精神:</label> 
+						<select  class='sheet-input' name="attr_ability-seishin" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Senses/五感:</label> 
+						<select  class='sheet-input' name="attr_ability-gokan" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Intelligence/知力:</label> 
+						<select  class='sheet-input' name="attr_ability-chiryoku" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row"> 
+						<label class='sheet-row-label' >Charisma/魅力:</label> 
+						<select  class='sheet-input' name="attr_ability-miryoku" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+					  </select>
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Social Standing/社会:</label>
+						<select  class='sheet-input' name="attr_ability-shakai" >
+							<option> 0 </option>
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+							<option> 6 </option>
+						</select>
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >Luck/運勢:</label>
+						<input type="number" min="1" max="6" class='sheet-input' name="attr_ability-unsei" >
+						<button type="action" name="act_unsei-roll"> Roll </button>
+					</div>
+					<div class="fieldset-legend" > Parameter/パラメータ </div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >HP:</label>
+						<input type="number" class="sheet-input-number" name="attr_hp">
+						<span> / </span>
+						<input type="hidden" name="attr_hp_max" value="10" >
+						<span  class='sheet-input-number' name="attr_hp_max" ></span>
+						<!-- value="(@{ability-shintai}+10)"--> 
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' >MP:</label>
+						<input type="number" class="sheet-input-number"  name="attr_mp">
+						<span> / </span>
+						<input type="hidden" name="attr_mp_max" >
+						<span  class='sheet-input-number' name="attr_mp_max" ></span>
+						<!-- value="(@{ability-seishin}+@{ability-chiryoku})" -->
+					</div>
+    		    </div>
+    		</div>
+    	</div>
+		<div class="sheet-tab sheet-tab-skills">
+			<input type="radio" name="attr_tab" value="skills">
+			<span class="sheet-tab-label">Skills</span>
+    		<div class="sheet-tab-content">
+    		    <div class="sheet-content">
+					<div class="fieldset-legend" > Skills/技能 </div>
+					<div class="fieldset-info" >
+						<label class='sheet-row-label' >Point Adjustment/技能補正:</label>
+						<input class="sheet-input-number" type="number" name="attr_skill-add-point"> 
+					</div>
+					<div class="fieldset-info" >
+						<span class="sheet-row-label"> Skill Point/技能ポイント: </span> 
+						<input type="hidden" name="attr_skill-point-left" value="30" >
+						<!-- value=30+Additionals  -->
+						<span class="point-left-indicator" name="attr_skill-point-left"></span>
+					</div>
+					<div class="chardata-row row-header">
+						<label class="sheet-row-label" > Skill Name/技能名</label>
+						<label class="sheet-row-label" > Level/レベル</label>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >∞Resonance/∞共鳴:</label>
+					  <span class="sheet-row-label">
+						  <select name="attr_level-kyoumei"> 
+							  <option> 1 </option>
+							  <option> 2 </option>
+							  <option> 3 </option>
+							  <option> 4 </option>
+							  <option> 5 </option>
+							  <option> 6 </option>
+							  <option> 7 </option>
+							  <option> 8 </option>
+							  <option> 9 </option>
+						  </select>
+					  </span>
+					  <span class="sheet-row-label"> </span> 
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kyoumei}d10[Resonance Check]" > Roll </button>
+					</div>
+					<br>
+
+					<div class="chardata-row row row-header">
+						<label class="sheet-row-label" > Skill Name/技能名</label>
+						<label class="sheet-row-label" > Level/レベル</label>
+						<label class="sheet-row-label" > Judgement Value/判定値</label>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >*Investigation/*調査:</label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="0" > 0</input>
+						  <input name="attr_level-chousa" class="radio-numbered" type="radio" value="1" checked> 1</input>
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-chousa" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-kiyou" name="attr_level-chousa-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option  > Dexterity/器用 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-chousa" value="1" >
+						  <span class="skill-result" name="attr_judge-chousa" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chousa}d10[Investigation Check]" > Roll </button>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Search/検索:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-kensaku"  type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kensaku"  type="radio" value="1"> 1</input>
+						  <input name="attr_level-kensaku"  type="radio" value="2"> 2</input>
+						  <input name="attr_level-kensaku"  type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-kensaku-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kensaku" value="0" >
+						  <span class="skill-result" name="attr_judge-kensaku" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kensaku}d10[Search Check]" > Roll </button>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Analysis/洞察:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dousatsu" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-dousatsu-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-dousatsu" value="0" >
+						  <span class="skill-result" name="attr_judge-dousatsu" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dousatsu}d10[Analysis Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Mapping/マッピング:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-mapping" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-mapping-abiref" >
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-gokan" > Senses/五感 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-mapping" value="0" >
+						  <span class="skill-result" name="attr_judge-mapping" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-mapping}d10[Mapping Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Intuition/直感:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-chokkan" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-chokkan-abiref" >
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-chokkan" value="0" >
+						  <span class="skill-result" name="attr_judge-chokkan" > </span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chokkan}d10[Intuition Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Appraisal/鑑定:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kantei" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-kantei-abiref" >
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kantei" value="0" >
+						  <span class="skill-result" name="attr_judge-kantei" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kantei}d10[Appraisal Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >*Perception/*知覚:</label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="0" > 0</input>
+						  <input checked name="attr_level-chikaku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-chikaku" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-gokan" name="attr_level-chikaku-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-gokan" > Senses/五感 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-chikaku" value="1" >
+						  <span class="skill-result" name="attr_judge-chikaku" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chikaku}d10[Perception Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Observant Eye/観察眼:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kansatsugan" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-gokan" name="attr_level-kansatsugan-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-gokan" > Senses/五感 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kansatsugan" value="0" >
+						  <span class="skill-result" name="attr_judge-kansatsugan" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kansatsugan}d10[Observant Eye Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Keen Ear/聞き耳:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kikime" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-gokan" name="attr_level-kikime-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-gokan" > Senses/五感 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kikime" value="0" >
+						  <span class="skill-result" name="attr_judge-kikime" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kikime}d10[Keen Ear Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Detect Poison/毒見:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dokumi" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-gokan" name="attr_level-dokumi-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-gokan" > Senses/五感 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-dokumi" value="0" >
+						  <span class="skill-result" name="attr_judge-dokumi" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dokumi}d10[Detect Poison Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Crisis Detection/危機感知:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kikikanchi" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-kikikanchi-abiref" >
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kikikanchi" value="0" >
+						  <span class="skill-result" name="attr_judge-kikikanchi" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kikikanchi}d10[Crisis Detection Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+						<label class='sheet-row-label' ><span class="sheet-star">★</span>Sixth Sense<span class="sheet-star">★</span>霊感:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-reikan" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-reikan-abiref" >
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-reikan" value="0" >
+						  <span class="skill-result" name="attr_judge-reikan" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-reikan}d10[Sixth Sense Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >*Negotiation/*交渉:</label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-koushou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-koushou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-miryoku" name="attr_level-koushou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-miryoku" > Charisma/魅力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-koushou" value="1" >
+						  <span class="skill-result" name="attr_judge-koushou" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-koushou}d10[Negotiation Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Societal Arts/社交術:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-shakoujutsu" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shakai" name="attr_level-shakoujutsu-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shakai" > Social Standing/社会 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-shakoujutsu" value="0" >
+						  <span class="skill-result" name="attr_judge-shakoujutsu" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shakoujutsu}d10[Socieatal Arts Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Debate/ディベート:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-debate" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-debate-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-debate" value="0" >
+						  <span class="skill-result" name="attr_judge-debate" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-debate}d10[Debate Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Mentality/心理:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-shinri" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-shinri-abiref" >
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-shinri" value="0" >
+						  <span class="skill-result" name="attr_judge-shinri" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shinri}d10[Mentality Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >Charm/魅了:</label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-miryou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-miryoku" name="attr_level-miryou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-miryoku" > Charisma/魅力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-miryou" value="0" >
+						  <span class="skill-result" name="attr_judge-miryou" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-miryou}d10[Charm Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' >*Knowledge/*知識:</label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-chishiki" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-chishiki" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-chishiki-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-chishiki" value="1" >
+						  <span class="skill-result" name="attr_judge-chishiki" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chishiki}d10[Knowledge Check]" > Roll </button>
+					  </select>
+					</div> 
+					<div class="repcontainer">
+						<label class='sheet-row-label' > Expert Knowledge/専門知識:</label>
+						<fieldset class="repeating_skill-senmonchishiki">
+						<div class="chardata-row">
+						  <span class="sheet-row-label">
+							  <input name="attr_skillname-senmonchishiki" class="sheet-input" type="text" > 
+						  </span>
+						  <span class="sheet-row-label">
+							  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+							  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="1"> 1</input>
+							  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="2"> 2</input>
+							  <input name="attr_level-senmonchishiki" class="radio-numbered" type="radio" value="3"> 3</input>
+						  </span>
+						  <span class="sheet-row-label">
+							  <input type="hidden" value="ability-chiryoku" name="attr_level-senmonchishiki-abiref" >
+							  <select disabled class='sheet-input' >
+								  <option value="ability-chiryoku" > Intelligence/知力 </option>
+							  </select>
+							  <input type="hidden" name="attr_judge-senmonchishiki" value="0" >
+							  <span class="skill-result" name="attr_judge-senmonchishiki" ></span>
+						  </span>
+						  <button class="sheet-rollbtn" type="roll" value="/roll @{level-senmonchishiki}d10[Expert Knowledge Check]" > Roll </button>
+						  </select>
+						</div>
+						</fieldset>
+					</div>
+
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *News/*ニュース: </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-news" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-news" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shakai" name="attr_level-news-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shakai" > Social Standing/社会 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-news" value="1" >
+						  <span class="skill-result" name="attr_judge-news" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-news}d10[News Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Gossip/事情通 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-jijoutsuu" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-jijoutsuu-abiref" >
+							  <option value="ability-gokan" > Senses/五感 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-jijoutsuu" value="0" >
+						  <span class="skill-result" name="attr_judge-jijoutsuu" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-jijoutsuu}d10[Gossip Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > Industry/業界 </label>
+						<fieldset class="repeating_skill-gyoukai">
+							<div class="chardata-row">
+							  <span class="sheet-row-label">
+								  <input name="attr_skillname-gyoukai" class="sheet-input" type="text" >
+							  </span>
+							  <span class="sheet-row-label">
+								  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="0" checked> 0</input>
+								  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="1"> 1</input>
+								  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="2"> 2</input>
+								  <input name="attr_level-gyoukai" class="radio-numbered" type="radio" value="3"> 3</input>
+							  </span>
+							  <span class="sheet-row-label">
+								  <select class='sheet-input' name="attr_level-gyoukai-abiref" >
+									  <option value="ability-miryoku" > Charisma/魅力 </option>
+									  <option value="ability-shakai" > Social Standing/社会 </option>
+								  </select>
+								  <input type="hidden" name="attr_judge-gyoukai" value="0" >
+								  <span class="skill-result" name="attr_judge-gyoukai" ></span>
+							  </span>
+							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-gyoukai}d10[Industry Check]" > Roll </button>
+							  </select>
+							</div>
+						</fieldset>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Movement/*運動 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-undou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-undou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-undou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-undou" value="1" >
+						  <span class="skill-result" name="attr_judge-undou" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-undou}d10[Movement Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Speed/スピード </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-speed" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-speed-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-speed" value="0" >
+						  <span class="skill-result" name="attr_judge-speed" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-speed}d10[Speed Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Strength/ストレングス </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-strength" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-strength-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-strength" value="0" >
+						  <span class="skill-result" name="attr_judge-strength" ></span>
+					  </span>
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-strength}d10[Strength Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Acrobat/アクロバット </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-acrobat" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-acrobat-abiref" >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-acrobat" value="0" >
+						  <span class="skill-result" name="attr_judge-acrobat" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-acrobat}d10[Acrobat Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Dive/ダイブ </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dive" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-dive-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-dive" value="0" >
+						  <span class="skill-result" name="attr_judge-dive" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dive}d10[Dive Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Fighting/*格闘 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-kakutou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-kakutou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-kakutou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kakutou" value="1" >
+						  <span class="skill-result" name="attr_judge-kakutou" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kakutou}d10[Fighting Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > Martial Arts/武術 </label>
+						<fieldset class="repeating_skill-bujutsu">
+							<div class="chardata-row">
+							  <span class="sheet-row-label">
+								  <input name="attr_skillname-bujutsu" class="sheet-input" type="text" >
+							  </span>
+							  <span class="sheet-row-label">
+								  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+								  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+								  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+								  <input name="attr_level-bujutsu" class="radio-numbered" type="radio" value="3"> 3</input>
+							  </span>
+							  <span class="sheet-row-label">
+								  <input type="hidden" value="ability-shintai" name="attr_level-bujutsu-abiref" >
+								  <select disabled class='sheet-input' >
+									  <option value="ability-shintai" > Fitness/身体 </option>
+								  </select>
+								  <input type="hidden" name="attr_judge-bujutsu" value="0" >
+								  <span class="skill-result" name="attr_judge-bujutsu" ></span>
+							  </span>
+							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-bujutsu}d10[Martial Arts Check]" > Roll </button>
+							</div>
+						</fieldset>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > <span class="sheet-star">★</span>Special Arts/<span class="sheet-star">★</span>奥義 </label>
+						<fieldset class="repeating_skill-ougi">
+						<div class="chardata-row">
+							<span class="sheet-row-label">
+								<input name="attr_skillname-ougi" class="sheet-input" type="text">
+							</span> 
+							<span class="sheet-row-label"> 
+								<input name="attr_level-ougi" class="radio-numbered" type="radio" value="0" checked> 0</input> 
+								<input name="attr_level-ougi" class="radio-numbered" type="radio" value="1"> 1</input> 
+								<input name="attr_level-ougi" class="radio-numbered" type="radio" value="2"> 2</input> 
+								<input name="attr_level-ougi" class="radio-numbered" type="radio" value="3"> 3</input> 
+							</span> 
+							<span class="sheet-row-label">
+								<select class='sheet-input' name="attr_level-ougi-abiref" >
+									<option value="ability-shintai" > Fitness/身体 </option>
+									<option value="ability-kiyou" > Dexterity/器用 </option>
+									<option value="ability-seishin" > Spirit/精神 </option>
+								</select>
+								<input type="hidden" name="attr_judge-ougi" value="0" >
+								<span class="skill-result" name="attr_judge-ougi" ></span> 
+							</span> 
+							<button class="sheet-rollbtn" type="roll" value="/roll @{level-ougi}d10[Special Arts Check]" > Roll </button>
+						</div>
+						</fieldset>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Throwing/*投擲 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-touteki" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-touteki" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-kiyou" name="attr_level-touteki-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-touteki" value="1" >
+						  <span class="skill-result" name="attr_judge-touteki" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-touteki}d10[Throwing Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > <span class="sheet-star">★</span>Shooting/<span class="sheet-star">★</span>射撃 </label>
+						<fieldset class="repeating_skill-shageki">
+							<div class="chardata-row">
+							  <span class="sheet-row-label">
+								  <input name="attr_skillname-shageki" class="sheet-input" type="text">
+							  </span>
+							  <span class="sheet-row-label">
+								  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="0" checked> 0</input>
+								  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="1"> 1</input>
+								  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="2"> 2</input>
+								  <input name="attr_level-shageki" class="radio-numbered" type="radio" value="3"> 3</input>
+							  </span>
+							  <span class="sheet-row-label">
+								  <select class='sheet-input' name="attr_level-shageki-abiref" >
+									  <option value="ability-kiyou" > Dexterity/器用 </option>
+									  <option value="ability-gokan" > Senses/五感 </option>
+								  </select>
+								  <input type="hidden" name="attr_judge-shageki" value="0" >
+								  <span class="skill-result" name="attr_judge-shageki" ></span>
+							  </span>
+								  
+							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shageki}d10[Shooting Check]" > Roll </button>
+							  </select>
+							</div>
+						</fieldset>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Survival/*生存 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-seizon" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-seizon" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-seizon-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-seizon" value="1" >
+						  <span class="skill-result" name="attr_judge-seizon" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-seizon}d10[Survival Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Endurance/耐久 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-taikyuu" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-shintai" name="attr_level-taikyuu-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-shintai" > Fitness/身体 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-taikyuu" value="0" >
+						  <span class="skill-result" name="attr_judge-taikyuu" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-taikyuu}d10[Endurance Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Ego/*自我 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-jiga" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-jiga" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-seishin" name="attr_level-jiga-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-seishin" > Spirit/精神 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-jiga" value="1" >
+						  <span class="skill-result" name="attr_judge-jiga" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-jiga}d10[Ego Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Will/根性 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-konjou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-seishin" name="attr_level-konjou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-seishin" > Spirit/精神 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-konjou" value="0" >
+						  <span class="skill-result" name="attr_judge-konjou" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-konjou}d10[Will Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Treatment/*手当て </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-teate" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-teate" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-teate-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-teate" value="1" >
+						  <span class="skill-result" name="attr_judge-teate" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-teate}d10[Treatment Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Medical Technique/医術 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-ijutsu-abiref" >
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-ijutsu" value="0" >
+						  <span class="skill-result" name="attr_judge-ijutsu" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-ijutsu}d10[Medical Technique Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+						<label class='sheet-row-label' > <span class="sheet-star">★</span>Resuscitation/<span class="sheet-star">★</span>蘇生 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-sosei" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-sosei-abiref" >
+							  <option value="ability-seishin" > Spirit/精神 </option>
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-sosei" value="0" >
+						  <span class="skill-result" name="attr_judge-sosei" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-sosei}d10[Resuscitation Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Craft/*細工 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-saiku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-saiku" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-kiyou" name="attr_level-saiku-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-saiku" value="1" >
+						  <span class="skill-result" name="attr_judge-saiku" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-saiku}d10[Craft Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > Technique/技巧 </label>
+						<fieldset class="repeating_skill-gikou">
+							<div class="chardata-row">
+							  <span class="sheet-row-label">
+								  <input name="attr_skillname-gikou" class="sheet-input" type="text" >
+							  </span>
+							  <span class="sheet-row-label">
+								  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+								  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="1"> 1</input>
+								  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="2"> 2</input>
+								  <input name="attr_level-gikou" class="radio-numbered" type="radio" value="3"> 3</input>
+							  </span>
+							  <span class="sheet-row-label">
+								  <input type="hidden" value="ability-kiyou" name="attr_level-gikou-abiref" >
+								  <select disabled class='sheet-input' >
+									  <option value="ability-kiyou" > Dexterity/器用 </option>
+								  </select>
+								  <input type="hidden" name="attr_judge-gikou" value="0" >
+								  <span class="skill-result" name="attr_judge-gikou" ></span>
+							  </span>
+							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-gikou}d10[Technique Check]" > Roll </button>
+							</div>
+						</fieldset>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > Art/芸術 </label>
+						<fieldset class="repeating_skill-geijutsu">
+							<div class="chardata-row">
+							  <span class="sheet-row-label">
+								  <input name="attr_skillname-geijutsu" class="sheet-input" type="text" >
+							  </span>
+							  <span class="sheet-row-label">
+								  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+								  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="1"> 1</input>
+								  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="2"> 2</input>
+								  <input name="attr_level-geijutsu" class="radio-numbered" type="radio" value="3"> 3</input>
+							  </span>
+							  <span class="sheet-row-label">
+								  <select class='sheet-input' name="attr_level-geijutsu-abiref" >
+									  <option value="ability-kiyou" > Dexterity/器用 </option>
+									  <option value="ability-seishin" > Spirit/精神 </option>
+									  <option value="ability-gokan" > Senses/五感 </option>
+								  </select>
+								  <input type="hidden" name="attr_judge-geijutsu" value="0" >
+								  <span class="skill-result" name="attr_judge-geijutsu" ></span>
+							  </span>
+								  
+							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-geijutsu}d10[Art Check]" > Roll </button>
+							  </select>
+							</div>
+						</fieldset>
+					</div>
+					<div class="repcontainer">
+						<label class='sheet-row-label' > Maneuvering/操縦 </label>
+						<fieldset class="repeating_skill-soujuu">
+							<div class="chardata-row">
+							  <span class="sheet-row-label">
+								  <input name="attr_skillname-soujuu" class="sheet-input" type="text" >
+							  </span>
+							  <span class="sheet-row-label">
+								  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="0" checked> 0</input>
+								  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="1"> 1</input>
+								  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="2"> 2</input>
+								  <input name="attr_level-soujuu" class="radio-numbered" type="radio" value="3"> 3</input>
+							  </span>
+							  <span class="sheet-row-label">
+								  <select class='sheet-input' name="attr_level-soujuu-abiref" >
+									  <option value="ability-kiyou" > Dexterity/器用 </option>
+									  <option value="ability-gokan" > Senses/五感 </option>
+									  <option value="ability-chiryoku" > Intelligence/知力 </option>
+								  </select>
+								  <input type="hidden" name="attr_judge-soujuu" value="0" >
+								  <span class="skill-result" name="attr_judge-soujuu" ></span>
+							  </span>
+								  
+							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-soujuu}d10[Maneuvering Check]" > Roll </button>
+							  </select>
+							</div>
+						</fieldset>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Cryptography/暗号 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-angou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-angou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-angou" value="0" >
+						  <span class="skill-result" name="attr_judge-angou" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-angou}d10[Cryptography Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Cyber/電脳 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-dennou" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-chiryoku" name="attr_level-dennou-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-chiryoku" > Intelligence/知力 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-dennou" value="0" >
+						  <span class="skill-result" name="attr_judge-dennou" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dennou}d10[Cyber Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Concealment/隠匿 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-intoku" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <select class='sheet-input' name="attr_level-intoku-abiref" >
+							  <option value="ability-kiyou" > Dexterity/器用 </option>
+							  <option value="ability-shakai" > Social Standing/社会 </option>
+							  <option value="ability-unsei" > Luck/運勢 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-intoku" value="0" >
+						  <span class="skill-result" name="attr_judge-intoku" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-intoku}d10[Concealment Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > *Good Fortune/*幸運 </label>
+					  <span class="sheet-row-label">
+						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input checked name="attr_level-kouun" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input disabled name="attr_level-kouun" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-unsei" name="attr_level-kouun-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-unsei" > Luck/運勢 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kouun" value="1" >
+						  <span class="skill-result" name="attr_judge-kouun" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kouun}d10[Good Fortune Check]" > Roll </button>
+					  </select>
+					</div>
+					<div class="chardata-row">
+					  <label class='sheet-row-label' > Greater Fortune/強運 </label>
+					  <span class="sheet-row-label">
+						  <input name="attr_level-kyouun" class="radio-numbered" type="radio" value="0" checked> 0</input>
+						  <input name="attr_level-kyouun" class="radio-numbered" type="radio" value="1"> 1</input>
+						  <input name="attr_level-kyouun" class="radio-numbered" type="radio" value="2"> 2</input>
+						  <input name="attr_level-kyouun" class="radio-numbered" type="radio" value="3"> 3</input>
+					  </span>
+					  <span class="sheet-row-label">
+						  <input type="hidden" value="ability-unsei" name="attr_level-kyouun-abiref" >
+						  <select disabled class='sheet-input' >
+							  <option value="ability-unsei" > Luck/運勢 </option>
+						  </select>
+						  <input type="hidden" name="attr_judge-kyouun" value="0" >
+						  <span class="skill-result" name="attr_judge-kyouun" ></span>
+					  </span>
+						  
+					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kyouun}d10[Greater Fortune Check]" > Roll </button>
+					  </select>
+					</div>
+
+					<div class="repcontainer" > 
+						<label class='sheet-row-label' > *Others/*その他 </label> 
+						<fieldset class="repeating_skill-sonota">
+							<div class="chardata-row">
+								<span class="sheet-row-label"> 
+									<input name="attr_skillname-sonota" class="sheet-input" type="text" >
+								</span>
+								<span class="sheet-row-label"> 
+									<input name="attr_level-sonota" class="radio-numbered" type="radio" value="0" checked> 0</input> 
+									<input name="attr_level-sonota" class="radio-numbered" type="radio" value="1"> 1</input> 
+									<input name="attr_level-sonota" class="radio-numbered" type="radio" value="2"> 2</input> 
+									<input name="attr_level-sonota" class="radio-numbered" type="radio" value="3"> 3</input> 
+								</span>
+								<span class="sheet-row-label">
+									<select class='sheet-input' name="attr_level-sonota-abiref" >
+										<option value="ability-shintai" > Fitness/身体 </option>
+										<option value="ability-kiyou" > Dexterity/器用 </option>
+										<option value="ability-seishin" > Spirit/精神 </option>
+										<option value="ability-gokan" > Senses/五感 </option>
+										<option value="ability-chiryoku" > Intelligence/知力 </option>
+										<option value="ability-miryoku" > Charisma/魅力 </option>
+										<option value="ability-shakai" > Social Standing/社会 </option>
+										<option value="ability-unsei" > Luck/運勢 </option>
+									</select>
+									<input type="hidden" name="attr_judge-sonota" value="0" >
+									<span class="skill-result" name="attr_judge-sonota" ></span>
+								</span> 
+								<button class="sheet-rollbtn" type="roll" value="/roll @{level-sonota}d10[Others Check]" > Roll </button>
+							</div> 
+						</fieldset>
+					</div> <!-- repcontainer --->
+
+    		    </div>
+    		</div>
+    	</div>
+    </div>
+</div>
+
+<script type="text/worker">
+
+/* ---- BEGIN: TheAaronSheet.js ---- */
+// Github:   https://github.com/shdwjk/TheAaronSheet/blob/master/TheAaronSheet.js
+// By:       The Aaron, Arcane Scriptomancer
+// Contact:  https://app.roll20.net/users/104025/the-aaron
+
+var TAS = TAS || (function(){
+    'use strict';
+
+    var version = '0.2.5',
+        lastUpdate = 1504710542,
+
+        loggingSettings = {
+            debug: {
+                key:     'debug',
+                title:   'DEBUG',
+                color: {
+                    bgLabel: '#7732A2',
+                    label:   '#F2EF40',
+                    bgText:  '#FFFEB7',
+                    text:    '#7732A2'
+                }
+            },
+            error: {
+                key:     'error',
+                title:   'Error',
+                color: {
+                    bgLabel: '#C11713',
+                    label:   'white',
+                    bgText:  '#C11713',
+                    text:    'white'
+                }
+            },
+            warn: {
+                key:     'warn',
+                title:   'Warning',
+                color: {
+                    bgLabel: '#F29140',
+                    label:   'white',
+                    bgText:  '#FFD8B7',
+                    text:    'black'
+                }
+            },
+            info: {
+                key:     'info',
+                title:   'Info',
+                color: {
+                    bgLabel: '#413FA9',
+                    label:   'white',
+                    bgText:  '#B3B2EB',
+                    text:    'black'
+                }
+            },
+            notice: {
+                key:     'notice',
+                title:   'Notice',
+                color: {
+                    bgLabel: '#33C133',
+                    label:   'white',
+                    bgText:  '#ADF1AD',
+                    text:    'black'
+                }
+            },
+            log: {
+                key:     'log',
+                title:   'Log',
+                color: {
+                    bgLabel: '#f2f240',
+                    label:   'black',
+                    bgText:  '#ffff90',
+                    text:    'black'
+                }
+            },
+            callstack: {
+                key:     'TAS',
+                title:   'function',
+                color: {
+                    bgLabel: '#413FA9',
+                    label:   'white',
+                    bgText:  '#B3B2EB',
+                    text:    'black'
+                }
+            },
+            callstack_async: {
+                key:     'TAS',
+                title:   'ASYNC CALL',
+                color: {
+                    bgLabel: '#413FA9',
+                    label:   'white',
+                    bgText:  '#413FA9',
+                    text:    'white'
+                }
+            },
+            TAS: {
+                key:     'TAS',
+                title:   'TAS',
+                color: {
+                    bgLabel: 'grey',
+                    label:   'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)',
+                    bgText:  'grey',
+                    text:    'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)'
+                }
+            }
+        },
+
+
+        config = {
+            debugMode: false,
+            logging: {
+                log: true,
+                notice: true,
+                info: true,
+                warn: true,
+                error: true,
+                debug: false
+            }
+        },
+
+        callstackRegistry = [],
+		queuedUpdates = {}, //< Used for delaying saves till the last moment.
+
+    complexType = function(o){
+        switch(typeof o){
+            case 'string':
+                return 'string';
+            case 'boolean':
+                return 'boolean';
+            case 'number':
+                return (_.isNaN(o) ? 'NaN' : (o.toString().match(/\./) ? 'decimal' : 'integer'));
+            case 'function':
+                return 'function: '+(o.name ? o.name+'()' : '(anonymous)');
+            case 'object':
+                return (_.isArray(o) ? 'array' : (_.isArguments(o) ? 'arguments' : ( _.isNull(o) ? 'null' : 'object')));
+            default:
+                return typeof o;
+        }
+    },
+
+	dataLogger = function(primaryLogger,secondaryLogger,data){
+        _.each(data,function(m){
+            var type = complexType(m);
+            switch(type){
+                case 'string':
+                    primaryLogger(m);
+                    break;
+                case 'undefined':
+                case 'null':
+                case 'NaN':
+                    primaryLogger('['+type+']');
+                    break;
+                case 'number':
+                case 'not a number':
+                case 'integer':
+                case 'decimal':
+                case 'boolean':
+                    primaryLogger('['+type+']: '+m);
+                    break;
+                default:
+                    primaryLogger('['+type+']:=========================================');
+                    secondaryLogger(m);
+                    primaryLogger('=========================================================');
+                    break;
+            }
+        });
+	},
+
+
+    colorLog = function(options){
+        var coloredLoggerFunction,
+            key = options.key,
+            label = options.title || 'TAS',
+            lBGColor = (options.color && options.color.bgLabel) || 'blue',
+            lTxtColor = (options.color && options.color.label) || 'white',
+            mBGColor = (options.color && options.color.bgText) || 'blue',
+            mTxtColor = (options.color && options.color.text) || 'white';
+
+        coloredLoggerFunction = function(message){
+            /* eslint-disable no-console */
+            console.log(
+                '%c '+label+': %c '+message + ' ',
+                'background-color: '+lBGColor+';color: '+lTxtColor+'; font-weight:bold;',
+                'background-color: '+mBGColor+';color: '+mTxtColor+';'
+            ); 
+            /* eslint-enable no-console */
+        };
+        return function(){
+            if('TAS'===key || config.logging[key]){
+                /* eslint-disable no-console */
+               dataLogger(coloredLoggerFunction,function(m){console.log(m);},_.toArray(arguments)); 
+                /* eslint-enable no-console */
+            }
+        };
+    },
+
+    logDebug  = colorLog(loggingSettings.debug),
+    logError  = colorLog(loggingSettings.error),
+    logWarn   = colorLog(loggingSettings.warn),
+    logInfo   = colorLog(loggingSettings.info),
+    logNotice = colorLog(loggingSettings.notice),
+    logLog    = colorLog(loggingSettings.log),
+    log       = colorLog(loggingSettings.TAS),
+    logCS     = colorLog(loggingSettings.callstack),
+    logCSA    = colorLog(loggingSettings.callstack_async),
+
+    registerCallstack = function(callstack,label){
+        var idx=_.findIndex(callstackRegistry,function(o){
+            return (_.difference(o.stack,callstack).length === _.difference(callstack,o.stack).length) &&
+                _.difference(o.stack,callstack).length === 0 &&
+                o.label === label;
+        });
+        if(-1 === idx){
+            idx=callstackRegistry.length;
+            callstackRegistry.push({
+                stack: callstack,
+                label: label
+            });
+        }
+        return idx;
+    },
+
+    setConfigOption = function(options){
+        var newconf =_.defaults(options,config);
+        newconf.logging=_.defaults(
+            (options && options.logging)||{},
+            config.logging
+        );
+        config=newconf;
+    },
+    
+    isDebugMode = function(){
+        return config.debugMode;
+    },
+
+    debugMode = function(){
+        config.logging.debug=true;
+        config.debugMode = true;
+    },
+
+    getCallstack = function(){
+        var e = new Error('dummy'),
+            stack = _.map(_.rest(e.stack.replace(/^[^(]+?[\n$]/gm, '')
+            .replace(/^\s+at\s+/gm, '')
+            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@')
+            .split('\n')),function(l){
+                return l.replace(/\s+.*$/,'');
+            });
+        return stack;
+    },
+    logCallstackSub = function(cs){
+        var matches, csa;
+        _.find(cs,function(line){
+            matches = line.match(/TAS_CALLSTACK_(\d+)/);
+            if(matches){
+               csa=callstackRegistry[matches[1]];
+               logCSA( '===================='+(csa.label ? '> '+csa.label+' <' : '')+'====================');
+               logCallstackSub(csa.stack);
+               return true;
+            } 
+            logCS(line);
+            return false;
+        });
+    },
+    logCallstack = function(){
+        var cs;
+        if(config.debugMode){
+            cs = getCallstack();
+            cs.shift();
+            log('==============================> CALLSTACK <==============================');
+            logCallstackSub(cs);
+            log('=========================================================================');
+        }
+    },
+
+
+    wrapCallback = function (label, callback, context){
+        var callstack;
+        if('function' === typeof label){
+            context=callback;
+            callback=label;
+            label=undefined;
+        }
+        if(!config.debugMode){
+            return (function(cb,ctx){
+                return function(){
+                    cb.apply(ctx||{},arguments);
+                };
+            }(callback,context));
+        }
+        
+        callstack = getCallstack();
+        callstack.shift();
+        
+        return (function(cb,ctx,cs,lbl){
+            var ctxref=registerCallstack(cs,lbl);
+
+            /*jshint -W054 */
+            return new Function('cb','ctx','TASlog',
+                "return function TAS_CALLSTACK_"+ctxref+"(){"+
+                    "var start,end;"+
+                    "TASlog('Entering: '+(cb.name||'(anonymous function)'));"+
+                    "start=_.now();"+
+                    "cb.apply(ctx||{},arguments);"+
+                    "end=_.now();"+
+                    "TASlog('Exiting: '+(cb.name||'(anonymous function)')+' :: '+(end-start)+'ms elapsed');"+
+                "};")(cb,ctx,log);
+            /*jshint +W054 */
+        }(callback,context,callstack,label));
+    },
+
+
+    prepareUpdate = function( attribute, value ){
+        queuedUpdates[attribute]=value;
+    },
+
+    applyQueuedUpdates = function() {
+      setAttrs(queuedUpdates);
+      queuedUpdates = {};
+    },
+
+	namesFromArgs = function(args,base){
+        return _.chain(args)
+            .reduce(function(memo,attr){
+                if('string' === typeof attr) {
+                    memo.push(attr);
+                } else if(_.isArray(args) || _.isArguments(args)){
+                    memo = namesFromArgs(attr,memo);
+                }
+                return memo;
+            },(_.isArray(base) && base) || [])
+            .uniq()
+            .value();
+	},
+
+	addId = function(obj,value){
+		Object.defineProperty(obj,'id',{
+			value: value,
+			writable: false,
+			enumerable: false
+		});
+	},
+
+	addProp = function(obj,prop,value,fullname){
+		(function(){
+            var pname=(_.contains(['S','F','I','D'],prop) ? '_'+prop : prop),
+                full_pname = fullname || prop,
+                pvalue=value;
+
+            _.each(['S','I','F'],function(p){
+                if( !_.has(obj,p)){
+                    Object.defineProperty(obj, p, {
+                        value: {},
+                        enumerable: false,
+                        readonly: true
+                    });
+                }
+            });
+            if( !_.has(obj,'D')){
+                Object.defineProperty(obj, 'D', {
+                    value: _.reduce(_.range(10),function(m,d){
+                            Object.defineProperty(m, d, {
+                                value: {},
+                                enumerable: true,
+                                readonly: true
+                            });
+                            return m;
+                        },{}),
+                    enumerable: false,
+                    readonly: true
+                });
+            }
+
+
+            // Raw value
+			Object.defineProperty(obj, pname, {
+                enumerable: true,
+				set: function(v){
+                    if(v!==pvalue) {
+                        pvalue=v;
+                        prepareUpdate(full_pname,v);
+                    }
+				},
+				get: function(){
+					return pvalue;
+				}
+			});
+            
+            // string value
+			Object.defineProperty(obj.S, pname, {
+                enumerable: true,
+				set: function(v){
+                    var val=v.toString();
+                    if(val !== pvalue) {
+                        pvalue=val;
+                        prepareUpdate(full_pname,val);
+                    }
+				},
+				get: function(){
+					return pvalue.toString();
+				}
+			});
+
+            // int value
+			Object.defineProperty(obj.I, pname, {
+                enumerable: true,
+				set: function(v){
+                    var val=parseInt(v,10) || 0;
+                    if(val !== pvalue){
+                        pvalue=val;
+                        prepareUpdate(full_pname,val);
+                    }
+				},
+				get: function(){
+					return parseInt(pvalue,10) || 0;
+				}
+			});
+
+            // float value
+			Object.defineProperty(obj.F, pname, {
+                enumerable: true,
+				set: function(v){
+                    var val=parseFloat(v) || 0;
+                    if(val !== pvalue) {
+                        pvalue=val;
+                        prepareUpdate(full_pname,val);
+                    }
+				},
+				get: function(){
+					return parseFloat(pvalue) || 0;
+				}
+			});
+            _.each(_.range(10),function(d){
+                Object.defineProperty(obj.D[d], pname, {
+                    enumerable: true,
+                    set: function(v){
+                        var val=(parseFloat(v) || 0).toFixed(d);
+                        if(val !== pvalue){
+                            pvalue=val;
+                            prepareUpdate(full_pname,val);
+                        }
+                    },
+                    get: function(){
+                        return (parseFloat(pvalue) || 0).toFixed(d);
+                    }
+                });
+            });
+
+		}());
+	},
+	
+	repeating = function( section ) {
+		return (function(s){
+			var sectionName = s,
+				attrNames = [],
+				fieldNames = [],
+				operations = [],
+                after = [],
+			
+			repAttrs = function TAS_Repeating_Attrs(){
+				attrNames = namesFromArgs(arguments,attrNames);
+				return this;
+			},
+			repFields = function TAS_Repeating_Fields(){
+				fieldNames = namesFromArgs(arguments,fieldNames);
+				return this;
+			},
+			repReduce = function TAS_Repeating_Reduce(func, initial, final, context) { 
+				operations.push({
+                    type: 'reduce',
+                    func: (func && _.isFunction(func) && func) || _.noop,
+                    memo: (_.isUndefined(initial) && 0) || initial,
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+			},
+			repMap = function TAS_Repeating_Map(func, final, context) {
+				operations.push({
+                    type: 'map',
+                    func: (func && _.isFunction(func) && func) || _.noop,
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+			},
+            repEach = function TAS_Repeating_Each(func, final, context) {
+				operations.push({
+                    type: 'each',
+                    func: (func && _.isFunction(func) && func) || _.noop,
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+            },
+            repTap = function TAS_Repeating_Tap(final, context) {
+				operations.push({
+                    type: 'tap',
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+            },
+            repAfter = function TAS_Repeating_After(callback,context) {
+				after.push({
+                    callback: (callback && _.isFunction(callback) && callback) || _.noop,
+                    context: context || {}
+                });
+				return this;
+            },
+			repExecute = function TAS_Repeating_Execute(callback,context){
+				var rowSet = {},
+					attrSet = {},
+					fieldIds = [],
+					fullFieldNames = [];
+
+                repAfter(callback,context);
+
+				// call each operation per row.
+				// call each operation's final
+				getSectionIDs("repeating_"+sectionName,function(ids){
+					fieldIds = ids;
+					fullFieldNames = _.reduce(fieldIds,function(memo,id){
+						return memo.concat(_.map(fieldNames,function(name){
+							return 'repeating_'+sectionName+'_'+id+'_'+name;  
+						}));
+					},[]);
+					getAttrs( _.uniq(attrNames.concat(fullFieldNames)), function(values){
+						_.each(attrNames,function(aname){
+							if(values.hasOwnProperty(aname)){
+								addProp(attrSet,aname,values[aname]);
+							}
+						});
+
+						rowSet = _.reduce(fieldIds,function(memo,id){
+							var r={};
+							addId(r,id);
+							_.each(fieldNames,function(name){
+								var fn = 'repeating_'+sectionName+'_'+id+'_'+name;  
+								addProp(r,name,values[fn],fn);
+							});
+
+							memo[id]=r;
+
+							return memo;
+						},{});
+
+                        _.each(operations,function(op){
+                            var res;
+                            switch(op.type){
+                                case 'tap':
+                                    _.bind(op.final,op.context,rowSet,attrSet)();
+                                    break;
+
+                                case 'each':
+                                    _.each(rowSet,function(r){
+                                        _.bind(op.func,op.context,r,attrSet,r.id,rowSet)();
+                                    });
+                                    _.bind(op.final,op.context,rowSet,attrSet)();
+                                    break;
+
+                                case 'map':
+                                    res = _.map(rowSet,function(r){
+                                        return _.bind(op.func,op.context,r,attrSet,r.id,rowSet)();
+                                    });
+                                    _.bind(op.final,op.context,res,rowSet,attrSet)();
+                                    break;
+
+                                case 'reduce':
+                                    res = op.memo;
+                                    _.each(rowSet,function(r){
+                                        res = _.bind(op.func,op.context,res,r,attrSet,r.id,rowSet)();
+                                    });
+                                    _.bind(op.final,op.context,res,rowSet,attrSet)();
+                                    break;
+                            }
+                        });
+
+                        // finalize attrs
+                        applyQueuedUpdates();
+                        _.each(after,function(op){
+                            _.bind(op.callback,op.context)();
+                        });
+					});
+				});
+			};
+				
+			return {
+				attrs: repAttrs,
+				attr: repAttrs,
+
+				column: repFields,
+				columns: repFields,
+				field: repFields,
+				fields: repFields,
+
+				reduce: repReduce,
+				inject: repReduce,
+				foldl: repReduce,
+
+				map: repMap,
+				collect: repMap,
+
+				each: repEach,
+                forEach: repEach,
+
+                tap: repTap,
+                'do': repTap,
+
+				after: repAfter,
+				last: repAfter,
+				done: repAfter,
+
+				execute: repExecute,
+				go: repExecute,
+				run: repExecute
+			};
+		}(section));
+	},
+
+
+    repeatingSimpleSum = function(section, field, destination){
+        repeating(section)
+            .attr(destination)
+            .field(field)
+            .reduce(function(m,r){
+                return m + (r.F[field]);
+            },0,function(t,r,a){
+                a.S[destination]=t;
+            })
+            .execute();
+    };
+
+    /* eslint-disable no-console */
+	console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  The Aaron Sheet  v'+version+'  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•','background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+	console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  Last update: '+(new Date(lastUpdate*1000))+'  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•','background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+    /* eslint-enable no-console */
+
+
+    return {
+        /* Repeating Sections */
+        repeatingSimpleSum: repeatingSimpleSum,
+		repeating: repeating,
+
+        /* Configuration */
+        config: setConfigOption,
+
+        /* Debugging */
+        callback: wrapCallback,
+        callstack: logCallstack,
+        debugMode: debugMode,
+        isDebugMode: isDebugMode,
+        _fn: wrapCallback,
+
+        /* Logging */
+        debug: logDebug,
+        error: logError,
+        warn: logWarn,
+        info: logInfo,
+        notice: logNotice,
+        log: logLog
+    };
+}());
+
+/* ---- END: TheAaronSheet.js ---- */
+
+
+/* ----- START: Emo-klore custom sheet worker by testermelon ------ */
+
+
+const lgDebug = true;
+
+//List of abilities attr names 
+const listAttrsAbilities = [
+	"ability-shintai", 
+	"ability-kiyou", 
+	"ability-seishin", 
+	"ability-gokan", 
+	"ability-chiryoku", 
+	"ability-miryoku", 
+	"ability-shakai", 
+	"ability-unsei", 
+];
+
+//list of all skills that is not in repeating
+const listNonrepSkills = [
+	"chousa", 		"kensaku", 		"dousatsu",		"mapping", 		"chokkan", 
+	"kantei", 		"chikaku", 		"kansatsugan", 	"kikime", 
+	"dokumi", 		"kikikanchi", 	"reikan", 		"koushou", 
+	"shakoujutsu", 	"debate", 		"shinri", 		"miryou", 
+	"chishiki", 	"news", 		"jijoutsuu", 	"undou", 
+	"speed", 		"strength", 	"acrobat", 		"dive", 
+	"kakutou", 		"touteki", 		"seizon", 		"taikyuu",
+	"jiga", 		"konjou", 		"teate", 		"ijutsu", 
+	"sosei", 		"saiku", 		"angou", 		"dennou", 
+	"intoku", 		"kouun", 		"kyouun",		
+];
+
+//list of all skills in repeating
+const listRepeatingSkills = [
+	"senmonchishiki", 
+	"gyoukai", 
+	"bujutsu", 
+	"ougi", 
+	"shageki", 
+	"gikou", 
+	"geijutsu", 
+	"soujuu", 
+	"sonota", 
+];
+
+//generate atts names for skills 
+const listAttrsLevel 	= listNonrepSkills.map( skill => `level-${skill}`);
+const listAttrsJudgeref	= listNonrepSkills.map( skill => `level-${skill}-abiref`); 
+
+/* START OF HELPER FUNCTIONS DEFINITIONS */
+
+/********************************
+ * Shorten A = CONSTANT + B + C + D .... 
+ * as get(B,C,D,...) => set A 
+ * toSet : A 
+ * konstanta : CONSTANT
+ * getList is the rest: (sign, toGet) 
+ ***********************************/
+const  summingArgs = (toSet, konstanta,  ...getList) => {
+	let toGet = [];
+	let signs = [];
+	for(let i=0; i<getList.length; i++) {
+		signs.push(getList[2*i]);	
+		toGet.push(getList[2*i+1]);	
+	}
+	getAttrs(toGet, values => {
+		let sum = 0;
+		for(let i=0; i<toGet.length; i++) {
+			if(signs[i] == "-" ) 
+				sum -= parseInt(values[toGet[i]]) ;
+			if(signs[i] == "+" )
+				sum += parseInt(values[toGet[i]]) ;
+		}
+		sum += konstanta;
+		let obj = {};
+		obj[toSet] = sum;
+		setAttrs(obj);
+	});
+}
+
+//CALCULATE ABILITY POINTS LEFT
+//ability-point-left = abilityPoint(25) + abilityaddpoint - (all abilities except luck) 
+const calcAbilityPointLeft = () => {
+	const abilityPoint = 25;
+	summingArgs( "ability-point-left", 
+		abilityPoint, 
+		"+", "ability-add-point", 
+		"-", "ability-shintai", 
+		"-", "ability-kiyou",
+		"-", "ability-seishin" ,
+		"-", "ability-gokan" ,
+		"-", "ability-chiryoku" ,
+		"-", "ability-miryoku" ,
+		"-", "ability-shakai" ,
+	);
+};
+
+//calculate skill cost 
+const skillCost = (lvl, skill) => {
+
+	//fixed level skills
+	if(
+	(	skill == 'chousa'	) ||
+	(	skill == 'chikaku'	) ||
+	(	skill == 'koushou'	) ||
+	(	skill == 'chishiki'	) ||
+	(	skill == 'news'		) ||
+	(	skill == 'undou'	) ||
+	(	skill == 'kakutou'	) ||
+	(	skill == 'touteki'	) ||
+	(	skill == 'seizon'	) ||
+	(	skill == 'jiga'		) ||
+	(	skill == 'teate'	) ||
+	(	skill == 'saiku'	) ||
+	(	skill == 'kouun'	)
+	){ 
+		console.log("cost = 0");
+		return 0;
+	};
+
+	let cost = lvl * 5; 
+	if(
+	( skill == 'reikan'		) ||
+	( skill == 'sosei' 		) ||
+	( skill == 'ougi' 		) ||
+	( skill == 'shageki' 	) ||
+	( skill == 'ougi' 		) ||
+	( skill == 'sonota' 	)
+	){
+		cost *= 2;
+	};
+
+	if(lgDebug) console.log(`cost(${lvl},${skill}) : ${cost}`);
+
+	return cost;
+}
+
+
+// set judgement value according to level + ability
+const setAllJudgement = (abilityName) => {
+	if(lgDebug) console.log('setAllJudgement()');
+
+	//obtain all judgement ability references 
+	getAttrs( listAttrsJudgeref, (values) => {
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
+
+		//iterate on skills and recalculate matching ones
+		listNonrepSkills.forEach( (skill) => {
+			let ref = `level-${skill}-abiref`;
+			if(lgDebug) console.log(`ref: ${ref} `);
+			if(lgDebug) console.log(`abilityName: ${abilityName}`);
+			if(values[ref] == `ability-${abilityName}` ) {
+				setSingleJudgement(skill);
+			};
+		}); //forEach
+	}); //getAttrs
+	
+	listRepeatingSkills.forEach( (skill) => {
+		TAS.repeating(`skill-${skill}`)
+			.attrs(`ability-${abilityName}`)
+			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`)
+			.each(function(row,attrSet,id,rowSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+				
+				if(row[`level-${skill}-abiref`] == `ability-${abilityName}`) {
+					row[`judge-{skill}`] = 
+						(parseInt(row[`level-${skill}`]) || 0)
+						+
+						(parseInt(attrSet[`ability-${abilityName}`]) || 0);
+				};
+			}, function(rowSet,attrSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+
+			})
+			.execute();
+	});
+};
+
+// set judgement value according to level + ability for one skill
+const setSingleJudgement = (skill) => {
+	if(lgDebug) console.log('setSingleJudgement');
+
+	let attrToGet = [`level-${skill}`,`level-${skill}-abiref`].concat(listAttrsAbilities);
+	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
+
+	getAttrs(attrToGet, (values) => {
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
+
+		let lvl = parseInt(values[`level-${skill}`]) || 0 ;
+		let abi = parseInt(values[ values[`level-${skill}-abiref`] ]) || 0 ;
+		let result = lvl + abi;
+
+		let obj= {};
+		obj[`judge-${skill}`] = result;
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(obj)));
+
+		setAttrs(obj);
+	});
+};
+
+
+const calcSkillPointLeft = () => {
+	if(lgDebug) console.log('calcSkillPointLeft()');
+
+	let attrToGet = [`skill-add-point`].concat(listAttrsLevel);
+	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
+
+	getAttrs(attrToGet, (values) => {
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
+
+		//initially 30
+		let sum = 30+ values['skill-add-point'] ; 
+		listNonrepSkills.forEach( (skill)=> {
+			let lvl = values[`level-${skill}`];
+			//check with skill cost table elsewhere
+			sum -= skillCost(lvl, skill);
+		});
+		if(lgDebug) console.log(`NonR sum = ${sum}`);
+
+		//Repeating Skills cost sum
+		listRepeatingSkills.forEach( (skill) => {
+			TAS.repeating(`skill-${skill}`)
+				.attrs(listAttrsLevel)
+				.attrs('skill-point-left')
+				.fields(`level-${skill}` )
+				.reduce(function(memo,row,attrSet,id,rowSet){
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+					
+					lvl = row[`level-${skill}`]; 
+					memo += skillCost(lvl,skill) ;
+					return memo;
+
+				}, 0 , function(memo,rowSet,attrSet){
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+
+					sum -= memo;
+				})
+				.execute();
+			if(lgDebug) console.log(`Total sum = ${sum}`);
+		}); //Repeating skills forEach
+
+		let obj = {};
+		obj['skill-point-left'] = sum;
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(obj)));
+
+		setAttrs( obj );
+	});
+};
+
+
+/*RESPOND TO CHANGES IN ABILITIES PAGE */
+
+on(`change:ability-add-point`, () => { calcAbilityPointLeft(); });
+
+on(`change:ability-shintai`, () => {
+	calcAbilityPointLeft();
+	summingArgs( "hp_max", 10, "+", "ability-shintai");
+	setAllJudgement('shintai');
+});
+
+on(`change:ability-kiyou`, () => {
+	calcAbilityPointLeft();
+	setAllJudgement('kiyou');
+});
+
+on(`change:ability-seishin`, () => {
+	calcAbilityPointLeft();
+	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+	setAllJudgement('seishin');
+});
+
+on(`change:ability-gokan`, () => {
+	calcAbilityPointLeft();
+	setAllJudgement('gokan');
+});
+
+on(`change:ability-chiryoku`, () => {
+	calcAbilityPointLeft();
+	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
+	setAllJudgement('chiryoku');
+});
+
+on(`change:ability-miryoku`, () => {
+	calcAbilityPointLeft();
+	setAllJudgement('miryoku');
+});
+
+on(`change:ability-shakai`, () => {
+	calcAbilityPointLeft();
+	setAllJudgement('shakai');
+});
+
+on(`change:ability-unsei`, () => {
+	setAllJudgement('unsei');
+});
+
+on(`clicked:unsei-roll`, () => {
+	//abilityunsei = 1d6;
+	let keberuntungan = Math.floor(Math.random() * 6 ) + 1;
+	summingArgs("ability-unsei", keberuntungan );
+});
+
+
+/*RESPOND TO CHANGES IN SKILLS PAGE */
+
+on(`change:skill-add-point`, () => { calcSkillPointLeft(); });
+
+listNonrepSkills.forEach( (skill) => {
+
+	//change of skill level
+	on(`change:level-${skill}`, () => {
+		calcSkillPointLeft();
+		setSingleJudgement(skill);
+	});
+
+	//change of ability reference
+	on(`change:level-${skill}-abiref`, () => {
+		setSingleJudgement(skill);
+	});
+
+});
+
+/* what needs to be done for repeating skills? 
+	1. Update 'skill-point-left' on:change of `level-${skill}`
+	2. Update each 'judge-${skill}' on change of `level-${skill}`
+	3. Update each 'judge-${skill}' on change of `level-${skill}-abiref`
+*/
+
+
+listRepeatingSkills.forEach( (skill) => {
+
+	on(`change:repeating_skill-${skill}`, (eventInfo) => {
+		if(lgDebug) console.log(`changed: ${skill}`);
+		if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
+
+		TAS.repeating(`skill-${skill}`)
+			.attrs(listAttrsAbilities)
+			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
+			.each(function(row,attrSet,id,rowSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+				
+				let abiref = row[`level-${skill}-abiref`];
+				let lvl = parseInt(row[`level-${skill}`]) || 0;
+				let abi = parseInt(attrSet[abiref]) || 0;
+				row[`judge-${skill}`] =  lvl + abi ;
+			},function(rowSet,attrSet){
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+			})
+			.execute();
+	});
+
+});
+
+</script>
