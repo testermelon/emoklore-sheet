@@ -2244,25 +2244,25 @@ const calcAbilityPointLeft = () => {
 //calculate skill cost 
 const skillCost = (lvl, skill) => {
 
-	let cost = 0;
-
 	//fixed level skills
-	if(	skill == 'chousa'	) cost = 0;
-	if(	skill == 'chikaku'	) cost = 0;
-	if(	skill == 'koushou'	) cost = 0;
-	if(	skill == 'chishiki'	) cost = 0;
-	if(	skill == 'news'	) cost = 0;
-	if(	skill == 'undou'	) cost = 0;
-	if(	skill == 'kakutou'	) cost = 0;
-	if(	skill == 'touteki'	) cost = 0;
-	if(	skill == 'seizon'	) cost = 0;
-	if(	skill == 'jiga'	) cost = 0;
-	if(	skill == 'teate'	) cost = 0;
-	if(	skill == 'saiku'	) cost = 0;
-	if(	skill == 'kouun'	) cost = 0;
-
-	cost = lvl * 5; 
-
+	if((	skill == 'chousa'	) ||
+	(	skill == 'chikaku'	) ||
+	(	skill == 'koushou'	) ||
+	(	skill == 'chishiki'	) ||
+	(	skill == 'news'	) ||
+	(	skill == 'undou'	) ||
+	(	skill == 'kakutou'	) ||
+	(	skill == 'touteki'	) ||
+	(	skill == 'seizon'	) ||
+	(	skill == 'jiga'	) ||
+	(	skill == 'teate'	) ||
+	(	skill == 'saiku'	) ||
+	(	skill == 'kouun'	)
+	) { 
+console.log("cost = 0");
+return 0;
+};
+	let cost = lvl * 5; 
 	if(	skill == 'reikan'	) cost *= 2;
 	if(	skill == 'sosei' 	) cost *= 2;
 	if( skill == 'ougi' 	) cost *= 2;
@@ -2374,7 +2374,6 @@ const calcSkillPointLeft = () => {
 		setAttrs( obj );
 	});
 };
-
 
 
 /*RESPOND TO CHANGES IN ABILITIES PAGE */
