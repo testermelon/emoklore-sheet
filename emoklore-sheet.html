@@ -2260,6 +2260,7 @@ const skillCost = (lvl, skill) => {
 	};
 
 	let cost = 0;
+	if (lvl == 0) cost = 0;
 	if (lvl == 1) cost = 1;
 	if (lvl == 2) cost = 5;
 	if (lvl == 3) cost = 15;
@@ -2271,7 +2272,6 @@ const skillCost = (lvl, skill) => {
 	( skill == 'ougi' 		) ||
 	( skill == 'shageki' 	) ||
 	( skill == 'ougi' 		) ||
-	( skill == 'sonota' 	)
 	){
 		cost *= 2;
 	};
