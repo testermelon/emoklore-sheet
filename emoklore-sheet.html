@@ -2297,27 +2297,27 @@ const setAllJudgement = (abilityName) => {
 	}); //getAttrs
 	
 	listRepeatingSkills.forEach( (skill) => {
+	
+                //update judgement value for repeating skills 
 		TAS.repeating(`skill-${skill}`)
-			.attrs(`ability-${abilityName}`)
-			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`)
+			.attrs(listAttrsAbilities)
+			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
 			.each(function(row,attrSet,id,rowSet){
+				if(lgDebug) console.log(`in TAS-each(${id}, check row:`);
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 				
-				if(row[`level-${skill}-abiref`] == `ability-${abilityName}`) {
-					row[`judge-{skill}`] = 
-						(parseInt(row[`level-${skill}`]) || 0)
-						+
-						(parseInt(attrSet[`ability-${abilityName}`]) || 0);
-				};
-			}, function(rowSet,attrSet){
+				let abiref = row[`level-${skill}-abiref`];
+				let lvl = parseInt(row[`level-${skill}`]) || 0;
+				let abi = parseInt(attrSet[abiref]) || 0;
+				row[`judge-${skill}`] =  lvl + abi ;
+			},function(rowSet,attrSet){
+				if(lgDebug) console.log('TAS final call params: attrSet, rowSet');
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
-
 			})
 			.execute();
+			//TAS done
+		
 	});
 };
 
@@ -2475,7 +2475,7 @@ listRepeatingSkills.forEach( (skill) => {
 	on(`change:repeating_skill-${skill}`, (eventInfo) => {
 		if(lgDebug) console.log(`changed: ${skill}, check eventInfo:`);
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
-		
+
                 //update judgement value for repeating skills 
 		TAS.repeating(`skill-${skill}`)
 			.attrs(listAttrsAbilities)
@@ -2494,8 +2494,7 @@ listRepeatingSkills.forEach( (skill) => {
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 			})
 			.execute();
-			//TAS done
-			
+			//TAS done		
 		updateSkillPointLeft();
 	});
 
