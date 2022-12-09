@@ -388,12 +388,12 @@
 			<span class="sheet-tab-label">Skills</span>
     		<div class="sheet-tab-content">
     		    <div class="sheet-content">
-					<div class="fieldset-legend make-sticky" > Skills/技能 </div>
+					<div class="fieldset-legend" > Skills/技能 </div>
 					<div class="fieldset-info" >
 						<label class='sheet-row-label' >Point Adjustment/技能補正:</label>
 						<input class="sheet-input-number" type="number" name="attr_skill-add-point"> 
 					</div>
-					<div class="fieldset-info" >
+					<div class="fieldset-info make-sticky " >
 						<span class="sheet-row-label"> Skill Point/技能ポイント: </span> 
 						<input type="hidden" name="attr_skill-point-left" value="30" >
 						<!-- value=30+Additionals  -->
@@ -2239,7 +2239,7 @@ const calcAbilityPointLeft = () => {
 //calculate skill cost 
 const skillCost = (lvl, skill) => {
 
-	//fixed level skills
+	//base skills cost 0 pt
 	if(
 	(	skill == 'chousa'	) ||
 	(	skill == 'chikaku'	) ||
@@ -2255,11 +2255,15 @@ const skillCost = (lvl, skill) => {
 	(	skill == 'saiku'	) ||
 	(	skill == 'kouun'	)
 	){ 
-		console.log("cost = 0");
+		if(lgDebug) console.log("cost = 0");
 		return 0;
 	};
 
-	let cost = lvl * 5; 
+	let cost = 1;
+	if (lvl == 2) cost = 5;
+	if (lvl == 3) cost = 15;
+	
+	//check for EX Skills
 	if(
 	( skill == 'reikan'		) ||
 	( skill == 'sosei' 		) ||
@@ -2279,7 +2283,7 @@ const skillCost = (lvl, skill) => {
 
 // set judgement value according to level + ability
 const setAllJudgement = (abilityName) => {
-	if(lgDebug) console.log('setAllJudgement()');
+	if(lgDebug) console.log(`setAllJudgement(${abilityName})`);
 
 	//obtain all judgement ability references 
 	getAttrs( listAttrsJudgeref, (values) => {
@@ -2303,7 +2307,7 @@ const setAllJudgement = (abilityName) => {
 			.attrs(listAttrsAbilities)
 			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
 			.each(function(row,attrSet,id,rowSet){
-				if(lgDebug) console.log(`in TAS-each(${id}, check row:`);
+				if(lgDebug) console.log(`in TAS-each(${id}), check row:`);
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
 				
 				let abiref = row[`level-${skill}-abiref`];
@@ -2481,7 +2485,7 @@ listRepeatingSkills.forEach( (skill) => {
 			.attrs(listAttrsAbilities)
 			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
 			.each(function(row,attrSet,id,rowSet){
-				if(lgDebug) console.log(`in TAS-each(${id}, check row:`);
+				if(lgDebug) console.log(`in TAS-each(${id}), check row:`);
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
 				
 				let abiref = row[`level-${skill}-abiref`];
