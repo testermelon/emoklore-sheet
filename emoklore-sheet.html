@@ -2381,16 +2381,18 @@ const updateSkillPointLeft = () => {
 					if(lgDebug) console.log('in updateSkillP('+skill+')::TAS Final. sum: '+sum+', memo: '+memo);
 
 					sum -= memo;
-				})
-				.execute();
-			if(lgDebug) console.log(`Total sum = ${sum}`);
-		}); //Repeating skills forEach
 
 		let obj = {};
 		obj['skill-point-left'] = sum;
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(obj)));
 
 		setAttrs( obj );
+	
+				})
+				.execute();
+			if(lgDebug) console.log(`Total sum = ${sum}`);
+		}); //Repeating skills forEach
+
 	});
 };
 
