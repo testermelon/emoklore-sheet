@@ -2259,7 +2259,8 @@ const skillCost = (lvl, skill) => {
 		return 0;
 	};
 
-	let cost = 1;
+	let cost = 0;
+	if (lvl == 1) cost = 1;
 	if (lvl == 2) cost = 5;
 	if (lvl == 3) cost = 15;
 	
