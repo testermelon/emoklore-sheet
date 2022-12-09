@@ -2344,17 +2344,17 @@ const setSingleJudgement = (skill) => {
 };
 
 
-const calcSkillPointLeft = () => {
-	if(lgDebug) console.log('calcSkillPointLeft()');
+const updateSkillPointLeft = () => {
+	if(lgDebug) console.log('updateSkillPointLeft()');
 
 	let attrToGet = [`skill-add-point`].concat(listAttrsLevel);
-	if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
 
 	getAttrs(attrToGet, (values) => {
+	        if(lgDebug) console.log(`attrToGet: ${attrToGet}`);
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(values)));
 
-		//initially 30
-		let sum = 30+ values['skill-add-point'] ; 
+		//initially 30 + adjustments
+		let sum = 30 + (parseInt(values['skill-add-point']) || 0) ; 
 		listNonrepSkills.forEach( (skill)=> {
 			let lvl = values[`level-${skill}`];
 			//check with skill cost table elsewhere
@@ -2365,24 +2365,16 @@ const calcSkillPointLeft = () => {
 		//Repeating Skills cost sum
 		listRepeatingSkills.forEach( (skill) => {
 			TAS.repeating(`skill-${skill}`)
-				.attrs(listAttrsLevel)
-				.attrs('skill-point-left')
 				.fields(`level-${skill}` )
 				.reduce(function(memo,row,attrSet,id,rowSet){
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
+					if(lgDebug) console.log('in updateSkillP('+skill+')::TAS reduce, id: '+id+', memo:'+memo+', row:');
 					if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
-					
 					lvl = row[`level-${skill}`]; 
 					memo += skillCost(lvl,skill) ;
 					return memo;
 
 				}, 0 , function(memo,rowSet,attrSet){
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(memo)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-					if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+					if(lgDebug) console.log('in updateSkillP('+skill+')::TAS Final. sum: '+sum+', memo: '+memo);
 
 					sum -= memo;
 				})
@@ -2454,13 +2446,13 @@ on(`clicked:unsei-roll`, () => {
 
 /*RESPOND TO CHANGES IN SKILLS PAGE */
 
-on(`change:skill-add-point`, () => { calcSkillPointLeft(); });
+on(`change:skill-add-point`, () => { updateSkillPointLeft(); });
 
 listNonrepSkills.forEach( (skill) => {
 
 	//change of skill level
 	on(`change:level-${skill}`, () => {
-		calcSkillPointLeft();
+		updateSkillPointLeft();
 		setSingleJudgement(skill);
 	});
 
@@ -2481,29 +2473,30 @@ listNonrepSkills.forEach( (skill) => {
 listRepeatingSkills.forEach( (skill) => {
 
 	on(`change:repeating_skill-${skill}`, (eventInfo) => {
-		if(lgDebug) console.log(`changed: ${skill}`);
+		if(lgDebug) console.log(`changed: ${skill}, check eventInfo:`);
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
-
+		
+                //update judgement value for repeating skills 
 		TAS.repeating(`skill-${skill}`)
 			.attrs(listAttrsAbilities)
 			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
 			.each(function(row,attrSet,id,rowSet){
+				if(lgDebug) console.log(`in TAS-each(${id}, check row:`);
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(id)));
-				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
 				
 				let abiref = row[`level-${skill}-abiref`];
 				let lvl = parseInt(row[`level-${skill}`]) || 0;
 				let abi = parseInt(attrSet[abiref]) || 0;
 				row[`judge-${skill}`] =  lvl + abi ;
 			},function(rowSet,attrSet){
+				if(lgDebug) console.log('TAS final call params: attrSet, rowSet');
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
 				if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
-
-				calcSkillPointLeft();
 			})
 			.execute();
+			//TAS done
+			
+		updateSkillPointLeft();
 	});
 
 });
