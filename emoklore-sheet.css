@@ -233,6 +233,7 @@ fieldset {
 	border-radius:5px;
 	font-size:12px;
 	padding:0;
+	padding-left:3px;
 }
 
 select.sheet-input {
@@ -337,7 +338,7 @@ input.reverb-row-item {
 	background: #EEEEEE;
 	border:1px solid slategray;
 	border-radius: 8px;
-	margin: 0 10px 0 10px;
+	margin: 0;
 	width: 50px;
 	text-align: center;
 	padding:0;
