@@ -419,7 +419,9 @@
 						  </select>
 					  </span>
 					  <span class="sheet-row-label"> </span> 
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kyoumei}d10[Resonance Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kyoumei}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kyoumei" value=>
+
 					</div>
 					<br>
 
@@ -442,7 +444,8 @@
 						  <input type="hidden" name="attr_judge-chousa" value="1" >
 						  <span class="skill-result" name="attr_judge-chousa" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chousa}d10[Investigation Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-chousa}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-chousa" value=>
 					</div>
 
 					<div class="chardata-row">
@@ -461,7 +464,8 @@
 						  <input type="hidden" name="attr_judge-kensaku" value="0" >
 						  <span class="skill-result" name="attr_judge-kensaku" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kensaku}d10[Search Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kensaku}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kensaku" value=>
 					</div>
 
 					<div class="chardata-row">
@@ -480,7 +484,8 @@
 						  <input type="hidden" name="attr_judge-dousatsu" value="0" >
 						  <span class="skill-result" name="attr_judge-dousatsu" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dousatsu}d10[Analysis Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-dousatsu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-dousatsu" value=>
 					  </select>
 					</div>
 
@@ -500,7 +505,8 @@
 						  <input type="hidden" name="attr_judge-mapping" value="0" >
 						  <span class="skill-result" name="attr_judge-mapping" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-mapping}d10[Mapping Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-mapping}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-mapping" value=>
 					  </select>
 					</div>
 
@@ -520,7 +526,8 @@
 						  <input type="hidden" name="attr_judge-chokkan" value="0" >
 						  <span class="skill-result" name="attr_judge-chokkan" > </span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chokkan}d10[Intuition Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-chokkan}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-chokkan" value=>
 					  </select>
 					</div>
 
@@ -540,7 +547,8 @@
 						  <input type="hidden" name="attr_judge-kantei" value="0" >
 						  <span class="skill-result" name="attr_judge-kantei" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kantei}d10[Appraisal Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kantei}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kantei" value=>
 					  </select>
 					</div>
 
@@ -558,7 +566,8 @@
 						  <input type="hidden" name="attr_judge-chikaku" value="1" >
 						  <span class="skill-result" name="attr_judge-chikaku" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chikaku}d10[Perception Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-chikaku}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-chikaku" value=>
 					  </select>
 					</div>
 
@@ -578,7 +587,8 @@
 						  <input type="hidden" name="attr_judge-kansatsugan" value="0" >
 						  <span class="skill-result" name="attr_judge-kansatsugan" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kansatsugan}d10[Observant Eye Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kansatsugan}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kansatsugan" value=>
 					  </select>
 					</div>
 
@@ -598,7 +608,8 @@
 						  <input type="hidden" name="attr_judge-kikime" value="0" >
 						  <span class="skill-result" name="attr_judge-kikime" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kikime}d10[Keen Ear Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kikime}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kikime" value=>
 					  </select>
 					</div>
 
@@ -618,7 +629,8 @@
 						  <input type="hidden" name="attr_judge-dokumi" value="0" >
 						  <span class="skill-result" name="attr_judge-dokumi" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dokumi}d10[Detect Poison Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-dokumi}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-dokumi" value=>
 					  </select>
 					</div>
 
@@ -638,7 +650,8 @@
 						  <input type="hidden" name="attr_judge-kikikanchi" value="0" >
 						  <span class="skill-result" name="attr_judge-kikikanchi" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kikikanchi}d10[Crisis Detection Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kikikanchi}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kikikanchi" value=>
 					  </select>
 					</div>
 
@@ -658,7 +671,8 @@
 						  <input type="hidden" name="attr_judge-reikan" value="0" >
 						  <span class="skill-result" name="attr_judge-reikan" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-reikan}d10[Sixth Sense Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-reikan}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-reikan" value=>
 					  </select>
 					</div>
 
@@ -676,7 +690,8 @@
 						  <input type="hidden" name="attr_judge-koushou" value="1" >
 						  <span class="skill-result" name="attr_judge-koushou" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-koushou}d10[Negotiation Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-koushou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-koushou" value=>
 					  </select>
 					</div>
 
@@ -696,7 +711,8 @@
 						  <input type="hidden" name="attr_judge-shakoujutsu" value="0" >
 						  <span class="skill-result" name="attr_judge-shakoujutsu" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shakoujutsu}d10[Socieatal Arts Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-shakoujutsu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-shakoujutsu" value=>
 					  </select>
 					</div>
 
@@ -716,7 +732,8 @@
 						  <input type="hidden" name="attr_judge-debate" value="0" >
 						  <span class="skill-result" name="attr_judge-debate" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-debate}d10[Debate Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-debate}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-debate" value=>
 					  </select>
 					</div>
 
@@ -736,7 +753,8 @@
 						  <input type="hidden" name="attr_judge-shinri" value="0" >
 						  <span class="skill-result" name="attr_judge-shinri" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shinri}d10[Mentality Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-shinri}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-shinri" value=>
 					  </select>
 					</div>
 
@@ -756,7 +774,8 @@
 						  <input type="hidden" name="attr_judge-miryou" value="0" >
 						  <span class="skill-result" name="attr_judge-miryou" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-miryou}d10[Charm Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-miryou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-miryou" value=>
 					  </select>
 					</div>
 
@@ -774,7 +793,8 @@
 						  <input type="hidden" name="attr_judge-chishiki" value="1" >
 						  <span class="skill-result" name="attr_judge-chishiki" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-chishiki}d10[Knowledge Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-chishiki}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-chishiki" value=>
 					  </select>
 					</div> 
 					<div class="repcontainer">
@@ -798,7 +818,8 @@
 							  <input type="hidden" name="attr_judge-senmonchishiki" value="0" >
 							  <span class="skill-result" name="attr_judge-senmonchishiki" ></span>
 						  </span>
-						  <button class="sheet-rollbtn" type="roll" value="/roll @{level-senmonchishiki}d10[Expert Knowledge Check]" > Roll </button>
+						  <button class="sheet-rollbtn" type="roll" value="@{rollstr-senmonchishiki}" > Roll </button>
+						  <input type="hidden" name="attr_rollstr-senmonchishiki" value=>
 						  </select>
 						</div>
 						</fieldset>
@@ -821,7 +842,8 @@
 						  <input type="hidden" name="attr_judge-news" value="1" >
 						  <span class="skill-result" name="attr_judge-news" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-news}d10[News Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-news}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-news" value=>
 					  </select>
 					</div>
 
@@ -841,7 +863,8 @@
 						  <input type="hidden" name="attr_judge-jijoutsuu" value="0" >
 						  <span class="skill-result" name="attr_judge-jijoutsuu" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-jijoutsuu}d10[Gossip Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-jijoutsuu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-jijoutsuu" value=>
 					  </select>
 					</div>
 					<div class="repcontainer">
@@ -865,7 +888,8 @@
 								  <input type="hidden" name="attr_judge-gyoukai" value="0" >
 								  <span class="skill-result" name="attr_judge-gyoukai" ></span>
 							  </span>
-							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-gyoukai}d10[Industry Check]" > Roll </button>
+							  <button class="sheet-rollbtn" type="roll" value="@{rollstr-gyoukai}" > Roll </button>
+							  <input type="hidden" name="attr_rollstr-gyoukai" value=>
 							  </select>
 							</div>
 						</fieldset>
@@ -884,7 +908,8 @@
 						  <input type="hidden" name="attr_judge-undou" value="1" >
 						  <span class="skill-result" name="attr_judge-undou" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-undou}d10[Movement Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-undou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-undou" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -903,7 +928,8 @@
 						  <input type="hidden" name="attr_judge-speed" value="0" >
 						  <span class="skill-result" name="attr_judge-speed" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-speed}d10[Speed Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-speed}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-speed" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -922,7 +948,8 @@
 						  <input type="hidden" name="attr_judge-strength" value="0" >
 						  <span class="skill-result" name="attr_judge-strength" ></span>
 					  </span>
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-strength}d10[Strength Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-strength}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-strength" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -942,7 +969,8 @@
 						  <span class="skill-result" name="attr_judge-acrobat" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-acrobat}d10[Acrobat Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-acrobat}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-acrobat" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -962,7 +990,8 @@
 						  <span class="skill-result" name="attr_judge-dive" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dive}d10[Dive Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-dive}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-dive" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -980,7 +1009,8 @@
 						  <span class="skill-result" name="attr_judge-kakutou" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kakutou}d10[Fighting Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kakutou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kakutou" value=>
 					  </select>
 					</div>
 					<div class="repcontainer">
@@ -1004,7 +1034,8 @@
 								  <input type="hidden" name="attr_judge-bujutsu" value="0" >
 								  <span class="skill-result" name="attr_judge-bujutsu" ></span>
 							  </span>
-							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-bujutsu}d10[Martial Arts Check]" > Roll </button>
+							  <button class="sheet-rollbtn" type="roll" value="@{rollstr-bujutsu}" > Roll </button>
+							  <input type="hidden" name="attr_rollstr-bujutsu" value=>
 							</div>
 						</fieldset>
 					</div>
@@ -1030,7 +1061,8 @@
 								<input type="hidden" name="attr_judge-ougi" value="0" >
 								<span class="skill-result" name="attr_judge-ougi" ></span> 
 							</span> 
-							<button class="sheet-rollbtn" type="roll" value="/roll @{level-ougi}d10[Special Arts Check]" > Roll </button>
+							<button class="sheet-rollbtn" type="roll" value="@{rollstr-ougi}" > Roll </button>
+							<input type="hidden" name="attr_rollstr-ougi" value=>
 						</div>
 						</fieldset>
 					</div>
@@ -1049,7 +1081,8 @@
 						  <span class="skill-result" name="attr_judge-touteki" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-touteki}d10[Throwing Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-touteki}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-touteki" value=>
 					  </select>
 					</div>
 					<div class="repcontainer">
@@ -1074,7 +1107,8 @@
 								  <span class="skill-result" name="attr_judge-shageki" ></span>
 							  </span>
 								  
-							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-shageki}d10[Shooting Check]" > Roll </button>
+							  <button class="sheet-rollbtn" type="roll" value="@{rollstr-shageki}" > Roll </button>
+							  <input type="hidden" name="attr_rollstr-shageki" value=>
 							  </select>
 							</div>
 						</fieldset>
@@ -1094,7 +1128,8 @@
 						  <span class="skill-result" name="attr_judge-seizon" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-seizon}d10[Survival Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-seizon}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-seizon" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1114,7 +1149,8 @@
 						  <span class="skill-result" name="attr_judge-taikyuu" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-taikyuu}d10[Endurance Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-taikyuu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-taikyuu" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1132,7 +1168,8 @@
 						  <span class="skill-result" name="attr_judge-jiga" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-jiga}d10[Ego Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-jiga}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-jiga" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1152,7 +1189,8 @@
 						  <span class="skill-result" name="attr_judge-konjou" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-konjou}d10[Will Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-konjou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-konjou" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1170,27 +1208,8 @@
 						  <span class="skill-result" name="attr_judge-teate" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-teate}d10[Treatment Check]" > Roll </button>
-					  </select>
-					</div>
-					<div class="chardata-row">
-					  <label class='sheet-row-label' > Medical Technique/医術 </label>
-					  <span class="sheet-row-label">
-						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="0" checked> 0</input>
-						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="1"> 1</input>
-						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="2"> 2</input>
-						  <input name="attr_level-ijutsu" class="radio-numbered" type="radio" value="3"> 3</input>
-					  </span>
-					  <span class="sheet-row-label">
-						  <select class='sheet-input' name="attr_level-ijutsu-abiref" >
-							  <option value="ability-kiyou" > Dexterity/器用 </option>
-							  <option value="ability-chiryoku" > Intelligence/知力 </option>
-						  </select>
-						  <input type="hidden" name="attr_judge-ijutsu" value="0" >
-						  <span class="skill-result" name="attr_judge-ijutsu" ></span>
-					  </span>
-						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-ijutsu}d10[Medical Technique Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-ijutsu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-ijutsu" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1210,7 +1229,8 @@
 						  <span class="skill-result" name="attr_judge-sosei" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-sosei}d10[Resuscitation Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-sosei}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-sosei" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1228,7 +1248,8 @@
 						  <span class="skill-result" name="attr_judge-saiku" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-saiku}d10[Craft Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-saiku}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-saiku" value=>
 					  </select>
 					</div>
 					<div class="repcontainer">
@@ -1252,7 +1273,8 @@
 								  <input type="hidden" name="attr_judge-gikou" value="0" >
 								  <span class="skill-result" name="attr_judge-gikou" ></span>
 							  </span>
-							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-gikou}d10[Technique Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-gikou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-gikou" value=>
 							</div>
 						</fieldset>
 					</div>
@@ -1279,7 +1301,8 @@
 								  <span class="skill-result" name="attr_judge-geijutsu" ></span>
 							  </span>
 								  
-							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-geijutsu}d10[Art Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-geijutsu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-geijutsu" value=>
 							  </select>
 							</div>
 						</fieldset>
@@ -1307,7 +1330,8 @@
 								  <span class="skill-result" name="attr_judge-soujuu" ></span>
 							  </span>
 								  
-							  <button class="sheet-rollbtn" type="roll" value="/roll @{level-soujuu}d10[Maneuvering Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-soujuu}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-soujuu" value=>
 							  </select>
 							</div>
 						</fieldset>
@@ -1329,7 +1353,8 @@
 						  <span class="skill-result" name="attr_judge-angou" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-angou}d10[Cryptography Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-angou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-angou" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1349,7 +1374,8 @@
 						  <span class="skill-result" name="attr_judge-dennou" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-dennou}d10[Cyber Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-dennou}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-dennou" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1370,8 +1396,8 @@
 						  <span class="skill-result" name="attr_judge-intoku" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-intoku}d10[Concealment Check]" > Roll </button>
-					  </select>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-intoku}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-intoku" value=>
 					</div>
 					<div class="chardata-row">
 					  <label class='sheet-row-label' > *Good Fortune/*幸運 </label>
@@ -1388,7 +1414,8 @@
 						  <span class="skill-result" name="attr_judge-kouun" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kouun}d10[Good Fortune Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kouun}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kouun" value=>
 					  </select>
 					</div>
 					<div class="chardata-row">
@@ -1408,7 +1435,8 @@
 						  <span class="skill-result" name="attr_judge-kyouun" ></span>
 					  </span>
 						  
-					  <button class="sheet-rollbtn" type="roll" value="/roll @{level-kyouun}d10[Greater Fortune Check]" > Roll </button>
+					  <button class="sheet-rollbtn" type="roll" value="@{rollstr-kyouun}" > Roll </button>
+					  <input type="hidden" name="attr_rollstr-kyouun" value=>
 					  </select>
 					</div>
 
@@ -1439,7 +1467,8 @@
 									<input type="hidden" name="attr_judge-sonota" value="0" >
 									<span class="skill-result" name="attr_judge-sonota" ></span>
 								</span> 
-								<button class="sheet-rollbtn" type="roll" value="/roll @{level-sonota}d10[Others Check]" > Roll </button>
+								<button class="sheet-rollbtn" type="roll" value="@{rollstr-other}" > Roll </button>
+								<input type="hidden" name="attr_rollstr-other" value=>
 							</div> 
 						</fieldset>
 					</div> <!-- repcontainer --->
@@ -1449,6 +1478,22 @@
     	</div>
     </div>
 </div>
+
+<rolltemplate class="sheet-rolltemplate-emoklore">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title">{{title}}</div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
 
 <script type="text/worker">
 
@@ -2486,5 +2531,12 @@ listRepeatingSkills.forEach( (skill) => {
 	});
 
 });
+
+/** CREATE ROLL STRINGS **/
+
+listNonrepSkills.forEach( (skill) => {
+	
+
+}
 
 </script>
