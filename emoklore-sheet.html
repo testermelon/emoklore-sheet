@@ -270,7 +270,7 @@
 						<input name="attr_ability-add-point" class="sheet-input-number" type="number" value="0"> 
 					</div>
 					<div class="fieldset-info make-sticky" >
-						<label class="sheet-row-label"> Ability Points/能力ポイント: </span> 
+						<label class="sheet-row-label"> Ability Points/能力ポイント: </label> 
 						<span class="point-left-indicator" name="attr_ability-point-left"  ></span>
 						<input type="hidden" name="attr_ability-point-left" value="25"> 
 					</div>
@@ -394,7 +394,7 @@
 						<input class="sheet-input-number" type="number" name="attr_skill-add-point"> 
 					</div>
 					<div class="fieldset-info make-sticky " >
-						<label class="sheet-row-label"> Skill Point/技能ポイント: </span> 
+						<label class="sheet-row-label"> Skill Point/技能ポイント: </label> 
 						<input type="hidden" name="attr_skill-point-left" value="30" >
 						<!-- value=30+Additionals  -->
 						<span class="point-left-indicator" name="attr_skill-point-left"></span>
@@ -2229,8 +2229,7 @@ const skillCost = (lvl, skill) => {
 	(	skill == 'jiga'		) ||
 	(	skill == 'teate'	) ||
 	(	skill == 'saiku'	) ||
-	(	skill == 'kouun'	)
-	){ 
+	(	skill == 'kouun'	) ){ 
 		if(lgDebug) console.log("cost = 0");
 		return 0;
 	};
@@ -2247,8 +2246,7 @@ const skillCost = (lvl, skill) => {
 	( skill == 'sosei' 		) ||
 	( skill == 'ougi' 		) ||
 	( skill == 'shageki' 	) ||
-	( skill == 'ougi' 		) ||
-	){
+	( skill == 'ougi' 		) ){
 		cost *= 2;
 	};
 
