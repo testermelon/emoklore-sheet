@@ -10,5 +10,5 @@ For repeating setions handling I used [TAS (theAaronSheet)](https://github.com/s
 # Roadmap (Todos)
 - Custom Roll parsing for luck and judgements.
 - Show/hide level zero skils.
-- Various cosmetics.
+- Various cosmetics and conveniences.
 - Translations are pending, currently its bilingual in the form of EN/JP.
