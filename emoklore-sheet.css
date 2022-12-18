@@ -432,3 +432,30 @@ input.reverb-row-item {
   text-align: center;
 }
 
+
+/* emoklore-sheet.css | file:///home/indra/Projects/web/emoklore/emoklore-sheet.css */
+
+.sheet-rolltemplate-emoklore .sheet-container {
+  /* --header-bg-color: rgba(112,32,130,1);*/
+  --header-bg-color: teal;
+  --header-text-color: #FFF;
+}
+
+.sheet-rolltemplate-emoklore .sheet-content {
+  /* background: #FFF; */
+  background: #222;
+  color: #a8dbdb;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.sheet-rolltemplate-emoklore .sheet-header {
+  margin: 5px;
+}
+
+.sheet-rolltemplate-emoklore .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-emoklore .sheet-content :nth-child(4n) {
+  background:#414A4A;
+  border-radius: 15px;
+  margin: 5px;
+}
