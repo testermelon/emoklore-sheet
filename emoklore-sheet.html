@@ -2418,6 +2418,58 @@ const updateSkillPointLeft = () => {
 	});
 };
 
+/** CREATE ROLL STRINGS **/
+
+//For singletons
+const setNonrepRollStr = (skill) => {
+	getAttrs([`level-${skill}`,`skillname-${skill}`], (values) => {
+		let level = values[`level-${skil}`];
+		let skillname = values[`skillname-${skill}`];
+		let obj={};
+		obj[`attr_rollstr-${skill}`] = `{template=emoklore} {{ Title=${skillname} }} `;
+		for(let i=1; i<level+1; i++) {
+			obj[`attr_rollstr-${skill}`] += ` {{ Roll ${i} = [[d10]] }} `; 
+		};
+		setAttrs(obj);
+	};
+
+};
+
+//For repeatings 
+const setRepeatingRollStr = (skill) => {
+
+	TAS.repeating(`skill-${skill}`)
+		.fields(`level-${skill}`,`skillname-${skill}` )
+		.each(function(row,attrSet,id,rowSet){
+			if(lgDebug) console.log(`in TAS-each(${id}), check row:`);
+			if(lgDebug) console.log(JSON.parse(JSON.stringify(row)));
+
+			let level = row[`level-${skil}`];
+			let skillname = row[`skillname-${skill}`];
+			let obj={};
+			row[`rollstr-${skill}`] = `{template=emoklore} {{ Title=${skillname} }} `;
+			for(let i=1; i<level+1; i++) {
+				row[`rollstr-${skill}`] += ` {{ Roll ${i} = [[d10]] }} `; 
+			}
+			
+		},function(rowSet,attrSet){
+			if(lgDebug) console.log('TAS final call params: attrSet, rowSet');
+			if(lgDebug) console.log(JSON.parse(JSON.stringify(attrSet)));
+			if(lgDebug) console.log(JSON.parse(JSON.stringify(rowSet)));
+		})
+		.execute();
+		//TAS done		
+};
+
+
+/*RESPOND TO SHEET OPEN */
+on(`sheet:opened`, () => {
+
+	//Set Initial ROLL STRINGS
+	listNonrepSkills.forEach( (skill) => { setNonrepRollStr(skill); });
+	listRepeatingSkills.forEach( (skill) => { setRepeatingRollStr(skill); });
+	});
+
 
 /*RESPOND TO CHANGES IN ABILITIES PAGE */
 
@@ -2428,52 +2480,52 @@ on(`change:ability-shintai`, () => {
 	summingArgs( "hp_max", 10, "+", "ability-shintai");
 	summingArgs( "hp", 10, "+", "ability-shintai");
 	setAllJudgement('shintai');
-});
+	});
 
 on(`change:ability-kiyou`, () => {
 	calcAbilityPointLeft();
 	setAllJudgement('kiyou');
-});
+	});
 
 on(`change:ability-seishin`, () => {
 	calcAbilityPointLeft();
 	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
 	summingArgs( "mp", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
 	setAllJudgement('seishin');
-});
+	});
 
 on(`change:ability-gokan`, () => {
 	calcAbilityPointLeft();
 	setAllJudgement('gokan');
-});
+	});
 
 on(`change:ability-chiryoku`, () => {
 	calcAbilityPointLeft();
 	summingArgs( "mp_max", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
 	summingArgs( "mp", 	0 , "+", "ability-seishin", "+", "ability-chiryoku" );
 	setAllJudgement('chiryoku');
-});
+	});
 
 on(`change:ability-miryoku`, () => {
 	calcAbilityPointLeft();
 	setAllJudgement('miryoku');
-});
+	});
 
 on(`change:ability-shakai`, () => {
 	calcAbilityPointLeft();
 	setAllJudgement('shakai');
-});
+	});
 
 on(`change:ability-unsei`, () => {
 	setAllJudgement('unsei');
-});
+	});
 
 on(`clicked:unsei-roll`, () => {
 	//abilityunsei = 1d6;
 	let keberuntungan = Math.floor(Math.random() * 6 ) + 1;
 	summingArgs("ability-unsei", keberuntungan );
 
-});
+	});
 
 
 /*RESPOND TO CHANGES IN SKILLS PAGE */
@@ -2486,14 +2538,14 @@ listNonrepSkills.forEach( (skill) => {
 	on(`change:level-${skill}`, () => {
 		updateSkillPointLeft();
 		setSingleJudgement(skill);
-	});
+		setNonrepRollStr(skill);
+		});
 
 	//change of ability reference
 	on(`change:level-${skill}-abiref`, () => {
 		setSingleJudgement(skill);
+		});
 	});
-
-});
 
 /* what needs to be done for repeating skills? 
 	1. Update 'skill-point-left' on:change of `level-${skill}`
@@ -2508,7 +2560,7 @@ listRepeatingSkills.forEach( (skill) => {
 		if(lgDebug) console.log(`changed: ${skill}, check eventInfo:`);
 		if(lgDebug) console.log(JSON.parse(JSON.stringify(eventInfo)));
 
-                //update judgement value for repeating skills 
+        //update judgement value for repeating skills 
 		TAS.repeating(`skill-${skill}`)
 			.attrs(listAttrsAbilities)
 			.fields(`level-${skill}`,`level-${skill}-abiref`,`judge-${skill}`, )
@@ -2527,16 +2579,9 @@ listRepeatingSkills.forEach( (skill) => {
 			})
 			.execute();
 			//TAS done		
+		setRepeatingRollStr(skill);
 		updateSkillPointLeft();
+		});
 	});
-
-});
-
-/** CREATE ROLL STRINGS **/
-
-listNonrepSkills.forEach( (skill) => {
-	
-
-}
 
 </script>
